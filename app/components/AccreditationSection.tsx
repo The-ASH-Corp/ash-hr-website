@@ -1,8 +1,29 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 interface AccreditationSectionProps {
   onOpenEnquiry?: () => void;
 }
+
+const cardGridVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
 
 export default function AccreditationSection({
   onOpenEnquiry,
@@ -15,7 +36,13 @@ export default function AccreditationSection({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-12"
+        >
           <div className="lg:col-span-7">
             <span className="inline-block text-xs font-bold uppercase tracking-wider text-primary mb-2">
               We Are Providing
@@ -32,14 +59,28 @@ export default function AccreditationSection({
               internationally to gain valuable skills and qualifications.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* 4 Core Offerings Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          variants={cardGridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {/* Card 1 */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary/50 hover:shadow-card-soft transition-all duration-200 flex flex-col justify-between group">
+          <motion.div
+            variants={cardVariants}
+            whileHover={{ y: -8, scale: 1.015 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="bg-white p-6 rounded-xl border border-slate-200 hover:bg-primary hover:border-primary hover:shadow-card-hover transition-colors duration-300 flex flex-col justify-between group"
+          >
             <div>
-              <div className="w-10 h-10 rounded-lg bg-primary-50 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <motion.div
+                whileHover={{ rotate: 6, scale: 1.12 }}
+                className="w-10 h-10 rounded-lg bg-primary-50 text-primary group-hover:bg-white/15 group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-300"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -53,24 +94,32 @@ export default function AccreditationSection({
                     strokeWidth="1.8"
                   ></path>
                 </svg>
-              </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">
+              </motion.div>
+              <h3 className="text-base font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 Case Study Based Learning
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 Direct access for learners to work on real-time industry case
                 studies.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-primary group-hover:translate-x-0.5 transition-transform">
+            <div className="mt-6 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs font-semibold text-primary group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               Practical Rigor <span className="ml-1.5">→</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2 */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary/50 hover:shadow-card-soft transition-all duration-200 flex flex-col justify-between group">
+          <motion.div
+            variants={cardVariants}
+            whileHover={{ y: -8, scale: 1.015 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="bg-white p-6 rounded-xl border border-slate-200 hover:bg-primary hover:border-primary hover:shadow-card-hover transition-colors duration-300 flex flex-col justify-between group"
+          >
             <div>
-              <div className="w-10 h-10 rounded-lg bg-primary-50 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <motion.div
+                whileHover={{ rotate: 6, scale: 1.12 }}
+                className="w-10 h-10 rounded-lg bg-primary-50 text-primary group-hover:bg-white/15 group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-300"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -90,24 +139,32 @@ export default function AccreditationSection({
                     strokeWidth="1.8"
                   ></path>
                 </svg>
-              </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">
+              </motion.div>
+              <h3 className="text-base font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 Practical Work Experience
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 Equipping the learners to work independently with practical
                 experience.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-primary group-hover:translate-x-0.5 transition-transform">
+            <div className="mt-6 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs font-semibold text-primary group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               Hands-on Projects <span className="ml-1.5">→</span>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Card 3 (Clean accent styling) */}
-          <div className="bg-primary text-white p-6 rounded-xl shadow-md hover:shadow-card-hover transition-all duration-200 flex flex-col justify-between group">
+          {/* Card 3 */}
+          <motion.div
+            variants={cardVariants}
+            whileHover={{ y: -8, scale: 1.015 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="bg-white p-6 rounded-xl border border-slate-200 hover:bg-primary hover:border-primary hover:shadow-card-hover transition-colors duration-300 flex flex-col justify-between group"
+          >
             <div>
-              <div className="w-10 h-10 rounded-lg bg-white/15 text-white flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <motion.div
+                whileHover={{ rotate: 6, scale: 1.12 }}
+                className="w-10 h-10 rounded-lg bg-primary-50 text-primary group-hover:bg-white/15 group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-300"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -121,24 +178,32 @@ export default function AccreditationSection({
                     strokeWidth="2"
                   ></path>
                 </svg>
-              </div>
-              <h3 className="text-base font-bold text-white mb-2">
+              </motion.div>
+              <h3 className="text-base font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 100% Placement Assistance
               </h3>
-              <p className="text-xs text-indigo-100/90 leading-relaxed">
+              <p className="text-xs text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 Exclusive lifetime access to the Hire platform and top hiring
                 partners.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/20 flex items-center text-xs font-semibold text-amber-300 group-hover:translate-x-0.5 transition-transform">
+            <div className="mt-6 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs font-semibold text-primary group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               Career Guarantee <span className="ml-1.5">→</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 4 */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-primary/50 hover:shadow-card-soft transition-all duration-200 flex flex-col justify-between group">
+          <motion.div
+            variants={cardVariants}
+            whileHover={{ y: -8, scale: 1.015 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="bg-white p-6 rounded-xl border border-slate-200 hover:bg-primary hover:border-primary hover:shadow-card-hover transition-colors duration-300 flex flex-col justify-between group"
+          >
             <div>
-              <div className="w-10 h-10 rounded-lg bg-primary-50 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <motion.div
+                whileHover={{ rotate: 6, scale: 1.12 }}
+                className="w-10 h-10 rounded-lg bg-primary-50 text-primary group-hover:bg-white/15 group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-300"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -152,35 +217,42 @@ export default function AccreditationSection({
                     strokeWidth="1.8"
                   ></path>
                 </svg>
-              </div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">
+              </motion.div>
+              <h3 className="text-base font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 Free Company Internship
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 Our Free Company Internship program lets you gain real-world
                 experience at no cost.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-primary group-hover:translate-x-0.5 transition-transform">
+            <div className="mt-6 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs font-semibold text-primary group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               Corporate Stint <span className="ml-1.5">→</span>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Action Footer for section */}
-        <div className="mt-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="mt-10 text-center flex flex-col sm:flex-row items-center justify-center gap-3"
+        >
           <span className="text-sm text-slate-600">
             More than 10k+ happy Students rely on us
           </span>
-          <button
+          <motion.button
             onClick={onOpenEnquiry}
-            className="inline-flex items-center px-5 py-2 rounded-full text-xs font-semibold text-white bg-primary hover:bg-primary-dark transition-all duration-200 cursor-pointer shadow-sm hover:scale-105 active:scale-95"
+            whileHover={{ scale: 1.06, y: -1 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center px-5 py-2 rounded-full text-xs font-semibold text-white bg-primary hover:bg-primary-dark transition-colors duration-200 cursor-pointer shadow-sm"
           >
             More Courses
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );
 }
-

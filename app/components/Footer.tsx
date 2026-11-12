@@ -1,6 +1,22 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Footer() {
+  const socialLinks = [
+    { label: "WhatsApp", short: "WA", href: "https://wa.me/919072801300", external: true },
+    { label: "Facebook", short: "FB", href: "#facebook", external: false },
+    { label: "Instagram", short: "IG", href: "#instagram", external: false },
+    { label: "LinkedIn", short: "IN", href: "#linkedin", external: false },
+    { label: "YouTube", short: "YT", href: "#youtube", external: false },
+  ];
+
   return (
-    <footer
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.6 }}
       className="bg-executive-navy text-white pt-16 pb-12 border-t border-slate-800"
       data-purpose="site-footer"
     >
@@ -8,7 +24,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
           {/* About Column */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-2">
+            <motion.div
+              whileHover={{ x: 2 }}
+              className="flex items-center gap-2 w-fit"
+            >
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg">
                 C
               </div>
@@ -18,7 +37,7 @@ export default function Footer() {
                   academy
                 </span>
               </span>
-            </div>
+            </motion.div>
             <p className="text-xs text-slate-400 leading-relaxed pr-6">
               <strong>CBA Academy</strong> is a career-focused professional
               training institute dedicated to building job-ready skills for
@@ -38,43 +57,22 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center space-x-3 pt-2">
-              <a
-                aria-label="WhatsApp"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-primary text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs font-bold"
-                href="https://wa.me/919072801300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WA
-              </a>
-              <a
-                aria-label="Facebook"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-primary text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs font-bold"
-                href="#facebook"
-              >
-                FB
-              </a>
-              <a
-                aria-label="Instagram"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-primary text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs font-bold"
-                href="#instagram"
-              >
-                IG
-              </a>
-              <a
-                aria-label="LinkedIn"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-primary text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs font-bold"
-                href="#linkedin"
-              >
-                IN
-              </a>
-              <a
-                aria-label="YouTube"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-primary text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs font-bold"
-                href="#youtube"
-              >
-                YT
-              </a>
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.short}
+                  aria-label={social.label}
+                  whileHover={{ y: -4, scale: 1.12 }}
+                  whileTap={{ scale: 0.94 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 16 }}
+                  className="w-8 h-8 rounded-full bg-slate-800 hover:bg-primary text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs font-bold"
+                  href={social.href}
+                  {...(social.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                >
+                  {social.short}
+                </motion.a>
+              ))}
             </div>
           </div>
 
@@ -84,43 +82,23 @@ export default function Footer() {
               Our Course
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <a
-                  className="hover:text-white transition-colors"
-                  href="#courses"
-                >
-                  HR Course
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-white transition-colors"
-                  href="#courses"
-                >
-                  Office Administration
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-white transition-colors"
-                  href="#courses"
-                >
-                  Accounting Course
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:text-white transition-colors"
-                  href="#courses"
-                >
-                  Spoken English
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Terms &amp; Condition
-                </a>
-              </li>
+              {[
+                { label: "HR Course", href: "#courses" },
+                { label: "Office Administration", href: "#courses" },
+                { label: "Accounting Course", href: "#courses" },
+                { label: "Spoken English", href: "#courses" },
+                { label: "Terms & Condition", href: "#" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <motion.a
+                    whileHover={{ x: 4 }}
+                    className="inline-block hover:text-white transition-colors"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </motion.a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -130,31 +108,23 @@ export default function Footer() {
               Our Community
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Our Partners
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Suggestions
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#blogs">
-                  Our Blog
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Newsletter
-                </a>
-              </li>
+              {[
+                { label: "Help Center", href: "#" },
+                { label: "Our Partners", href: "#" },
+                { label: "Suggestions", href: "#" },
+                { label: "Our Blog", href: "#blogs" },
+                { label: "Newsletter", href: "#" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <motion.a
+                    whileHover={{ x: 4 }}
+                    className="inline-block hover:text-white transition-colors"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </motion.a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -164,31 +134,23 @@ export default function Footer() {
               Company Resources
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Our Partners
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Suggestions
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#blogs">
-                  Our Blog
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="#">
-                  Newsletter
-                </a>
-              </li>
+              {[
+                { label: "Help Center", href: "#" },
+                { label: "Our Partners", href: "#" },
+                { label: "Suggestions", href: "#" },
+                { label: "Our Blog", href: "#blogs" },
+                { label: "Newsletter", href: "#" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <motion.a
+                    whileHover={{ x: 4 }}
+                    className="inline-block hover:text-white transition-colors"
+                    href={link.href}
+                  >
+                    {link.label}
+                  </motion.a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -197,19 +159,19 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>Copyright © 2025 CBA Academy. All rights reserved.</p>
           <div className="flex items-center space-x-6">
-            <a className="hover:text-slate-400 transition-colors" href="#">
-              Services
-            </a>
-            <a className="hover:text-slate-400 transition-colors" href="#">
-              Help &amp; FAQs
-            </a>
-            <a className="hover:text-slate-400 transition-colors" href="#">
-              Careers
-            </a>
+            {["Services", "Help & FAQs", "Careers"].map((item) => (
+              <motion.a
+                key={item}
+                whileHover={{ y: -2 }}
+                className="hover:text-slate-400 transition-colors"
+                href="#"
+              >
+                {item}
+              </motion.a>
+            ))}
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
-
