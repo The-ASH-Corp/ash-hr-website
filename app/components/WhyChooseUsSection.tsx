@@ -82,7 +82,7 @@ export default function WhyChooseUsSection({
               </h2>
             </div>
             <p className="text-slate-600 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed text-center sm:text-left">
-              At <strong>CBA Academy</strong>, our goal is to give students
+              At <strong>Ash Academy</strong>, our goal is to give students
               practical skills and knowledge for career success by combining
               classroom lessons with real-world experience. We prepare you with
               confidence for professional challenges.

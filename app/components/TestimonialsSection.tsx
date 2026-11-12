@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
       initials: "AL",
       role: "Academy Alumni",
       quote:
-        "I am glad that I was a student of CBA Academy. The hands-on projects felt like real-world challenges, making the learning process dynamic and practical. Plus, the support staff went above and beyond.",
+        "I am glad that I was a student of Ash Academy. The hands-on projects felt like real-world challenges, making the learning process dynamic and practical. Plus, the support staff went above and beyond.",
       featured: false,
     },
   ];

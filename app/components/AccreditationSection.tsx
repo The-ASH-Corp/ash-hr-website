@@ -55,7 +55,7 @@ export default function AccreditationSection({
           </div>
           <div className="lg:col-span-5">
             <p className="text-slate-600 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed max-w-2xl lg:max-w-none mx-auto lg:mx-0">
-              At <strong>CBA Academy</strong>, students are awarded several
+              At <strong>Ash Academy</strong>, students are awarded several
               certifications that are recognized both nationally and
               internationally to gain valuable skills and qualifications.
             </p>

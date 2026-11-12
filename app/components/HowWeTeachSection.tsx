@@ -72,7 +72,7 @@ export default function HowWeTeachSection() {
             <span className="text-sky-300">Real-World</span> Success
           </h2>
           <p className="text-slate-300 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed">
-            At CBA Academy, we focus on practical skills that prepare you for the
+            At Ash Academy, we focus on practical skills that prepare you for the
             workplace. Our unique training approach ensures you are job-ready from
             day one.
           </p>
@@ -165,7 +165,7 @@ export default function HowWeTeachSection() {
               className="relative w-full max-w-[260px] sm:max-w-xs xl:max-w-sm 2xl:max-w-md min-[2200px]:max-w-lg rounded-2xl overflow-hidden border border-white/20 aspect-[3/4] shadow-2xl group"
             >
               <Image
-                alt="Two accomplished business graduates representing CBA Academy"
+                alt="Two accomplished business graduates representing Ash Academy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 src="/images/img_8.jpg"
                 fill

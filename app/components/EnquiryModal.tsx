@@ -68,7 +68,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 Admissions Open
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
-                Apply to CBA Academy
+                Apply to Ash Academy
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mt-1">
                 Book a 1-on-1 counseling session and get full curriculum details.

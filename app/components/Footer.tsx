@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
             </motion.a>
             <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400 leading-relaxed lg:pr-6">
-              <strong>CBA Academy</strong> is a career-focused professional
+              <strong>Ash Academy</strong> is a career-focused professional
               training institute dedicated to building job-ready skills for
               today&apos;s competitive corporate world. We offer industry-relevant
               courses in <strong>Accounting</strong>,{" "}
@@ -160,7 +160,7 @@ export default function Footer() {
 
         {/* Bottom Copyright bar */}
         <div className="pt-6 sm:pt-8 2xl:pt-10 flex flex-col sm:flex-row items-center justify-between text-xs 2xl:text-sm min-[2200px]:text-base text-slate-500 gap-4 text-center sm:text-left">
-          <p>Copyright © 2025 CBA Academy. All rights reserved.</p>
+          <p>Copyright © 2025 Ash Academy. All rights reserved.</p>
           <div className="flex items-center space-x-6 2xl:space-x-8">
             {["Services", "Help & FAQs", "Careers"].map((item) => (
               <motion.a

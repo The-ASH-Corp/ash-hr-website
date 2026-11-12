@@ -15,7 +15,7 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
       data-purpose="cta-banner"
       id="contact"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -63,7 +63,7 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
                 className="w-24 h-24 sm:w-28 sm:h-28 lg:w-36 lg:h-36 rounded-full border-2 border-white/40 overflow-hidden shadow bg-slate-800 relative group"
               >
                 <Image
-                  alt="Representative student from CBA Academy"
+                  alt="Representative student from Ash Academy"
                   className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
                   src="/images/img_9.jpg"
                   fill
@@ -78,7 +78,7 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
                 Contact us today for batch dates &amp; fees:
               </p>
               <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white">
-                CBA Academy
+                Ash Academy
               </h4>
               <p className="text-xs sm:text-sm text-slate-200">
                 Start your professional journey
