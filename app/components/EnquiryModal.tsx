@@ -35,7 +35,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           onClick={onClose}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-sm"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
@@ -43,7 +43,8 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
             exit={{ opacity: 0, scale: 0.92, y: 20 }}
             transition={{ type: "spring", stiffness: 360, damping: 26 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border border-slate-100"
+            style={{ backgroundColor: "#ffffff", color: "#0f172a" }}
+            className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-5 sm:p-8 border border-slate-100"
             role="dialog"
             aria-modal="true"
           >
@@ -51,7 +52,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
               whileHover={{ scale: 1.1, rotate: 90 }}
               whileTap={{ scale: 0.9 }}
               onClick={onClose}
-              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
+              className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
               aria-label="Close dialog"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,14 +60,17 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
               </svg>
             </motion.button>
 
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-50 text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+            <div className="mb-5 sm:mb-6 pr-6">
+              <div
+                style={{ backgroundColor: "#f0f3ff", color: "#253b97" }}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f0f3ff] text-[#253b97] text-xs font-semibold uppercase tracking-wider mb-2"
+              >
                 Admissions Open
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
                 Apply to CBA Academy
               </h3>
-              <p className="text-sm text-slate-500 mt-1">
+              <p className="text-xs sm:text-sm text-slate-500 mt-1">
                 Book a 1-on-1 counseling session and get full curriculum details.
               </p>
             </div>
@@ -100,7 +104,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   onSubmit={handleSubmit}
-                  className="space-y-4"
+                  className="space-y-3.5 sm:space-y-4"
                 >
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
@@ -112,7 +116,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       placeholder="Enter your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
                     />
                   </div>
 
@@ -126,7 +130,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       placeholder="Enter your mobile number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
                     />
                   </div>
 
@@ -139,7 +143,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
                     />
                   </div>
 
@@ -150,7 +154,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                     <select
                       value={formData.course}
                       onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white"
+                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent bg-white"
                     >
                       <option value="Human Resource Management">Human Resource Management</option>
                       <option value="Financial Accounting">Financial Accounting</option>
@@ -160,12 +164,13 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                     </select>
                   </div>
 
-                  <div className="pt-2">
+                  <div className="pt-1 sm:pt-2">
                     <motion.button
                       whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                       type="submit"
-                      className="w-full py-3 rounded-xl bg-primary hover:bg-primary-dark text-white font-semibold text-sm transition-colors shadow-md shadow-primary/25 cursor-pointer"
+                      style={{ backgroundColor: "#253b97", color: "#ffffff" }}
+                      className="w-full py-2.5 sm:py-3 rounded-xl bg-[#253b97] hover:bg-[#1c2d73] text-white font-semibold text-sm transition-colors shadow-md shadow-[#253b97]/25 cursor-pointer"
                     >
                       Submit Application
                     </motion.button>

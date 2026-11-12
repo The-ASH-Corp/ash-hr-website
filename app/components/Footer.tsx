@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -17,28 +18,30 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.6 }}
-      className="bg-executive-navy text-white pt-16 pb-12 border-t border-slate-800"
+      style={{ backgroundColor: "#0f172a", color: "#ffffff" }}
+      className="bg-[#0f172a] text-white pt-12 pb-8 sm:pt-16 sm:pb-12 2xl:pt-20 2xl:pb-14 border-t border-slate-800"
       data-purpose="site-footer"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[2200px]:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-12 gap-8 sm:gap-10 2xl:gap-14 pb-10 sm:pb-12 2xl:pb-16 border-b border-slate-800">
           {/* About Column */}
-          <div className="lg:col-span-5 space-y-4">
-            <motion.div
-              whileHover={{ x: 2 }}
-              className="flex items-center gap-2 w-fit"
+          <div className="sm:col-span-3 lg:col-span-5 space-y-4 2xl:space-y-5">
+            <motion.a
+              href="#home"
+              whileHover={{ x: 2, scale: 1.02 }}
+              className="inline-flex items-center w-fit"
             >
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg">
-                C
+              <div className="relative h-12 w-24 2xl:h-14 2xl:w-28 min-[2200px]:h-16 min-[2200px]:w-32 overflow-hidden">
+                <Image
+                  src="/images/ASH Logo.png"
+                  alt="ASH Academy Logo"
+                  fill
+                  sizes="128px"
+                  className="object-cover object-[center_45%] brightness-0 invert"
+                />
               </div>
-              <span className="text-2xl font-extrabold tracking-tight text-white leading-none">
-                cba
-                <span className="text-slate-400 text-base font-semibold">
-                  academy
-                </span>
-              </span>
-            </motion.div>
-            <p className="text-xs text-slate-400 leading-relaxed pr-6">
+            </motion.a>
+            <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400 leading-relaxed lg:pr-6">
               <strong>CBA Academy</strong> is a career-focused professional
               training institute dedicated to building job-ready skills for
               today&apos;s competitive corporate world. We offer industry-relevant
@@ -48,7 +51,7 @@ export default function Footer() {
               <strong>English Communication</strong>, designed to transform
               students into confident professionals.
             </p>
-            <p className="text-xs text-slate-400 leading-relaxed pr-6">
+            <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400 leading-relaxed lg:pr-6">
               Our programs combine <strong>expert-led training</strong>,{" "}
               <strong>practical exposure</strong>, and{" "}
               <strong>internship support</strong>, ensuring every learner is
@@ -56,7 +59,7 @@ export default function Footer() {
             </p>
 
             {/* Social Icons */}
-            <div className="flex items-center space-x-3 pt-2">
+            <div className="flex items-center space-x-3 2xl:space-x-4 pt-2">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.short}
@@ -64,7 +67,7 @@ export default function Footer() {
                   whileHover={{ y: -4, scale: 1.12 }}
                   whileTap={{ scale: 0.94 }}
                   transition={{ type: "spring", stiffness: 400, damping: 16 }}
-                  className="w-8 h-8 rounded-full bg-slate-800 hover:bg-primary text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs font-bold"
+                  className="w-8 h-8 2xl:w-10 2xl:h-10 min-[2200px]:w-11 min-[2200px]:h-11 rounded-full bg-slate-800 hover:bg-[#253b97] text-slate-300 hover:text-white flex items-center justify-center transition-colors text-xs 2xl:text-sm font-bold"
                   href={social.href}
                   {...(social.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
@@ -77,11 +80,11 @@ export default function Footer() {
           </div>
 
           {/* Links: Our Course */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+          <div className="sm:col-span-1 lg:col-span-2 space-y-3 2xl:space-y-4">
+            <h4 className="text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-white uppercase tracking-wider">
               Our Course
             </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
+            <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400">
               {[
                 { label: "HR Course", href: "#courses" },
                 { label: "Office Administration", href: "#courses" },
@@ -103,11 +106,11 @@ export default function Footer() {
           </div>
 
           {/* Links: Our Community */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+          <div className="sm:col-span-1 lg:col-span-2 space-y-3 2xl:space-y-4">
+            <h4 className="text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-white uppercase tracking-wider">
               Our Community
             </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
+            <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400">
               {[
                 { label: "Help Center", href: "#" },
                 { label: "Our Partners", href: "#" },
@@ -129,11 +132,11 @@ export default function Footer() {
           </div>
 
           {/* Links: Company Resources */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+          <div className="sm:col-span-1 lg:col-span-3 space-y-3 2xl:space-y-4">
+            <h4 className="text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-white uppercase tracking-wider">
               Company Resources
             </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
+            <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400">
               {[
                 { label: "Help Center", href: "#" },
                 { label: "Our Partners", href: "#" },
@@ -156,9 +159,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div className="pt-6 sm:pt-8 2xl:pt-10 flex flex-col sm:flex-row items-center justify-between text-xs 2xl:text-sm min-[2200px]:text-base text-slate-500 gap-4 text-center sm:text-left">
           <p>Copyright © 2025 CBA Academy. All rights reserved.</p>
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-6 2xl:space-x-8">
             {["Services", "Help & FAQs", "Careers"].map((item) => (
               <motion.a
                 key={item}

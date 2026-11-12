@@ -51,26 +51,27 @@ export default function HowWeTeachSection() {
 
   return (
     <section
-      className="py-20 bg-slate-900 text-white relative overflow-hidden"
+      style={{ backgroundColor: "#0f172a", color: "#ffffff" }}
+      className="py-14 sm:py-16 lg:py-20 2xl:py-28 min-[2200px]:py-32 bg-slate-900 text-white relative overflow-hidden"
       data-purpose="hands-on-framework"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[2200px]:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center max-w-2xl mx-auto mb-14 space-y-3"
+          className="text-center max-w-2xl 2xl:max-w-3xl min-[2200px]:max-w-4xl mx-auto mb-10 sm:mb-14 2xl:mb-20 space-y-2.5 sm:space-y-3 2xl:space-y-4"
         >
-          <span className="text-xs font-semibold uppercase tracking-wider text-sky-300">
+          <span className="text-xs 2xl:text-sm min-[2200px]:text-base font-semibold uppercase tracking-wider text-sky-300 block">
             How We Teach
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-bold tracking-tight">
             Practical, Hands-On Learning for{" "}
             <span className="text-sky-300">Real-World</span> Success
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed">
             At CBA Academy, we focus on practical skills that prepare you for the
             workplace. Our unique training approach ensures you are job-ready from
             day one.
@@ -78,23 +79,23 @@ export default function HowWeTeachSection() {
         </motion.div>
 
         {/* 4 Pillars Surrounding Center Graphic */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 2xl:gap-12 items-center mb-12 sm:mb-14 2xl:mb-20">
           {/* Left 2 Pillars */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 2xl:gap-6">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 2xl:p-7 min-[2200px]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: 8, scale: 1.15 }}
-                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[2200px]:w-14 min-[2200px]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 2xl:w-6 2xl:h-6 min-[2200px]:w-7 min-[2200px]:h-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -107,10 +108,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base font-bold text-white mb-1">
+              <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
                 01. Practical Training
               </h3>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
                 You can gain skill &amp; industrial experience
               </p>
             </motion.div>
@@ -121,14 +122,14 @@ export default function HowWeTeachSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 2xl:p-7 min-[2200px]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: 8, scale: 1.15 }}
-                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[2200px]:w-14 min-[2200px]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 2xl:w-6 2xl:h-6 min-[2200px]:w-7 min-[2200px]:h-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -141,10 +142,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base font-bold text-white mb-1">
+              <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
                 02. Real Client Project
               </h3>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
                 Hands-on-experience &amp; meeting client need
               </p>
             </motion.div>
@@ -161,34 +162,34 @@ export default function HowWeTeachSection() {
             <motion.div
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 250, damping: 20 }}
-              className="relative w-full max-w-xs rounded-2xl overflow-hidden border border-white/20 aspect-[3/4] shadow-2xl group"
+              className="relative w-full max-w-[260px] sm:max-w-xs xl:max-w-sm 2xl:max-w-md min-[2200px]:max-w-lg rounded-2xl overflow-hidden border border-white/20 aspect-[3/4] shadow-2xl group"
             >
               <Image
                 alt="Two accomplished business graduates representing CBA Academy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 src="/images/img_8.jpg"
                 fill
-                sizes="(max-width: 768px) 100vw, 320px"
+                sizes="(max-width: 640px) 260px, (max-width: 1536px) 384px, 512px"
               />
             </motion.div>
           </motion.div>
 
           {/* Right 2 Pillars */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 2xl:gap-6">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 2xl:p-7 min-[2200px]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: -8, scale: 1.15 }}
-                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[2200px]:w-14 min-[2200px]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 2xl:w-6 2xl:h-6 min-[2200px]:w-7 min-[2200px]:h-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -201,10 +202,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base font-bold text-white mb-1">
+              <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
                 03. Interview Preparation
               </h3>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
                 Improve your communication skills and confidence
               </p>
             </motion.div>
@@ -215,14 +216,14 @@ export default function HowWeTeachSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 2xl:p-7 min-[2200px]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: -8, scale: 1.15 }}
-                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[2200px]:w-14 min-[2200px]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 2xl:w-6 2xl:h-6 min-[2200px]:w-7 min-[2200px]:h-7"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -241,10 +242,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base font-bold text-white mb-1">
+              <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
                 04. Achieve Your Dream Career
               </h3>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
                 Setting clear goals, gaining the necessary skills and experience
               </p>
             </motion.div>
@@ -252,8 +253,8 @@ export default function HowWeTeachSection() {
         </div>
 
         {/* Clean Stat Counter Bar */}
-        <div className="border-t border-white/10 pt-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="border-t border-white/10 pt-8 sm:pt-10 2xl:pt-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 2xl:gap-12 text-center">
             {stats.map((stat, idx) => (
               <motion.div
                 key={stat.label}
@@ -264,10 +265,10 @@ export default function HowWeTeachSection() {
                 whileHover={{ y: -4, scale: 1.05 }}
                 className="cursor-default"
               >
-                <div className="text-3xl sm:text-4xl font-extrabold text-white tabular-nums">
+                <div className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-extrabold text-white tabular-nums">
                   <AnimatedStat to={stat.to} suffix={stat.suffix} />
                 </div>
-                <p className="text-xs uppercase tracking-wider text-slate-400 mt-1">
+                <p className="text-[11px] sm:text-xs 2xl:text-sm min-[2200px]:text-base uppercase tracking-wider text-slate-400 mt-1 2xl:mt-2">
                   {stat.label}
                 </p>
               </motion.div>
