@@ -1,6 +1,54 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { motion, useInView, animate } from "framer-motion";
+
+interface AnimatedStatProps {
+  from?: number;
+  to: number;
+  suffix: string;
+  duration?: number;
+}
+
+function AnimatedStat({
+  from = 0,
+  to,
+  suffix,
+  duration = 1.8,
+}: AnimatedStatProps) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [displayValue, setDisplayValue] = useState(from);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const controls = animate(from, to, {
+      duration,
+      ease: [0.16, 1, 0.3, 1],
+      onUpdate: (latest) => {
+        setDisplayValue(Math.round(latest));
+      },
+    });
+    return () => controls.stop();
+  }, [isInView, from, to, duration]);
+
+  return (
+    <span ref={ref}>
+      {displayValue}
+      {suffix}
+    </span>
+  );
+}
 
 export default function HowWeTeachSection() {
+  const stats = [
+    { to: 50, suffix: "+", label: "Job Oriented Courses" },
+    { to: 15, suffix: "+", label: "Years Experience" },
+    { to: 20, suffix: "k+", label: "Students Completed" },
+    { to: 98, suffix: "%", label: "Placement Rate" },
+  ];
+
   return (
     <section
       className="py-20 bg-slate-900 text-white relative overflow-hidden"
@@ -8,7 +56,13 @@ export default function HowWeTeachSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-2xl mx-auto mb-14 space-y-3"
+        >
           <span className="text-xs font-semibold uppercase tracking-wider text-sky-300">
             How We Teach
           </span>
@@ -21,14 +75,24 @@ export default function HowWeTeachSection() {
             workplace. Our unique training approach ensures you are job-ready from
             day one.
           </p>
-        </div>
+        </motion.div>
 
         {/* 4 Pillars Surrounding Center Graphic */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-14">
           {/* Left 2 Pillars */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 group">
-              <div className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+            >
+              <motion.div
+                whileHover={{ rotate: 8, scale: 1.15 }}
+                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -42,17 +106,27 @@ export default function HowWeTeachSection() {
                     strokeWidth="2"
                   ></path>
                 </svg>
-              </div>
+              </motion.div>
               <h3 className="text-base font-bold text-white mb-1">
                 01. Practical Training
               </h3>
               <p className="text-xs text-slate-300">
                 You can gain skill &amp; industrial experience
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 group">
-              <div className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+            >
+              <motion.div
+                whileHover={{ rotate: 8, scale: 1.15 }}
+                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -66,19 +140,29 @@ export default function HowWeTeachSection() {
                     strokeWidth="2"
                   ></path>
                 </svg>
-              </div>
+              </motion.div>
               <h3 className="text-base font-bold text-white mb-1">
                 02. Real Client Project
               </h3>
               <p className="text-xs text-slate-300">
                 Hands-on-experience &amp; meeting client need
               </p>
-            </div>
+            </motion.div>
           </div>
 
           {/* Center Image Showcase */}
-          <div className="lg:col-span-4 flex justify-center">
-            <div className="relative w-full max-w-xs rounded-2xl overflow-hidden border border-white/20 aspect-[3/4] shadow-2xl group">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-4 flex justify-center"
+          >
+            <motion.div
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 250, damping: 20 }}
+              className="relative w-full max-w-xs rounded-2xl overflow-hidden border border-white/20 aspect-[3/4] shadow-2xl group"
+            >
               <Image
                 alt="Two accomplished business graduates representing CBA Academy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -86,13 +170,23 @@ export default function HowWeTeachSection() {
                 fill
                 sizes="(max-width: 768px) 100vw, 320px"
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right 2 Pillars */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 group">
-              <div className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+            >
+              <motion.div
+                whileHover={{ rotate: -8, scale: 1.15 }}
+                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -106,17 +200,27 @@ export default function HowWeTeachSection() {
                     strokeWidth="2"
                   ></path>
                 </svg>
-              </div>
+              </motion.div>
               <h3 className="text-base font-bold text-white mb-1">
                 03. Interview Preparation
               </h3>
               <p className="text-xs text-slate-300">
                 Improve your communication skills and confidence
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 group">
-              <div className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white/5 p-5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+            >
+              <motion.div
+                whileHover={{ rotate: -8, scale: 1.15 }}
+                className="w-9 h-9 rounded-lg bg-white/10 text-sky-300 flex items-center justify-center mb-3 transition-transform"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -136,56 +240,41 @@ export default function HowWeTeachSection() {
                     strokeWidth="2"
                   ></path>
                 </svg>
-              </div>
+              </motion.div>
               <h3 className="text-base font-bold text-white mb-1">
                 04. Achieve Your Dream Career
               </h3>
               <p className="text-xs text-slate-300">
                 Setting clear goals, gaining the necessary skills and experience
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Clean Stat Counter Bar */}
         <div className="border-t border-white/10 pt-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-white">
-                50+
-              </div>
-              <p className="text-xs uppercase tracking-wider text-slate-400 mt-1">
-                Job Oriented Courses
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-white">
-                15+
-              </div>
-              <p className="text-xs uppercase tracking-wider text-slate-400 mt-1">
-                Years Experience
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-white">
-                20k+
-              </div>
-              <p className="text-xs uppercase tracking-wider text-slate-400 mt-1">
-                Students Completed
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-white">
-                98%
-              </div>
-              <p className="text-xs uppercase tracking-wider text-slate-400 mt-1">
-                Placement Rate
-              </p>
-            </div>
+            {stats.map((stat, idx) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: idx * 0.1 }}
+                whileHover={{ y: -4, scale: 1.05 }}
+                className="cursor-default"
+              >
+                <div className="text-3xl sm:text-4xl font-extrabold text-white tabular-nums">
+                  <AnimatedStat to={stat.to} suffix={stat.suffix} />
+                </div>
+                <p className="text-xs uppercase tracking-wider text-slate-400 mt-1">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
-
