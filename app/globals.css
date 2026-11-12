@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #253b97;
+  --color-primary-dark: #1c2d73;
+  --color-primary-light: #3b54be;
+  --color-primary-50: #f0f3ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+
+  --color-surface: #fbf8ff;
+  --color-surface-alt: #f3f4fa;
+  --color-surface-card: #ffffff;
+
+  --color-executive-navy: #0f172a;
+  --color-executive-slate: #475569;
+  --color-executive-muted: #64748b;
+
+  --color-accent-gold: #eab308;
+  --color-accent-teal: #0ea5e9;
+
+  --font-sans: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --shadow-card-soft: 0 10px 30px -5px rgba(37, 59, 151, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+  --shadow-card-hover: 0 20px 35px -5px rgba(37, 59, 151, 0.14), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+  --shadow-executive: 0 25px 50px -12px rgba(28, 45, 115, 0.25);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fbf8ff;
+  --foreground: #0f172a;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+.executive-gradient {
+  background: linear-gradient(135deg, #1c2d73 0%, #253b97 50%, #304ac4 100%);
+}
+
+.executive-card-gradient {
+  background: linear-gradient(145deg, #ffffff 0%, #f6f8fd 100%);
+}
+
+.badge-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.radial-glow {
+  background: radial-gradient(circle at top right, rgba(79, 110, 247, 0.25) 0%, transparent 65%);
 }
