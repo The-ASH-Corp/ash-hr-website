@@ -26,15 +26,64 @@
   --shadow-executive: 0 25px 50px -12px rgba(28, 45, 115, 0.25);
 }
 
-:root {
-  --background: #fbf8ff;
-  --foreground: #0f172a;
+:root,
+html {
+  color-scheme: light only;
+  font-size: 14px;
+  --background: #fbf8ff !important;
+  --foreground: #0f172a !important;
+  --color-primary: #253b97;
+  --color-primary-dark: #1c2d73;
+  --color-primary-light: #3b54be;
+  --color-primary-50: #f0f3ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-surface: #fbf8ff;
+  --color-executive-navy: #0f172a;
 }
 
+@media (min-width: 1920px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  html {
+    color-scheme: light only;
+    --background: #fbf8ff !important;
+    --foreground: #0f172a !important;
+  }
+}
+
+*,
+html,
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+html,
+body {
+  background-color: #fbf8ff !important;
+  color: #0f172a !important;
   font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  overflow-x: clip;
 }
 
 .executive-gradient {

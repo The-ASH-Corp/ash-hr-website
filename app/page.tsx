@@ -18,7 +18,10 @@ export default function Home() {
   const closeEnquiry = () => setIsEnquiryModalOpen(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-surface text-executive-navy selection:bg-primary-100 selection:text-primary">
+    <div
+      style={{ backgroundColor: "#fbf8ff", color: "#0f172a" }}
+      className="min-h-screen flex flex-col overflow-x-clip bg-[#fbf8ff] text-[#0f172a] selection:bg-[#e0e7ff] selection:text-[#253b97]"
+    >
       <Header onOpenEnquiry={openEnquiry} />
 
       <main className="flex-1">
