@@ -1,32 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { testimonialsData } from "./landingData";
 
 export default function TestimonialsSection() {
-  const testimonials = [
-    {
-      initials: "ST",
-      role: "Corporate Graduate",
-      quote:
-        "I'm very pleased with my experience at this training institute. The courses were relevant and well-taught, and the instructors were very professional. The practical skills I gained have been essential for my career growth.",
-      featured: false,
-    },
-    {
-      initials: "EA",
-      role: "Executive Associate",
-      quote:
-        "This institute exceeded my expectations. The training was thorough and practical, and the staff were supportive and knowledgeable. My understanding of the subject was greatly aided by the practical approach.",
-      featured: true,
-    },
-    {
-      initials: "AL",
-      role: "Academy Alumni",
-      quote:
-        "I am glad that I was a student of Ash Academy. The hands-on projects felt like real-world challenges, making the learning process dynamic and practical. Plus, the support staff went above and beyond.",
-      featured: false,
-    },
-  ];
-
   return (
     <section
       style={{ backgroundColor: "#ffffff" }}
@@ -44,22 +21,23 @@ export default function TestimonialsSection() {
             className="lg:col-span-5 space-y-3.5 sm:space-y-4 text-center lg:text-left"
           >
             <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#253b97] block">
-              Students Testimonial
+              {testimonialsData.eyebrow}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-slate-900 tracking-tight leading-tight">
-              What Our Happy <span className="text-[#253b97]">Students</span> Say!
+              {testimonialsData.headingPrefix}{" "}
+              <span className="text-[#253b97]">
+                {testimonialsData.headingHighlight}
+              </span>{" "}
+              {testimonialsData.headingSuffix}
             </h2>
             <p className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-relaxed pt-1 max-w-xl mx-auto lg:mx-0">
-              Discover what our students have to say about their experiences.
-              From transformative learning moments to supportive instructors,
-              their stories highlight why they&apos;re excited about the journey
-              they&apos;ve had with us.
+              {testimonialsData.description}
             </p>
           </motion.div>
 
           {/* Right Testimonial Quote Cards Stack */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-            {testimonials.map((t, index) => (
+            {testimonialsData.testimonials.map((t, index) => (
               <motion.div
                 key={t.initials}
                 initial={{ opacity: 0, x: 35, y: 12 }}

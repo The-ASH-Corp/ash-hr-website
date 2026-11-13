@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { accreditationData } from "./landingData";
 
 interface AccreditationSectionProps {
   onOpenEnquiry?: () => void;
@@ -46,18 +47,20 @@ export default function AccreditationSection({
         >
           <div className="lg:col-span-7">
             <span className="inline-block text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] mb-2">
-              We Are Providing
+              {accreditationData.eyebrow}
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-bold text-slate-900 tracking-tight">
-              10+ <span className="text-[#253b97]">International</span> Accreditation
-              &amp; Certification
+              {accreditationData.headingPrefix}{" "}
+              <span className="text-[#253b97]">
+                {accreditationData.headingHighlight}
+              </span>{" "}
+              {accreditationData.headingSuffix}
             </h2>
           </div>
           <div className="lg:col-span-5">
             <p className="text-slate-600 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed max-w-2xl lg:max-w-none mx-auto lg:mx-0">
-              At <strong>Ash Academy</strong>, students are awarded several
-              certifications that are recognized both nationally and
-              internationally to gain valuable skills and qualifications.
+              At <strong>{accreditationData.brandName}</strong>
+              {accreditationData.descriptionSuffix}
             </p>
           </div>
         </motion.div>
@@ -97,15 +100,15 @@ export default function AccreditationSection({
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-lg min-[2200px]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
-                Case Study Based Learning
+                {accreditationData.cards[0].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
-                Direct access for learners to work on real-time industry case
-                studies.
+                {accreditationData.cards[0].description}
               </p>
             </div>
             <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[2200px]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
-              Practical Rigor <span className="ml-1.5">→</span>
+              {accreditationData.cards[0].footerLabel}{" "}
+              <span className="ml-1.5">→</span>
             </div>
           </motion.div>
 
@@ -142,15 +145,15 @@ export default function AccreditationSection({
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-lg min-[2200px]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
-                Practical Work Experience
+                {accreditationData.cards[1].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
-                Equipping the learners to work independently with practical
-                experience.
+                {accreditationData.cards[1].description}
               </p>
             </div>
             <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[2200px]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
-              Hands-on Projects <span className="ml-1.5">→</span>
+              {accreditationData.cards[1].footerLabel}{" "}
+              <span className="ml-1.5">→</span>
             </div>
           </motion.div>
 
@@ -181,15 +184,15 @@ export default function AccreditationSection({
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-lg min-[2200px]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
-                100% Placement Assistance
+                {accreditationData.cards[2].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
-                Exclusive lifetime access to the Hire platform and top hiring
-                partners.
+                {accreditationData.cards[2].description}
               </p>
             </div>
             <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[2200px]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
-              Career Guarantee <span className="ml-1.5">→</span>
+              {accreditationData.cards[2].footerLabel}{" "}
+              <span className="ml-1.5">→</span>
             </div>
           </motion.div>
 
@@ -220,15 +223,15 @@ export default function AccreditationSection({
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-lg min-[2200px]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
-                Free Company Internship
+                {accreditationData.cards[3].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
-                Our Free Company Internship program lets you gain real-world
-                experience at no cost.
+                {accreditationData.cards[3].description}
               </p>
             </div>
             <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[2200px]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
-              Corporate Stint <span className="ml-1.5">→</span>
+              {accreditationData.cards[3].footerLabel}{" "}
+              <span className="ml-1.5">→</span>
             </div>
           </motion.div>
         </motion.div>
@@ -242,7 +245,7 @@ export default function AccreditationSection({
           className="mt-8 sm:mt-10 2xl:mt-14 text-center flex flex-col sm:flex-row items-center justify-center gap-3 2xl:gap-4"
         >
           <span className="text-xs sm:text-sm 2xl:text-base min-[2200px]:text-lg text-slate-600">
-            More than 10k+ happy Students rely on us
+            {accreditationData.bottomNote}
           </span>
           <motion.button
             onClick={onOpenEnquiry}
@@ -251,7 +254,7 @@ export default function AccreditationSection({
             style={{ backgroundColor: "#253b97", color: "#ffffff" }}
             className="inline-flex items-center px-5 2xl:px-7 py-2 2xl:py-2.5 rounded-full text-xs 2xl:text-sm min-[2200px]:text-base font-semibold text-white bg-[#253b97] hover:bg-[#1c2d73] transition-colors duration-200 cursor-pointer shadow-sm"
           >
-            More Courses
+            {accreditationData.ctaLabel}
           </motion.button>
         </motion.div>
       </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { whyChooseUsData } from "./landingData";
 
 interface WhyChooseUsSectionProps {
   onOpenEnquiry?: () => void;
@@ -10,14 +11,6 @@ interface WhyChooseUsSectionProps {
 export default function WhyChooseUsSection({
   onOpenEnquiry,
 }: WhyChooseUsSectionProps) {
-  const checkpoints = [
-    "More than 90% Pass Rate",
-    "Supportive Learning Environment",
-    "Daily Doubt Clearing Advantage",
-    "Access to Updated and Relevant Study Materials",
-    "Tailored Interview Preparation Support",
-  ];
-
   return (
     <section
       style={{ backgroundColor: "#fbf8ff" }}
@@ -42,9 +35,9 @@ export default function WhyChooseUsSection({
                 className="rounded-2xl 2xl:rounded-3xl overflow-hidden shadow-sm aspect-[4/5] bg-slate-100 relative group"
               >
                 <Image
-                  alt="Students engaged in collaborative professional learning"
+                  alt={whyChooseUsData.images[0].alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  src="/images/img_5.jpg"
+                  src={whyChooseUsData.images[0].src}
                   fill
                   sizes="(max-width: 768px) 45vw, (max-width: 1536px) 280px, 400px"
                 />
@@ -55,9 +48,9 @@ export default function WhyChooseUsSection({
                 className="rounded-2xl 2xl:rounded-3xl overflow-hidden shadow-sm aspect-[4/5] bg-slate-100 mt-4 sm:mt-6 2xl:mt-8 relative group"
               >
                 <Image
-                  alt="Student working on laptop in corporate environment"
+                  alt={whyChooseUsData.images[1].alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  src="/images/img_6.jpg"
+                  src={whyChooseUsData.images[1].src}
                   fill
                   sizes="(max-width: 768px) 45vw, (max-width: 1536px) 280px, 400px"
                 />
@@ -75,23 +68,24 @@ export default function WhyChooseUsSection({
           >
             <div className="text-center sm:text-left space-y-2">
               <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] block">
-                About Us
+                {whyChooseUsData.eyebrow}
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-bold text-slate-900 tracking-tight">
-                Why Choose <span className="text-[#253b97]">Us?</span>
+                {whyChooseUsData.headingPrefix}{" "}
+                <span className="text-[#253b97]">
+                  {whyChooseUsData.headingHighlight}
+                </span>
               </h2>
             </div>
             <p className="text-slate-600 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed text-center sm:text-left">
-              At <strong>Ash Academy</strong>, our goal is to give students
-              practical skills and knowledge for career success by combining
-              classroom lessons with real-world experience. We prepare you with
-              confidence for professional challenges.
+              At <strong>{whyChooseUsData.brandName}</strong>
+              {whyChooseUsData.descriptionSuffix}
             </p>
 
             {/* Checkpoint list and experience badge */}
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 2xl:gap-8 pt-2 items-center">
               <div className="sm:col-span-8 space-y-3 2xl:space-y-4">
-                {checkpoints.map((text, i) => (
+                {whyChooseUsData.checkpoints.map((text, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: 20 }}
@@ -137,10 +131,10 @@ export default function WhyChooseUsSection({
                 />
 
                 <span className="relative z-10 text-3xl sm:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-extrabold tracking-tight leading-none text-white">
-                  15+
+                  {whyChooseUsData.experienceBadge.value}
                 </span>
                 <span className="relative z-10 text-[11px] 2xl:text-xs font-semibold uppercase tracking-wider text-sky-200 mt-1 2xl:mt-2">
-                  Years Experience
+                  {whyChooseUsData.experienceBadge.label}
                 </span>
               </motion.div>
             </div>
@@ -154,7 +148,7 @@ export default function WhyChooseUsSection({
                 style={{ backgroundColor: "#253b97", color: "#ffffff" }}
                 className="px-5 2xl:px-7 py-2.5 2xl:py-3 rounded-full text-xs 2xl:text-sm min-[2200px]:text-base font-semibold uppercase tracking-wider text-white bg-[#253b97] hover:bg-[#1c2d73] transition-colors shadow-sm cursor-pointer"
               >
-                More About Us
+                {whyChooseUsData.ctaLabel}
               </motion.button>
               <motion.div
                 whileHover={{ x: 3 }}
@@ -162,19 +156,19 @@ export default function WhyChooseUsSection({
               >
                 <div className="relative w-10 h-10 2xl:w-12 2xl:h-12 rounded-full overflow-hidden border border-slate-200 shrink-0">
                   <Image
-                    alt="Fazalul Rahiman portrait"
+                    alt={whyChooseUsData.director.imageAlt}
                     className="w-full h-full object-cover"
-                    src="/images/img_7.jpg"
+                    src={whyChooseUsData.director.imageSrc}
                     fill
                     sizes="48px"
                   />
                 </div>
                 <div>
                   <h4 className="text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-slate-900 leading-tight">
-                    Fazalul Rahiman
+                    {whyChooseUsData.director.name}
                   </h4>
                   <p className="text-xs 2xl:text-sm text-slate-500 font-medium">
-                    CEO, HEAD DIRECTOR
+                    {whyChooseUsData.director.role}
                   </p>
                 </div>
               </motion.div>

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useInView, animate } from "framer-motion";
+import { howWeTeachData } from "./landingData";
 
 interface AnimatedStatProps {
   from?: number;
@@ -42,13 +43,6 @@ function AnimatedStat({
 }
 
 export default function HowWeTeachSection() {
-  const stats = [
-    { to: 50, suffix: "+", label: "Job Oriented Courses" },
-    { to: 15, suffix: "+", label: "Years Experience" },
-    { to: 20, suffix: "k+", label: "Students Completed" },
-    { to: 98, suffix: "%", label: "Placement Rate" },
-  ];
-
   return (
     <section
       style={{ backgroundColor: "#0f172a", color: "#ffffff" }}
@@ -65,16 +59,17 @@ export default function HowWeTeachSection() {
           className="text-center max-w-2xl 2xl:max-w-3xl min-[2200px]:max-w-4xl mx-auto mb-10 sm:mb-14 2xl:mb-20 space-y-2.5 sm:space-y-3 2xl:space-y-4"
         >
           <span className="text-xs 2xl:text-sm min-[2200px]:text-base font-semibold uppercase tracking-wider text-sky-300 block">
-            How We Teach
+            {howWeTeachData.eyebrow}
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-bold tracking-tight">
-            Practical, Hands-On Learning for{" "}
-            <span className="text-sky-300">Real-World</span> Success
+            {howWeTeachData.headingPrefix}{" "}
+            <span className="text-sky-300">
+              {howWeTeachData.headingHighlight}
+            </span>{" "}
+            {howWeTeachData.headingSuffix}
           </h2>
           <p className="text-slate-300 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed">
-            At Ash Academy, we focus on practical skills that prepare you for the
-            workplace. Our unique training approach ensures you are job-ready from
-            day one.
+            {howWeTeachData.description}
           </p>
         </motion.div>
 
@@ -109,10 +104,10 @@ export default function HowWeTeachSection() {
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
-                01. Practical Training
+                {howWeTeachData.leftPillars[0].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
-                You can gain skill &amp; industrial experience
+                {howWeTeachData.leftPillars[0].description}
               </p>
             </motion.div>
 
@@ -143,10 +138,10 @@ export default function HowWeTeachSection() {
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
-                02. Real Client Project
+                {howWeTeachData.leftPillars[1].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
-                Hands-on-experience &amp; meeting client need
+                {howWeTeachData.leftPillars[1].description}
               </p>
             </motion.div>
           </div>
@@ -165,9 +160,9 @@ export default function HowWeTeachSection() {
               className="relative w-full max-w-[260px] sm:max-w-xs xl:max-w-sm 2xl:max-w-md min-[2200px]:max-w-lg rounded-2xl overflow-hidden border border-white/20 aspect-[3/4] shadow-2xl group"
             >
               <Image
-                alt="Two accomplished business graduates representing Ash Academy"
+                alt={howWeTeachData.centerImage.alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                src="/images/img_8.jpg"
+                src={howWeTeachData.centerImage.src}
                 fill
                 sizes="(max-width: 640px) 260px, (max-width: 1536px) 384px, 512px"
               />
@@ -203,10 +198,10 @@ export default function HowWeTeachSection() {
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
-                03. Interview Preparation
+                {howWeTeachData.rightPillars[0].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
-                Improve your communication skills and confidence
+                {howWeTeachData.rightPillars[0].description}
               </p>
             </motion.div>
 
@@ -243,10 +238,10 @@ export default function HowWeTeachSection() {
                 </svg>
               </motion.div>
               <h3 className="text-base 2xl:text-xl min-[2200px]:text-2xl font-bold text-white mb-1 2xl:mb-2">
-                04. Achieve Your Dream Career
+                {howWeTeachData.rightPillars[1].title}
               </h3>
               <p className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300">
-                Setting clear goals, gaining the necessary skills and experience
+                {howWeTeachData.rightPillars[1].description}
               </p>
             </motion.div>
           </div>
@@ -255,7 +250,7 @@ export default function HowWeTeachSection() {
         {/* Clean Stat Counter Bar */}
         <div className="border-t border-white/10 pt-8 sm:pt-10 2xl:pt-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 2xl:gap-12 text-center">
-            {stats.map((stat, idx) => (
+            {howWeTeachData.stats.map((stat, idx) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}

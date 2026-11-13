@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { heroData } from "./landingData";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,16 +63,16 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-3 sm:px-3.5 2xl:px-4 py-1.5 2xl:py-2 rounded-full bg-white/10 border border-white/20 text-[11px] sm:text-xs 2xl:text-sm font-semibold tracking-wider text-sky-200 uppercase"
             >
               <span className="w-2 h-2 2xl:w-2.5 2xl:h-2.5 rounded-full bg-sky-300 animate-pulse"></span>
-              CREATE YOUR FUTURE
+              {heroData.badgeText}
             </motion.div>
 
             <motion.h1
               variants={itemVariants}
               className="text-3xl sm:text-5xl lg:text-6xl 2xl:text-7xl min-[2200px]:text-8xl font-bold tracking-tight leading-tight text-white"
             >
-              Upskill and <br className="hidden sm:inline" />
+              {heroData.headingLine1} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-indigo-200 to-white">
-                Upgrade Your Career
+                {heroData.headingHighlight}
               </span>
             </motion.h1>
 
@@ -79,9 +80,7 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[2200px]:text-2xl text-slate-200/90 max-w-xl 2xl:max-w-2xl min-[2200px]:max-w-3xl font-normal leading-relaxed mx-auto lg:mx-0"
             >
-              Kick start your Career Journey with recognised international standard
-              learning. Get Globally Approved Skills and Shape your Inspiring
-              Career.
+              {heroData.description}
             </motion.p>
 
             {/* Streamlined Demo Booking Form */}
@@ -102,7 +101,7 @@ export default function HeroSection() {
                     fillRule="evenodd"
                   ></path>
                 </svg>
-                Book your free demo class now
+                {heroData.formPrompt}
               </p>
 
               <AnimatePresence mode="wait">
@@ -153,7 +152,7 @@ export default function HeroSection() {
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                         className="w-full bg-transparent py-2 2xl:py-2.5 text-slate-800 placeholder-slate-400 text-sm 2xl:text-base min-[2200px]:text-lg focus:outline-none border-0"
-                        placeholder="Enter Contact Number"
+                        placeholder={heroData.inputPlaceholder}
                         required
                         type="tel"
                       />
@@ -164,7 +163,7 @@ export default function HeroSection() {
                       className="w-full sm:w-auto px-6 2xl:px-8 py-2.5 2xl:py-3 rounded-xl sm:rounded-full bg-amber-400 hover:bg-amber-300 text-slate-900 font-semibold text-sm 2xl:text-base min-[2200px]:text-lg transition-colors shadow-sm whitespace-nowrap shrink-0 cursor-pointer"
                       type="submit"
                     >
-                      Enquiry Now
+                      {heroData.submitLabel}
                     </motion.button>
                   </motion.form>
                 )}
@@ -178,31 +177,29 @@ export default function HeroSection() {
             >
               <div className="flex items-center gap-2.5 2xl:gap-3.5">
                 <div className="flex -space-x-2">
-                  {["/images/img_1.jpg", "/images/img_2.jpg", "/images/img_3.jpg"].map(
-                    (src, idx) => (
-                      <motion.div
-                        key={src}
-                        whileHover={{ y: -4, scale: 1.12, zIndex: 10 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                        className="relative"
-                      >
-                        <Image
-                          alt={`Student avatar ${idx + 1}`}
-                          className="inline-block h-8 w-8 2xl:h-10 2xl:w-10 rounded-full ring-2 ring-white/60 object-cover"
-                          src={src}
-                          width={40}
-                          height={40}
-                        />
-                      </motion.div>
-                    )
-                  )}
+                  {heroData.avatars.map((src, idx) => (
+                    <motion.div
+                      key={src}
+                      whileHover={{ y: -4, scale: 1.12, zIndex: 10 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                      className="relative"
+                    >
+                      <Image
+                        alt={`Student avatar ${idx + 1}`}
+                        className="inline-block h-8 w-8 2xl:h-10 2xl:w-10 rounded-full ring-2 ring-white/60 object-cover"
+                        src={src}
+                        width={40}
+                        height={40}
+                      />
+                    </motion.div>
+                  ))}
                 </div>
                 <div className="text-left">
                   <div className="flex text-amber-300 text-xs 2xl:text-sm">
                     ★ ★ ★ ★ ★
                   </div>
                   <p className="text-[11px] 2xl:text-xs text-slate-200 font-medium">
-                    (5k+ Reviews)
+                    {heroData.reviewsText}
                   </p>
                 </div>
               </div>
@@ -214,10 +211,10 @@ export default function HeroSection() {
                 className="flex items-center gap-2 text-white"
               >
                 <span className="text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-white">
-                  20,000+
+                  {heroData.studentsCount}
                 </span>
                 <span className="text-xs 2xl:text-sm min-[2200px]:text-base text-slate-300 font-normal">
-                  Happy Students
+                  {heroData.studentsLabel}
                 </span>
               </motion.div>
             </motion.div>
@@ -237,9 +234,9 @@ export default function HeroSection() {
             >
               <div className="rounded-2xl 2xl:rounded-3xl overflow-hidden border border-white/20 shadow-xl relative aspect-[4/5] bg-slate-900">
                 <Image
-                  alt="Two professional young academy students dressed in executive corporate formal attire"
+                  alt={heroData.heroImage.alt}
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  src="/images/img_4.png"
+                  src={heroData.heroImage.src}
                   fill
                   priority
                   sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, (max-width: 1536px) 512px, 672px"
@@ -256,18 +253,18 @@ export default function HeroSection() {
                 >
                   <div>
                     <div className="text-[9px] sm:text-[10px] 2xl:text-xs uppercase tracking-wider font-semibold text-slate-500">
-                      Placement Rate
+                      {heroData.placementBadge.leftLabel}
                     </div>
                     <div className="text-xs sm:text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-[#253b97]">
-                      96.8% Success
+                      {heroData.placementBadge.leftValue}
                     </div>
                   </div>
                   <div className="text-right">
                     <div className="text-[9px] sm:text-[10px] 2xl:text-xs uppercase tracking-wider font-semibold text-slate-500">
-                      Recognition
+                      {heroData.placementBadge.rightLabel}
                     </div>
                     <div className="text-xs sm:text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-slate-800">
-                      10+ Global Certs
+                      {heroData.placementBadge.rightValue}
                     </div>
                   </div>
                 </motion.div>
@@ -283,12 +280,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.55 }}
           className="mt-10 sm:mt-14 2xl:mt-20 pt-6 2xl:pt-8 border-t border-white/10 grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-items-center sm:justify-center lg:justify-between gap-4 sm:gap-6 text-slate-300 text-[11px] sm:text-xs 2xl:text-sm min-[2200px]:text-base font-semibold tracking-wider uppercase"
         >
-          {[
-            { badge: "C", label: "CPD Accredited", rounded: "rounded" },
-            { badge: "IAF", label: "Member", rounded: "rounded-full" },
-            { badge: "E", label: "ELACI Approved", rounded: "rounded" },
-            { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded-full" },
-          ].map((item) => (
+          {heroData.accreditations.map((item) => (
             <motion.span
               key={item.label}
               whileHover={{ scale: 1.06, y: -2, color: "#ffffff" }}

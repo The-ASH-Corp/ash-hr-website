@@ -2,16 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { footerData } from "./landingData";
 
 export default function Footer() {
-  const socialLinks = [
-    { label: "WhatsApp", short: "WA", href: "https://wa.me/919072801300", external: true },
-    { label: "Facebook", short: "FB", href: "#facebook", external: false },
-    { label: "Instagram", short: "IG", href: "#instagram", external: false },
-    { label: "LinkedIn", short: "IN", href: "#linkedin", external: false },
-    { label: "YouTube", short: "YT", href: "#youtube", external: false },
-  ];
-
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -33,8 +26,8 @@ export default function Footer() {
             >
               <div className="relative h-12 w-24 2xl:h-14 2xl:w-28 min-[2200px]:h-16 min-[2200px]:w-32 overflow-hidden">
                 <Image
-                  src="/images/ASH Logo.png"
-                  alt="ASH Academy Logo"
+                  src={footerData.logo.src}
+                  alt={footerData.logo.alt}
                   fill
                   sizes="128px"
                   className="object-cover object-[center_45%] brightness-0 invert"
@@ -60,7 +53,7 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center space-x-3 2xl:space-x-4 pt-2">
-              {socialLinks.map((social) => (
+              {footerData.socialLinks.map((social) => (
                 <motion.a
                   key={social.short}
                   aria-label={social.label}
@@ -85,13 +78,7 @@ export default function Footer() {
               Our Course
             </h4>
             <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400">
-              {[
-                { label: "HR Course", href: "#courses" },
-                { label: "Office Administration", href: "#courses" },
-                { label: "Accounting Course", href: "#courses" },
-                { label: "Spoken English", href: "#courses" },
-                { label: "Terms & Condition", href: "#" },
-              ].map((link) => (
+              {footerData.courseLinks.map((link) => (
                 <li key={link.label}>
                   <motion.a
                     whileHover={{ x: 4 }}
@@ -111,13 +98,7 @@ export default function Footer() {
               Our Community
             </h4>
             <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400">
-              {[
-                { label: "Help Center", href: "#" },
-                { label: "Our Partners", href: "#" },
-                { label: "Suggestions", href: "#" },
-                { label: "Our Blog", href: "#blogs" },
-                { label: "Newsletter", href: "#" },
-              ].map((link) => (
+              {footerData.communityLinks.map((link) => (
                 <li key={link.label}>
                   <motion.a
                     whileHover={{ x: 4 }}
@@ -137,13 +118,7 @@ export default function Footer() {
               Company Resources
             </h4>
             <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[2200px]:text-base text-slate-400">
-              {[
-                { label: "Help Center", href: "#" },
-                { label: "Our Partners", href: "#" },
-                { label: "Suggestions", href: "#" },
-                { label: "Our Blog", href: "#blogs" },
-                { label: "Newsletter", href: "#" },
-              ].map((link) => (
+              {footerData.resourceLinks.map((link) => (
                 <li key={link.label}>
                   <motion.a
                     whileHover={{ x: 4 }}
@@ -160,9 +135,9 @@ export default function Footer() {
 
         {/* Bottom Copyright bar */}
         <div className="pt-6 sm:pt-8 2xl:pt-10 flex flex-col sm:flex-row items-center justify-between text-xs 2xl:text-sm min-[2200px]:text-base text-slate-500 gap-4 text-center sm:text-left">
-          <p>Copyright © 2025 Ash Academy. All rights reserved.</p>
+          <p>{footerData.copyright}</p>
           <div className="flex items-center space-x-6 2xl:space-x-8">
-            {["Services", "Help & FAQs", "Careers"].map((item) => (
+            {footerData.bottomLinks.map((item) => (
               <motion.a
                 key={item}
                 whileHover={{ y: -2 }}
