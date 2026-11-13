@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import ContactHeroSection from "../components/contact/ContactHeroSection";
+import ContactInfoSection from "../components/contact/ContactInfoSection";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
 
@@ -21,6 +22,7 @@ export default function ContactPage() {
 
       <main className="flex-1">
         <ContactHeroSection />
+        <ContactInfoSection />
       </main>
 
       <Footer />
