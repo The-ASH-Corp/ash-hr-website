@@ -16,7 +16,7 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
       data-purpose="cta-banner"
       id="contact"
     >
-      <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}

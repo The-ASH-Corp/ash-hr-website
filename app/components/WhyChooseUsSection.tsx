@@ -18,7 +18,7 @@ export default function WhyChooseUsSection({
       data-purpose="why-choose-us"
       id="about"
     >
-      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[2200px]:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 2xl:gap-16 items-center">
           {/* Visual Grid */}
           <motion.div
@@ -70,14 +70,14 @@ export default function WhyChooseUsSection({
               <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] block">
                 {whyChooseUsData.eyebrow}
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-bold text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-slate-900 tracking-tight">
                 {whyChooseUsData.headingPrefix}{" "}
                 <span className="text-[#253b97]">
                   {whyChooseUsData.headingHighlight}
                 </span>
               </h2>
             </div>
-            <p className="text-slate-600 text-sm sm:text-base 2xl:text-lg min-[2200px]:text-xl leading-relaxed text-center sm:text-left">
+            <p className="text-slate-600 text-sm sm:text-base 2xl:text-lg min-[137.5rem]:text-xl leading-relaxed text-center sm:text-left">
               At <strong>{whyChooseUsData.brandName}</strong>
               {whyChooseUsData.descriptionSuffix}
             </p>
@@ -101,7 +101,7 @@ export default function WhyChooseUsSection({
                     >
                       ✓
                     </span>
-                    <span className="text-xs sm:text-sm 2xl:text-base min-[2200px]:text-lg font-medium text-slate-800">
+                    <span className="text-xs sm:text-sm 2xl:text-base min-[137.5rem]:text-lg font-medium text-slate-800">
                       {text}
                     </span>
                   </motion.div>
@@ -130,7 +130,7 @@ export default function WhyChooseUsSection({
                   className="pointer-events-none absolute inset-y-0 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent"
                 />
 
-                <span className="relative z-10 text-3xl sm:text-4xl 2xl:text-5xl min-[2200px]:text-6xl font-extrabold tracking-tight leading-none text-white">
+                <span className="relative z-10 text-3xl sm:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-extrabold tracking-tight leading-none text-white">
                   {whyChooseUsData.experienceBadge.value}
                 </span>
                 <span className="relative z-10 text-[11px] 2xl:text-xs font-semibold uppercase tracking-wider text-sky-200 mt-1 2xl:mt-2">
@@ -146,7 +146,7 @@ export default function WhyChooseUsSection({
                 whileHover={{ scale: 1.05, y: -1 }}
                 whileTap={{ scale: 0.95 }}
                 style={{ backgroundColor: "#253b97", color: "#ffffff" }}
-                className="px-5 2xl:px-7 py-2.5 2xl:py-3 rounded-full text-xs 2xl:text-sm min-[2200px]:text-base font-semibold uppercase tracking-wider text-white bg-[#253b97] hover:bg-[#1c2d73] transition-colors shadow-sm cursor-pointer"
+                className="px-5 2xl:px-7 py-2.5 2xl:py-3 rounded-full text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold uppercase tracking-wider text-white bg-[#253b97] hover:bg-[#1c2d73] transition-colors shadow-sm cursor-pointer"
               >
                 {whyChooseUsData.ctaLabel}
               </motion.button>
@@ -164,7 +164,7 @@ export default function WhyChooseUsSection({
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm 2xl:text-base min-[2200px]:text-lg font-bold text-slate-900 leading-tight">
+                  <h4 className="text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-slate-900 leading-tight">
                     {whyChooseUsData.director.name}
                   </h4>
                   <p className="text-xs 2xl:text-sm text-slate-500 font-medium">

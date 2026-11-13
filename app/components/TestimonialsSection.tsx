@@ -10,8 +10,8 @@ export default function TestimonialsSection() {
       className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden"
       data-purpose="testimonials"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 min-[137.5rem]:gap-20 items-center">
           {/* Left Title and Description */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
               </span>{" "}
               {testimonialsData.headingSuffix}
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-relaxed pt-1 max-w-xl mx-auto lg:mx-0">
+            <p className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-relaxed pt-1 max-w-xl min-[137.5rem]:max-w-none mx-auto lg:mx-0">
               {testimonialsData.description}
             </p>
           </motion.div>

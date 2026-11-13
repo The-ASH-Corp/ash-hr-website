@@ -50,12 +50,12 @@ export default function AboutHeroSection() {
         className="pointer-events-none absolute -bottom-28 right-10 sm:right-24 lg:right-32 w-[240px] h-[240px] sm:w-[310px] sm:h-[310px] lg:w-[340px] lg:h-[340px] rounded-full border border-white/[0.08]"
       />
 
-      <div className="w-full max-w-7xl xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-3xl mx-auto text-center flex flex-col items-center"
+          className="max-w-3xl min-[137.5rem]:max-w-5xl mx-auto text-center flex flex-col items-center"
         >
           {/* Top Pill Badge */}
           <motion.div
@@ -95,7 +95,7 @@ export default function AboutHeroSection() {
           {/* Subtitle / Description */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-base lg:text-[17px] text-slate-200/90 font-normal leading-[1.75] max-w-[650px] mx-auto mb-7 sm:mb-8"
+            className="text-sm sm:text-base lg:text-[17px] text-slate-200/90 font-normal leading-[1.75] max-w-[650px] min-[137.5rem]:max-w-4xl mx-auto mb-7 sm:mb-8"
           >
             {aboutHeroData.description}
           </motion.p>

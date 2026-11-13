@@ -124,8 +124,8 @@ export const aboutServicesData: AboutServicesData = {
     rightDescription:
       "Start your professional career journey with industry-grade certifications.",
     phoneCompact: "9072801300",
-    email: "info@cbaacademy.in",
-    emailHref: "mailto:info@cbaacademy.in",
+    email: "info@ashacademy.in",
+    emailHref: "mailto:info@ashacademy.in",
     brochureLabel: "Request Prospectus Brochure",
   },
 };

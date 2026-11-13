@@ -69,14 +69,14 @@ export default function AboutServicesSection({
         className="py-16 sm:py-20 lg:py-24 bg-[#f8fafc] border-t border-slate-200/60 overflow-hidden"
         data-purpose="about-services-section"
       >
-        <div className="w-full max-w-7xl xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-2xl mb-10 sm:mb-12 space-y-3"
+            className="max-w-2xl min-[137.5rem]:max-w-4xl mb-10 sm:mb-12 space-y-3"
           >
             <div>
               <span
@@ -211,7 +211,7 @@ export default function AboutServicesSection({
         className="py-12 sm:py-16 lg:py-20 bg-white overflow-hidden"
         data-purpose="about-admissions-cta"
       >
-        <div className="w-full max-w-7xl xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
           <motion.div
             initial={{ opacity: 0, y: 28, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -251,7 +251,7 @@ export default function AboutServicesSection({
                   </a>
                 </h3>
 
-                <p className="text-xs text-slate-200/90 leading-relaxed max-w-xs mx-auto lg:mx-0">
+                <p className="text-xs text-slate-200/90 leading-relaxed max-w-xs min-[137.5rem]:max-w-md mx-auto lg:mx-0">
                   {admissionsBanner.hoursNote}
                 </p>
 
@@ -311,7 +311,7 @@ export default function AboutServicesSection({
               </div>
 
               {/* Right Column: Contact & Brochure Details */}
-              <div className="lg:col-span-4 space-y-2.5 text-center lg:text-left">
+              <div className="lg:col-span-4 min-[137.5rem]:justify-self-end space-y-2.5 text-center lg:text-left">
                 <p
                   style={{ color: "#f59e0b" }}
                   className="text-sm sm:text-[15px] font-bold text-[#f59e0b] leading-snug"
@@ -323,7 +323,7 @@ export default function AboutServicesSection({
                   {admissionsBanner.academyName}
                 </h4>
 
-                <p className="text-xs text-slate-200/90 leading-relaxed max-w-sm mx-auto lg:mx-0">
+                <p className="text-xs text-slate-200/90 leading-relaxed max-w-sm min-[137.5rem]:max-w-md mx-auto lg:mx-0">
                   {admissionsBanner.rightDescription}
                 </p>
 

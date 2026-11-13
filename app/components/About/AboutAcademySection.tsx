@@ -91,8 +91,8 @@ export default function AboutAcademySection() {
       className="py-16 sm:py-20 lg:py-24 bg-white text-[#0f172a] overflow-hidden"
       data-purpose="about-academy-section"
     >
-      <div className="w-full max-w-7xl xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 min-[137.5rem]:gap-20 items-start">
           {/* Left Column: Intro + 2x2 Stat Cards */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -143,7 +143,7 @@ export default function AboutAcademySection() {
             </div>
 
             {/* Description */}
-            <p className="text-slate-600 text-sm sm:text-[15px] leading-[1.75] max-w-xl">
+            <p className="text-slate-600 text-sm sm:text-[15px] leading-[1.75] max-w-xl min-[137.5rem]:max-w-none">
               {aboutAcademyData.description}
             </p>
 
