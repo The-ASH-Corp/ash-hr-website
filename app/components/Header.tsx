@@ -16,6 +16,8 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
   const [courseDropdownOpen, setCourseDropdownOpen] = useState(false);
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
+  const isContactPage = pathname === "/contact";
+  const isHomePage = pathname === "/";
 
   return (
     <motion.header
@@ -57,7 +59,7 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
             >
               <Link
                 className={
-                  !isAboutPage
+                  isHomePage
                     ? "text-sm font-semibold text-[#253b97] hover:text-[#1c2d73] transition-colors whitespace-nowrap"
                     : "text-sm font-medium text-slate-600 hover:text-[#253b97] transition-colors whitespace-nowrap"
                 }
@@ -149,14 +151,21 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
             >
               Our Blog
             </motion.a>
-            <motion.a
+            <motion.div
               whileHover={{ y: -2 }}
               transition={{ duration: 0.15 }}
-              className="text-sm font-medium text-slate-600 hover:text-[#253b97] transition-colors whitespace-nowrap"
-              href="/#contact"
             >
-              Contact
-            </motion.a>
+              <Link
+                className={
+                  isContactPage
+                    ? "text-sm font-semibold text-[#253b97] hover:text-[#1c2d73] transition-colors whitespace-nowrap"
+                    : "text-sm font-medium text-slate-600 hover:text-[#253b97] transition-colors whitespace-nowrap"
+                }
+                href="/contact"
+              >
+                Contact
+              </Link>
+            </motion.div>
           </nav>
 
           {/* CTA Action */}
@@ -219,7 +228,7 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
               <div className="py-4 space-y-1.5">
                 <Link
                   className={
-                    !isAboutPage
+                    isHomePage
                       ? "block px-3 py-2 rounded-lg text-sm font-semibold text-[#253b97] hover:bg-[#f0f3ff]"
                       : "block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
                   }
@@ -263,13 +272,17 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
                 >
                   Our Blog
                 </a>
-                <a
-                  className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
-                  href="/#contact"
+                <Link
+                  className={
+                    isContactPage
+                      ? "block px-3 py-2 rounded-lg text-sm font-semibold text-[#253b97] hover:bg-[#f0f3ff]"
+                      : "block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
+                  }
+                  href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
-                </a>
+                </Link>
                 <div className="pt-2 px-1">
                   <motion.button
                     whileTap={{ scale: 0.97 }}
