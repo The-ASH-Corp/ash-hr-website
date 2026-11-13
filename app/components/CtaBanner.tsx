@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ctaBannerData } from "./landingData";
 
 interface CtaBannerProps {
   onOpenEnquiry?: () => void;
@@ -15,7 +16,7 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
       data-purpose="cta-banner"
       id="contact"
     >
-      <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -29,16 +30,16 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
             {/* Left info */}
             <div className="lg:col-span-5 space-y-3 sm:space-y-4 text-center lg:text-left">
               <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-sky-200 block">
-                Get in touch directly
+                {ctaBannerData.eyebrow}
               </span>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
-                Call Us:{" "}
+                {ctaBannerData.callPrefix}{" "}
                 <motion.a
                   whileHover={{ scale: 1.03 }}
                   className="inline-block hover:text-sky-300 transition-colors"
-                  href="tel:9072801300"
+                  href={ctaBannerData.phoneHref}
                 >
-                  9072 80 1300
+                  {ctaBannerData.phoneDisplay}
                 </motion.a>
               </h3>
               <div className="pt-0.5">
@@ -50,7 +51,7 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
                   style={{ backgroundColor: "#ffffff", color: "#0f172a" }}
                   className="inline-flex items-center px-6 py-2.5 sm:px-7 sm:py-3 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-900 bg-white hover:bg-slate-100 transition-colors shadow-sm cursor-pointer"
                 >
-                  Registration
+                  {ctaBannerData.ctaLabel}
                 </motion.button>
               </div>
             </div>
@@ -63,9 +64,9 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
                 className="w-24 h-24 sm:w-28 sm:h-28 lg:w-36 lg:h-36 rounded-full border-2 border-white/40 overflow-hidden shadow bg-slate-800 relative group"
               >
                 <Image
-                  alt="Representative student from Ash Academy"
+                  alt={ctaBannerData.studentImage.alt}
                   className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
-                  src="/images/img_9.jpg"
+                  src={ctaBannerData.studentImage.src}
                   fill
                   sizes="144px"
                 />
@@ -75,29 +76,29 @@ export default function CtaBanner({ onOpenEnquiry }: CtaBannerProps) {
             {/* Contact Details Block */}
             <div className="lg:col-span-4 space-y-1.5 sm:space-y-2 text-center lg:text-right border-t lg:border-t-0 lg:border-l border-white/20 pt-5 lg:pt-0 lg:pl-8">
               <p className="text-xs sm:text-sm uppercase tracking-wider text-sky-200 font-semibold">
-                Contact us today for batch dates &amp; fees:
+                {ctaBannerData.rightNote}
               </p>
               <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white">
-                Ash Academy
+                {ctaBannerData.academyName}
               </h4>
               <p className="text-xs sm:text-sm text-slate-200">
-                Start your professional journey
+                {ctaBannerData.tagline}
               </p>
               <div className="pt-1 text-sm sm:text-base space-y-0.5">
                 <p>
                   <a
                     className="hover:underline font-semibold text-white"
-                    href="tel:9072801300"
+                    href={ctaBannerData.phoneHref}
                   >
-                    9072801300
+                    {ctaBannerData.phoneCompact}
                   </a>
                 </p>
                 <p>
                   <a
                     className="hover:underline text-indigo-100 text-xs sm:text-sm"
-                    href="mailto:info@cbaacademy.in"
+                    href={ctaBannerData.emailHref}
                   >
-                    info@cbaacademy.in
+                    {ctaBannerData.email}
                   </a>
                 </p>
               </div>
