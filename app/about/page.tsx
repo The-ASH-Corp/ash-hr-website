@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import AboutHeroSection from "../components/About/AboutHeroSection";
+import AboutAcademySection from "../components/About/AboutAcademySection";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
 
@@ -21,6 +22,7 @@ export default function AboutPage() {
 
       <main className="flex-1">
         <AboutHeroSection />
+        <AboutAcademySection />
       </main>
 
       <Footer />
@@ -29,4 +31,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
