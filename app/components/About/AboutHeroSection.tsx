@@ -57,37 +57,44 @@ export default function AboutHeroSection() {
           animate="visible"
           className="max-w-3xl min-[137.5rem]:max-w-5xl mx-auto text-center flex flex-col items-center"
         >
-          {/* Top Pill Badge */}
-          <motion.div
+          {/* Top Breadcrumb Pill Badge (matching Contact Hero design) */}
+          <motion.nav
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
+            aria-label="Breadcrumb"
             style={{
               backgroundColor: "rgba(255, 255, 255, 0.1)",
-              borderColor: "rgba(255, 255, 255, 0.18)",
+              borderColor: "rgba(255, 255, 255, 0.16)",
             }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-5 sm:mb-6"
+            className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm mb-5 sm:mb-6"
           >
-            {/* Classical Institution / Columns Icon in Gold */}
-            <svg
-              className="w-3.5 h-3.5 text-[#f5b82e] shrink-0"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M12 2L2 7v2h20V7L12 2zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-4v-7h-2v7H7v-7H5z" />
-            </svg>
-            <span
-              style={{ color: "#f5b82e" }}
-              className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.08em] text-[#f5b82e]"
-            >
-              {aboutHeroData.badgeText}
-            </span>
-          </motion.div>
+            {aboutHeroData.breadcrumbs.map((item, idx) => (
+              <div key={item.label} className="inline-flex items-center gap-2">
+                {item.href && idx < lastBreadcrumbIndex ? (
+                  <Link
+                    href={item.href}
+                    className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] text-slate-300 hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.08em] text-white">
+                    {item.label}
+                  </span>
+                )}
+                {idx < lastBreadcrumbIndex && (
+                  <span className="text-[11px] sm:text-xs text-slate-400 select-none">
+                    /
+                  </span>
+                )}
+              </div>
+            ))}
+          </motion.nav>
 
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-tight text-white mb-5 sm:mb-6"
+            className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-tight text-white mb-4 sm:mb-5"
           >
             {aboutHeroData.title}
           </motion.h1>
@@ -95,40 +102,10 @@ export default function AboutHeroSection() {
           {/* Subtitle / Description */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-base lg:text-[17px] text-slate-200/90 font-normal leading-[1.75] max-w-[650px] min-[137.5rem]:max-w-4xl mx-auto mb-7 sm:mb-8"
+            className="text-sm sm:text-base lg:text-[17px] text-slate-200/90 font-normal leading-[1.75] max-w-[650px] min-[137.5rem]:max-w-4xl mx-auto"
           >
             {aboutHeroData.description}
           </motion.p>
-
-          {/* Breadcrumb Navigation */}
-          <motion.nav
-            variants={itemVariants}
-            aria-label="Breadcrumb"
-            className="flex items-center justify-center gap-2 text-xs sm:text-sm"
-          >
-            {aboutHeroData.breadcrumbs.map((item, idx) => (
-              <div key={item.label} className="inline-flex items-center gap-2">
-                {item.href && idx < lastBreadcrumbIndex ? (
-                  <Link
-                    href={item.href}
-                    className="text-slate-300 hover:text-white transition-colors font-normal"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <span
-                    style={{ color: "#f5b82e" }}
-                    className="text-[#f5b82e] font-semibold"
-                  >
-                    {item.label}
-                  </span>
-                )}
-                {idx < lastBreadcrumbIndex && (
-                  <span className="text-slate-400 select-none">/</span>
-                )}
-              </div>
-            ))}
-          </motion.nav>
         </motion.div>
       </div>
     </section>
