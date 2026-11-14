@@ -13,9 +13,9 @@ interface HeaderProps {
 
 export default function Header({ onOpenEnquiry }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [courseDropdownOpen, setCourseDropdownOpen] = useState(false);
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
+  const isCoursePage = pathname === "/course";
   const isContactPage = pathname === "/contact";
   const isHomePage = pathname === "/";
 
@@ -85,63 +85,21 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
               </Link>
             </motion.div>
 
-            {/* Dropdown link */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setCourseDropdownOpen(true)}
-              onMouseLeave={() => setCourseDropdownOpen(false)}
+            <motion.div
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.15 }}
             >
-              <motion.button
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.15 }}
-                aria-expanded={courseDropdownOpen}
-                onClick={() => setCourseDropdownOpen(!courseDropdownOpen)}
-                className="flex items-center gap-1.5 text-sm font-medium text-slate-600 group-hover:text-[#253b97] transition-colors py-2 cursor-pointer whitespace-nowrap"
-                type="button"
+              <Link
+                className={
+                  isCoursePage
+                    ? "text-sm font-semibold text-[#253b97] hover:text-[#1c2d73] transition-colors whitespace-nowrap"
+                    : "text-sm font-medium text-slate-600 hover:text-[#253b97] transition-colors whitespace-nowrap"
+                }
+                href="/course"
               >
-                <span>Course</span>
-                <motion.svg
-                  animate={{ rotate: courseDropdownOpen ? 180 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-4 h-4 text-slate-400 group-hover:text-[#253b97]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 9l-7 7-7-7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                  ></path>
-                </motion.svg>
-              </motion.button>
-
-              <AnimatePresence>
-                {courseDropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.96 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                    transition={{ duration: 0.18, ease: "easeOut" }}
-                    className="absolute left-0 top-full w-60 py-2 bg-white rounded-xl shadow-xl border border-slate-100 mt-1 z-50"
-                  >
-                    {headerData.courses.map((course) => (
-                      <motion.a
-                        key={course}
-                        whileHover={{ x: 5 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-[#f0f3ff] hover:text-[#253b97] transition-colors"
-                        href="/#courses"
-                        onClick={() => setCourseDropdownOpen(false)}
-                      >
-                        {course}
-                      </motion.a>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                Course
+              </Link>
+            </motion.div>
 
             <motion.a
               whileHover={{ y: -2 }}
@@ -248,23 +206,17 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
                 >
                   About Us
                 </Link>
-                <div className="px-3 py-2">
-                  <span className="text-xs uppercase font-bold tracking-wider text-slate-400">
-                    Courses
-                  </span>
-                  <div className="mt-1.5 pl-2 space-y-1.5 border-l-2 border-slate-100">
-                    {headerData.courses.map((course) => (
-                      <a
-                        key={course}
-                        className="block py-1 text-sm text-slate-600 hover:text-[#253b97]"
-                        href="/#courses"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {course}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                <Link
+                  className={
+                    isCoursePage
+                      ? "block px-3 py-2 rounded-lg text-sm font-semibold text-[#253b97] hover:bg-[#f0f3ff]"
+                      : "block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
+                  }
+                  href="/course"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Course
+                </Link>
                 <a
                   className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
                   href="/#blogs"
