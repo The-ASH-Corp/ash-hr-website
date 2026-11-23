@@ -109,7 +109,7 @@ export default function WhyChooseUsSection({
               </div>
 
               {/* Clean, steady attention 15+ Years badge */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 12 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -117,9 +117,9 @@ export default function WhyChooseUsSection({
                 whileHover={{ scale: 1.05, y: -3 }}
                 style={{ backgroundColor: "#253b97", color: "#ffffff" }}
                 className="sm:col-span-4 relative overflow-hidden bg-[#253b97] text-white py-4 px-6 sm:p-5 2xl:p-7 rounded-2xl text-center shadow-lg shadow-[#253b97]/25 flex flex-col justify-center items-center cursor-default"
-              >
+              > */}
                 {/* Smooth periodic light shimmer sweep */}
-                <motion.div
+                {/* <motion.div
                   animate={{ x: ["-150%", "250%"] }}
                   transition={{
                     duration: 2.2,
@@ -128,15 +128,15 @@ export default function WhyChooseUsSection({
                     ease: "easeInOut",
                   }}
                   className="pointer-events-none absolute inset-y-0 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent"
-                />
+                /> */}
 
-                <span className="relative z-10 text-3xl sm:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-extrabold tracking-tight leading-none text-white">
+                {/* <span className="relative z-10 text-3xl sm:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-extrabold tracking-tight leading-none text-white">
                   {whyChooseUsData.experienceBadge.value}
                 </span>
                 <span className="relative z-10 text-[11px] 2xl:text-xs font-semibold uppercase tracking-wider text-sky-200 mt-1 2xl:mt-2">
                   {whyChooseUsData.experienceBadge.label}
-                </span>
-              </motion.div>
+                </span> */}
+              {/* </motion.div> */}
             </div>
 
             {/* Director info & CTA */}
@@ -150,28 +150,7 @@ export default function WhyChooseUsSection({
               >
                 {whyChooseUsData.ctaLabel}
               </motion.button>
-              <motion.div
-                whileHover={{ x: 3 }}
-                className="flex items-center gap-3 2xl:gap-4"
-              >
-                <div className="relative w-10 h-10 2xl:w-12 2xl:h-12 rounded-full overflow-hidden border border-slate-200 shrink-0">
-                  <Image
-                    alt={whyChooseUsData.director.imageAlt}
-                    className="w-full h-full object-cover"
-                    src={whyChooseUsData.director.imageSrc}
-                    fill
-                    sizes="48px"
-                  />
-                </div>
-                <div>
-                  <h4 className="text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-slate-900 leading-tight">
-                    {whyChooseUsData.director.name}
-                  </h4>
-                  <p className="text-xs 2xl:text-sm text-slate-500 font-medium">
-                    {whyChooseUsData.director.role}
-                  </p>
-                </div>
-              </motion.div>
+              
             </div>
           </motion.div>
         </div>
