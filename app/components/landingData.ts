@@ -18,7 +18,7 @@ export const heroData = {
   headingLine1: "Upskill and",
   headingHighlight: "Upgrade Your Career",
   description:
-    "Kickstart your career journey with industry-aligned dual-domain training in HR & Administration Management. 6-Month career development programme with practical exercises, workplace-based training, and 100% placement support.",
+    "Start your career journey with industry-aligned dual-domain training in HR & Administration Management. 6-Month career development programme with practical exercises, workplace-based training, and 100% placement support.",
   formPrompt: "Book your free demo class now",
   inputPlaceholder: "Enter Contact Number",
   submitLabel: "Enquiry Now",
@@ -30,16 +30,11 @@ export const heroData = {
     src: "/images/img_4.png",
     alt: "Professional executive academy students representing Ash Academy",
   },
-  placementBadge: {
-    leftLabel: "Placement Record",
-    leftValue: "100+ Placements",
-    rightLabel: "Placement Cell",
-    rightValue: "100% Support",
-  },
+ 
   accreditations: [
     { badge: "6M", label: "6-Month Career Programme", rounded: "rounded" },
     { badge: "120D", label: "120 Days Practical Training", rounded: "rounded-full" },
-    { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded" },
+    // { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded" },
     { badge: "100%", label: "Placement Support", rounded: "rounded-full" },
   ],
 };
@@ -78,8 +73,8 @@ export const accreditationData = {
       footerLabel: "Dual Domain Mastery",
     },
   ],
-  bottomNote: "Over 200+ trained students & 100+ placements across Kerala & GCC",
-  ctaLabel: "View Course Timetable",
+  // bottomNote: "Over 200+ trained students & 100+ placements across Kerala & GCC",
+  // ctaLabel: "View Course Timetable",
 };
 
 export const whyChooseUsData = {
@@ -120,40 +115,44 @@ export const whyChooseUsData = {
 };
 
 export const howWeTeachData = {
-  eyebrow: "Our Methodology",
-  headingPrefix: "Theory, Practical Exercises &",
-  headingHighlight: "Workplace-Based",
-  headingSuffix: "Training",
+  eyebrow: "How We Teach",
+  headingPrefix: "Practical, Skill-Based &",
+  headingHighlight: "Workplace-Focused",
+  headingSuffix: "Learning",
   description:
-    "At Ash Academy, our 24-week curriculum follows a proven 3-session daily routine (9:30 AM – 3:30 PM, 4 hr 45 min per day) and a 5-day weekly mastery pattern ensuring complete job readiness.",
+    "At ASH Academy, our 6-month HR & Administration Management Programme combines core conceptual foundations, AI-enabled productivity tools, and realistic workplace simulations with expert mentorship to build complete job readiness.",
   centerImage: {
     src: "/images/img_8.jpg",
     alt: "Two accomplished business graduates representing Ash Academy",
   },
   leftPillars: [
     {
-      title: "01. Session 1: Topic Teaching",
-      description: "9:30 – 11:15 AM: Deep-dive into core concepts, policies, statutory rules & SOPs",
+      title: "01. Dual-Domain HR & Admin Mastery",
+      description:
+        "Integrated training across office administration, talent acquisition, onboarding, payroll, statutory compliance, and hospital front-office operations.",
     },
     {
-      title: "02. Session 2: Guided Practice",
-      description: "11:30 AM – 1:00 PM: Trainer demonstration, common mistakes & collaborative activities",
+      title: "02. Practical Workplace Simulations",
+      description:
+        "Hands-on assignments, SOP & workflow drafting, real-world scenario role-plays, and weekly portfolio deliverables that build execution confidence.",
     },
   ],
   rightPillars: [
     {
-      title: "03. Session 3: Independent Execution",
-      description: "2:00 – 3:30 PM: Student task completion, live review, feedback & exit check",
+      title: "03. AI-Enabled & Digital Office Tools",
+      description:
+        "Applied training on HRMS platforms (Zoho People, Keka, greytHR), advanced Excel & MIS dashboards, digital documentation, and AI-assisted drafting.",
     },
     {
-      title: "04. 100% Placement Support",
-      description: "Resume preparation, mock interviews, workplace English & employer connections",
+      title: "04. Career Readiness & Placement Support",
+      description:
+        "One-on-one industry mentorship, evidence-based CV & LinkedIn profile building, workplace English, mock interviews, and 100% placement assistance.",
     },
   ],
   stats: [
-    { to: 24, suffix: " Wks", label: "Course Duration" },
-    { to: 120, suffix: " Days", label: "Practical Training" },
-    { to: 200, suffix: "+", label: "Students Trained" },
+    { to: 6, suffix: " Months", label: "Career Programme" },
+    { to: 24, suffix: " Modules", label: "Practical Curriculum" },
+    { to: 17, suffix: "+", label: "Target Job Roles" },
     { to: 100, suffix: "%", label: "Placement Support" },
   ],
 };

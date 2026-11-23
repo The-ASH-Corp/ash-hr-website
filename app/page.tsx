@@ -29,7 +29,7 @@ export default function Home() {
         <AccreditationSection onOpenEnquiry={openEnquiry} />
         <WhyChooseUsSection onOpenEnquiry={openEnquiry} />
         <HowWeTeachSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <CtaBanner onOpenEnquiry={openEnquiry} />
       </main>
 

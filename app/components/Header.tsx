@@ -16,7 +16,6 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
   const isCoursePage = pathname === "/course";
-  const isBlogsPage = pathname === "/blogs";
   const isContactPage = pathname === "/contact";
   const isHomePage = pathname === "/";
 
@@ -102,21 +101,6 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
               </Link>
             </motion.div>
 
-            <motion.div
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.15 }}
-            >
-              <Link
-                className={
-                  isBlogsPage
-                    ? "text-sm font-semibold text-[#253b97] hover:text-[#1c2d73] transition-colors whitespace-nowrap"
-                    : "text-sm font-medium text-slate-600 hover:text-[#253b97] transition-colors whitespace-nowrap"
-                }
-                href="/blogs"
-              >
-                Our Blog
-              </Link>
-            </motion.div>
             <motion.div
               whileHover={{ y: -2 }}
               transition={{ duration: 0.15 }}
@@ -224,17 +208,6 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Course
-                </Link>
-                <Link
-                  className={
-                    isBlogsPage
-                      ? "block px-3 py-2 rounded-lg text-sm font-semibold text-[#253b97] hover:bg-[#f0f3ff]"
-                      : "block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50"
-                  }
-                  href="/blogs"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Our Blog
                 </Link>
                 <Link
                   className={

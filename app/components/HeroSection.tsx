@@ -171,11 +171,11 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Social Proof Strip */}
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="pt-4 2xl:pt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 2xl:gap-8 border-t border-white/10"
-            >
-              <div className="flex items-center gap-2.5 2xl:gap-3.5">
+            > */}
+              {/* <div className="flex items-center gap-2.5 2xl:gap-3.5">
                 <div className="flex -space-x-2">
                   {heroData.avatars.map((src, idx) => (
                     <motion.div
@@ -202,22 +202,22 @@ export default function HeroSection() {
                     {heroData.reviewsText}
                   </p>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="h-4 2xl:h-6 w-px bg-white/20 hidden sm:block"></div>
+              {/* <div className="h-4 2xl:h-6 w-px bg-white/20 hidden sm:block"></div> */}
 
-              <motion.div
+              {/* <motion.div
                 whileHover={{ scale: 1.04 }}
                 className="flex items-center gap-2 text-white"
-              >
-                <span className="text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-white">
+              > */}
+                {/* <span className="text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-white">
                   {heroData.studentsCount}
-                </span>
-                <span className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-300 font-normal">
+                </span> */}
+                {/* <span className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-300 font-normal">
                   {heroData.studentsLabel}
-                </span>
-              </motion.div>
-            </motion.div>
+                </span> */}
+              {/* </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right Hero Visual */}
@@ -244,30 +244,7 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
 
                 {/* Clean minimal placement badge */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.65, duration: 0.5, ease: "easeOut" }}
-                  whileHover={{ scale: 1.03 }}
-                  className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 2xl:bottom-6 2xl:left-6 2xl:right-6 bg-white/95 backdrop-blur-md px-3.5 py-2 sm:px-4 sm:py-2.5 2xl:px-6 2xl:py-3.5 rounded-xl 2xl:rounded-2xl border border-white/60 shadow flex items-center justify-between text-slate-900"
-                >
-                  <div>
-                    <div className="text-[9px] sm:text-[10px] 2xl:text-xs uppercase tracking-wider font-semibold text-slate-500">
-                      {heroData.placementBadge.leftLabel}
-                    </div>
-                    <div className="text-xs sm:text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-[#253b97]">
-                      {heroData.placementBadge.leftValue}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[9px] sm:text-[10px] 2xl:text-xs uppercase tracking-wider font-semibold text-slate-500">
-                      {heroData.placementBadge.rightLabel}
-                    </div>
-                    <div className="text-xs sm:text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-slate-800">
-                      {heroData.placementBadge.rightValue}
-                    </div>
-                  </div>
-                </motion.div>
+               
               </div>
             </motion.div>
           </motion.div>

@@ -237,26 +237,7 @@ export default function AccreditationSection({
         </motion.div>
 
         {/* Action Footer for section */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-8 sm:mt-10 2xl:mt-14 text-center flex flex-col sm:flex-row items-center justify-center gap-3 2xl:gap-4"
-        >
-          <span className="text-xs sm:text-sm 2xl:text-base min-[137.5rem]:text-lg text-slate-600">
-            {accreditationData.bottomNote}
-          </span>
-          <motion.button
-            onClick={onOpenEnquiry}
-            whileHover={{ scale: 1.06, y: -1 }}
-            whileTap={{ scale: 0.95 }}
-            style={{ backgroundColor: "#253b97", color: "#ffffff" }}
-            className="inline-flex items-center px-5 2xl:px-7 py-2 2xl:py-2.5 rounded-full text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-white bg-[#253b97] hover:bg-[#1c2d73] transition-colors duration-200 cursor-pointer shadow-sm"
-          >
-            {accreditationData.ctaLabel}
-          </motion.button>
-        </motion.div>
+      
       </div>
     </section>
   );
