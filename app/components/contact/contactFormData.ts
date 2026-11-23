@@ -64,11 +64,11 @@ export const contactFormData: ContactFormData = {
     "Have questions? We're happy to help! Contact Us for any information about our courses and services. The ASH Academy team is just a message away.",
   programsLabel: "PROGRAMS OFFERED FOR INQUIRY",
   programs: [
-    "Financial Accounting Course",
+    "HR & Administration Management Programme",
     "Office Administration Course",
-    "Human Resource Management",
+    "Payroll & Compliance Executive",
+    "Basic Hospital Administration",
     "English Communication Course",
-    "Personality Development Class",
   ],
   socialHeading: "Follow us on social media :",
   socials: [
@@ -99,10 +99,10 @@ export const contactFormData: ContactFormData = {
     courseLabel: "Select Interested Course*",
     coursePlaceholder: "Choose a Program...",
     courseOptions: [
+      "HR & Administration Management Programme (6 Months)",
       "Advanced Diploma in Office Administration",
-      "Post Graduate in Financial Accounting",
-      "Advanced Diploma in Financial Accounting",
-      "Advanced Human Resource Management",
+      "Payroll & Statutory Compliance",
+      "Basic Hospital Administration",
       "English Communication & Personality Development",
     ],
     messageLabel: "Enter your message",
@@ -116,10 +116,10 @@ export const contactFormData: ContactFormData = {
   admissionsBanner: {
     eyebrow: "DIRECT ADMISSIONS",
     callLabel: "Call Us :",
-    phoneDisplay: "9072 80 1300",
-    phoneHref: "tel:9072801300",
+    phoneDisplay: "+91 8921 365 750",
+    phoneHref: "tel:+918921365750",
     hoursNote:
-      "Immediate counseling assistance available Monday to Saturday 9:00 AM – 6:30 PM.",
+      "Immediate counseling assistance available Monday to Friday 9:30 AM – 3:30 PM.",
     ctaLabel: "REGISTRATION / COUNSELING",
     counselorImage: {
       src: "/images/contactimg.jpg",
@@ -130,9 +130,9 @@ export const contactFormData: ContactFormData = {
     academyName: "ASH Academy",
     rightDescription:
       "Start your professional journey with industry-grade certifications.",
-    phoneCompact: "9072801300",
-    email: "info@ashacademy.in",
-    emailHref: "mailto:info@ashacademy.in",
+    phoneCompact: "+91 8921 365 750 / +91 9337 009 400",
+    email: "connect@ashacademy.ai",
+    emailHref: "mailto:connect@ashacademy.ai",
   },
 };
 

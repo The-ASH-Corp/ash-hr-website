@@ -21,6 +21,7 @@ export interface CourseHeroData {
   headingLine1: string;
   headingHighlight: string;
   headingLine2Suffix: string;
+  tagline: string;
   description: string;
   batchBox: {
     label: string;
@@ -44,60 +45,59 @@ export interface CourseHeroData {
 export const courseHeroData: CourseHeroData = {
   breadcrumbs: [
     { label: "HOME", href: "/" },
-    { label: "COURSES" },
+    { label: "COURSES", href: "/#courses" },
+    { label: "HR & ADMINISTRATION" },
   ],
   badges: {
-    accredited: "ISO 9001:2015 ACCREDITED",
-    benchmarked: "AACSB & SHRM BENCHMARKED",
+    accredited: "CAREER DEVELOPMENT PROGRAMME",
+    benchmarked: "6 MONTHS • 120 DAYS • 24 WEEKS",
   },
-  headingLine1: "Advanced Human Resource",
+  headingLine1: "HR & Administration",
   headingHighlight: "Management",
-  headingLine2Suffix: "Executive Diploma",
+  headingLine2Suffix: "Programme",
+  tagline: "Build Skills. Gain Confidence. Advance Your Career.",
   description:
-    "Master talent acquisition, statutory labor codes (PF, ESI, POSH, Factories Act), workforce analytics, and automated payroll systems with an institutional 2-month guaranteed corporate enterprise internship.",
+    "Comprehensive 6-month dual-domain professional course combining core HR functions, payroll calculations, office administration, basic hospital administration, AI productivity tools, and 100% placement support.",
   batchBox: {
-    label: "NEXT EXECUTIVE BATCH",
-    schedule: "1st of Next Month • Weekend & Regular",
-    seatsLeft: "Only 4 Seats Left",
+    label: "UPCOMING BATCH SCHEDULE",
+    schedule: "Mon to Fri • 9:30 AM – 3:30 PM (Theory, Practical & Workplace Training)",
+    seatsLeft: "Limited Seats Available",
   },
   primaryCta: "Apply for Upcoming Batch",
-  secondaryCta: "Download Syllabus & Fee Details",
-  phoneDisplay: "+91 9072 80 1300",
-  phoneHref: "tel:+919072801300",
+  secondaryCta: "View 24-Week Timetable & Fees",
+  phoneDisplay: "+91 8921 365 750",
+  phoneHref: "tel:+918921365750",
   heroImage: {
     src: "/images/img_4.png",
-    alt: "Advanced Human Resource Management Executive Diploma corporate session",
-    overlayEyebrow: "BOARDROOM IMMERSION",
-    overlayBadge: "100% Placement Cell",
-    overlayTitle:
-      "Practical Statutory Portal Filings & HRIS ERP Tools Included",
+    alt: "ASH Academy HR & Administration Management Programme student",
+    overlayEyebrow: "PRACTICAL WORKPLACE LEARNING",
+    overlayBadge: "100% Placement Support",
+    overlayTitle: "Theory, Practical Exercises & Workplace-Based Training",
   },
   stats: [
     {
       id: "duration",
       numericValue: 6,
       suffix: " Months",
-      label: "4M CLASS + 2M INTERNSHIP",
+      label: "24 WEEKS • 120 DAYS",
     },
     {
-      id: "placement",
-      numericValue: 96.8,
-      decimals: 1,
-      suffix: "%",
-      label: "VERIFIED PLACEMENT RATE",
-    },
-    {
-      id: "acts",
-      numericValue: 14,
+      id: "students",
+      numericValue: 200,
       suffix: "+",
-      label: "STATUTORY LABOUR ACTS",
+      label: "STUDENTS TRAINED",
     },
     {
-      id: "alumni",
-      numericValue: 2000,
-      formatWithCommas: true,
+      id: "placements",
+      numericValue: 100,
       suffix: "+",
-      label: "CERTIFIED ALUMNI PLACED",
+      label: "STUDENT PLACEMENTS",
+    },
+    {
+      id: "roles",
+      numericValue: 17,
+      suffix: "+",
+      label: "POTENTIAL JOB ROLES",
     },
   ],
 };

@@ -214,6 +214,16 @@ export default function CourseHeroSection({
               {courseHeroData.headingLine2Suffix}
             </motion.h1>
 
+            {/* Tagline from Document */}
+            {courseHeroData.tagline && (
+              <motion.div
+                variants={itemVariants}
+                className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#f5b82e]"
+              >
+                {courseHeroData.tagline}
+              </motion.div>
+            )}
+
             {/* Subtitle / Description */}
             <motion.p
               variants={itemVariants}

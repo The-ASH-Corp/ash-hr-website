@@ -5,7 +5,7 @@ import { courseOverviewData, OverviewHighlightItem } from "./courseOverviewData"
 
 function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
   switch (type) {
-    case "industry":
+    case "dualDomain":
       return (
         <svg
           className="w-4 h-4"
@@ -16,12 +16,11 @@ function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-          <path d="M9 22v-4h6v4" />
-          <path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01" />
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
         </svg>
       );
-    case "guaranteed":
+    case "practical":
       return (
         <svg
           className="w-4 h-4"
@@ -32,12 +31,10 @@ function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <rect x="3" y="4" width="18" height="16" rx="2" />
-          <circle cx="9" cy="10" r="2" />
-          <path d="M15 8h2M15 12h2M7 16h10" />
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
         </svg>
       );
-    case "portals":
+    case "placement":
       return (
         <svg
           className="w-4 h-4"
@@ -48,8 +45,25 @@ function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <rect x="2" y="4" width="20" height="16" rx="2" />
-          <path d="M6 9l3 3-3 3M11 15h4" />
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+          <polyline points="22 4 12 14.01 9 11.01" />
+        </svg>
+      );
+    case "ai":
+      return (
+        <svg
+          className="w-4 h-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z" />
+          <circle cx="9" cy="13" r="1" />
+          <circle cx="15" cy="13" r="1" />
+          <path d="M10 17h4" />
         </svg>
       );
   }
@@ -99,20 +113,31 @@ export default function CourseOverviewCard() {
       </h2>
 
       {/* Description */}
-      <p className="text-slate-600 text-xs sm:text-sm leading-[1.85]">
+      <p className="text-slate-600 text-xs sm:text-sm leading-[1.85] mb-6">
         {overviewCard.description}
       </p>
 
-      {/* Bottom 3 Highlights Row */}
-      <div className="mt-7 pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+      {/* Key Highlights Quick Strip (Document 2 & 3 Data) */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 mb-7">
+        {overviewCard.keyHighlights.map((kh, i) => (
+          <div key={i} className="text-left">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">
+              {kh.label}
+            </span>
+            <span className="text-xs sm:text-[13px] font-extrabold text-[#0f172a] block leading-tight">
+              {kh.value}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom 4 Highlights Row */}
+      <div className="pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {overviewCard.highlights.map((item) => (
           <motion.div
             key={item.id}
-            whileHover={{
-              y: -3,
-              transition: { type: "spring", stiffness: 380, damping: 20, delay: 0 },
-            }}
-            className="flex items-center gap-3"
+            whileHover={{ y: -3 }}
+            className="flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-slate-50 transition-colors"
           >
             <div
               style={{ backgroundColor: "#eef2ff", color: "#253b97" }}
@@ -134,4 +159,3 @@ export default function CourseOverviewCard() {
     </motion.section>
   );
 }
-

@@ -6,27 +6,31 @@ export interface CourseTabItem {
 
 export const courseTabsData: CourseTabItem[] = [
   { id: "overview", label: "Overview", href: "#overview" },
-  { id: "competencies", label: "Competencies", href: "#competencies" },
+  { id: "schedule", label: "Daily Schedule", href: "#schedule" },
   {
     id: "interactive-syllabus",
-    label: "Interactive Syllabus",
+    label: "24-Week Syllabus",
     href: "#interactive-syllabus",
   },
   {
-    id: "career-roi",
-    label: "Career & ROI Explorer",
-    href: "#career-roi",
+    id: "fee-structure",
+    label: "Fee & Installments",
+    href: "#fee-structure",
+  },
+  {
+    id: "who-can-join",
+    label: "Who Can Join & Roles",
+    href: "#who-can-join",
   },
   {
     id: "software-sandbox",
-    label: "Live Software Sandbox",
+    label: "Software & AI Tools",
     href: "#software-sandbox",
   },
   {
-    id: "internship-roadmap",
-    label: "Internship Roadmap",
-    href: "#internship-roadmap",
+    id: "placement-support",
+    label: "Placement Support",
+    href: "#placement-support",
   },
   { id: "faqs", label: "FAQs", href: "#faqs" },
 ];
-

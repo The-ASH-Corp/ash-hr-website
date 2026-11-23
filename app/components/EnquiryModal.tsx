@@ -13,7 +13,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
     name: "",
     phone: "",
     email: "",
-    course: "Human Resource Management",
+    course: "HR & Administration Management Programme",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -156,11 +156,11 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                       className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent bg-white"
                     >
-                      <option value="Human Resource Management">Human Resource Management</option>
-                      <option value="Financial Accounting">Financial Accounting</option>
-                      <option value="Office Administration">Office Administration</option>
-                      <option value="Personality Development">Personality Development</option>
-                      <option value="English Communication">English Communication</option>
+                      <option value="HR & Administration Management Programme">HR & Administration Management Programme (6 Months)</option>
+                      <option value="Office Administration">Office Administration & SOPs</option>
+                      <option value="Payroll & Compliance">Payroll & Statutory Compliance</option>
+                      <option value="Hospital Administration">Basic Hospital Administration</option>
+                      <option value="English Communication">English Communication & Personality</option>
                     </select>
                   </div>
 

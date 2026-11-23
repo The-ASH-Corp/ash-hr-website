@@ -4,9 +4,9 @@ export const headerData = {
     alt: "ASH Academy Logo",
   },
   courses: [
+    "HR & Administration",
     "Office Administration",
     "Financial Accounting",
-    "Human Resource Management",
     "Personality Development",
     "English Communication",
   ],
@@ -14,81 +14,81 @@ export const headerData = {
 };
 
 export const heroData = {
-  badgeText: "CREATE YOUR FUTURE",
+  badgeText: "BUILD SKILLS • GAIN CONFIDENCE • ADVANCE YOUR CAREER",
   headingLine1: "Upskill and",
   headingHighlight: "Upgrade Your Career",
   description:
-    "Kick start your Career Journey with recognised international standard learning. Get Globally Approved Skills and Shape your Inspiring Career.",
+    "Kickstart your career journey with industry-aligned dual-domain training in HR & Administration Management. 6-Month career development programme with practical exercises, workplace-based training, and 100% placement support.",
   formPrompt: "Book your free demo class now",
   inputPlaceholder: "Enter Contact Number",
   submitLabel: "Enquiry Now",
   avatars: ["/images/img_1.jpg", "/images/img_2.jpg", "/images/img_3.jpg"],
   reviewsText: "(5k+ Reviews)",
-  studentsCount: "20,000+",
-  studentsLabel: "Happy Students",
+  studentsCount: "200+",
+  studentsLabel: "Students Trained",
   heroImage: {
     src: "/images/img_4.png",
-    alt: "Two professional young academy students dressed in executive corporate formal attire",
+    alt: "Professional executive academy students representing Ash Academy",
   },
   placementBadge: {
-    leftLabel: "Placement Rate",
-    leftValue: "96.8% Success",
-    rightLabel: "Recognition",
-    rightValue: "10+ Global Certs",
+    leftLabel: "Placement Record",
+    leftValue: "100+ Placements",
+    rightLabel: "Placement Cell",
+    rightValue: "100% Support",
   },
   accreditations: [
-    { badge: "C", label: "CPD Accredited", rounded: "rounded" },
-    { badge: "IAF", label: "Member", rounded: "rounded-full" },
-    { badge: "E", label: "ELACI Approved", rounded: "rounded" },
-    { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded-full" },
+    { badge: "6M", label: "6-Month Career Programme", rounded: "rounded" },
+    { badge: "120D", label: "120 Days Practical Training", rounded: "rounded-full" },
+    { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded" },
+    { badge: "100%", label: "Placement Support", rounded: "rounded-full" },
   ],
 };
 
 export const accreditationData = {
   eyebrow: "We Are Providing",
-  headingPrefix: "10+",
-  headingHighlight: "International",
-  headingSuffix: "Accreditation & Certification",
+  headingPrefix: "Dual Domain",
+  headingHighlight: "HR & Administration",
+  headingSuffix: "Excellence",
   brandName: "Ash Academy",
   descriptionSuffix:
-    ", students are awarded several certifications that are recognized both nationally and internationally to gain valuable skills and qualifications.",
+    ", students gain practical skills, industry-relevant knowledge, and recognized certifications to prepare with confidence for real-world professional roles.",
   cards: [
     {
-      title: "Case Study Based Learning",
+      title: "Case Study & Simulated Learning",
       description:
-        "Direct access for learners to work on real-time industry case studies.",
+        "Direct access for learners to work on simulated office workflows, employee lifecycles, and real case studies.",
       footerLabel: "Practical Rigor",
     },
     {
-      title: "Practical Work Experience",
+      title: "Workplace-Based Training",
       description:
-        "Equipping the learners to work independently with practical experience.",
-      footerLabel: "Hands-on Projects",
+        "120 Days / 24 Weeks of daily structured hands-on sessions (9:30 AM – 3:30 PM) building operational independence.",
+      footerLabel: "120 Days Practice",
     },
     {
-      title: "100% Placement Assistance",
+      title: "100% Placement Support",
       description:
-        "Exclusive lifetime access to the Hire platform and top hiring partners.",
+        "Dedicated placement cell offering resume crafting, mock interview drills, and direct employer introductions.",
       footerLabel: "Career Guarantee",
     },
     {
-      title: "Free Company Internship",
+      title: "Integrated HR & Office Admin",
       description:
-        "Our Free Company Internship program lets you gain real-world experience at no cost.",
-      footerLabel: "Corporate Stint",
+        "Comprehensive dual-domain curriculum spanning recruitment, payroll, compliance, hospital admin, and AI tools.",
+      footerLabel: "Dual Domain Mastery",
     },
   ],
-  bottomNote: "More than 10k+ happy Students rely on us",
-  ctaLabel: "More Courses",
+  bottomNote: "Over 200+ trained students & 100+ placements across Kerala & GCC",
+  ctaLabel: "View Course Timetable",
 };
 
 export const whyChooseUsData = {
   eyebrow: "About Us",
   headingPrefix: "Why Choose",
-  headingHighlight: "Us?",
+  headingHighlight: "ASH Academy?",
   brandName: "Ash Academy",
   descriptionSuffix:
-    ", our goal is to give students practical skills and knowledge for career success by combining classroom lessons with real-world experience. We prepare you with confidence for professional challenges.",
+    ", our goal is to give students practical skills and knowledge for career success by combining classroom lessons with workplace-based simulations. We prepare you with confidence for professional challenges.",
   images: [
     {
       src: "/images/img_5.jpg",
@@ -100,17 +100,17 @@ export const whyChooseUsData = {
     },
   ],
   checkpoints: [
-    "More than 90% Pass Rate",
-    "Supportive Learning Environment",
-    "Daily Doubt Clearing Advantage",
-    "Access to Updated and Relevant Study Materials",
-    "Tailored Interview Preparation Support",
+    "Proven Training Experience in IT & Corporate Skill Development",
+    "Practical, Skill-Based Learning for Real-World Workplace Situations",
+    "Integrated HR & Administration Dual-Domain Exposure",
+    "AI-Enabled Workplace Learning with Modern Productivity Tools",
+    "100% Placement Support & Dedicated Career Mentorship",
   ],
   experienceBadge: {
-    value: "15+",
-    label: "Years Experience",
+    value: "100+",
+    label: "Placements",
   },
-  ctaLabel: "More About Us",
+  ctaLabel: "Explore Full Programme",
   director: {
     name: "Fazalul Rahiman",
     role: "CEO, HEAD DIRECTOR",
@@ -120,42 +120,41 @@ export const whyChooseUsData = {
 };
 
 export const howWeTeachData = {
-  eyebrow: "How We Teach",
-  headingPrefix: "Practical, Hands-On Learning for",
-  headingHighlight: "Real-World",
-  headingSuffix: "Success",
+  eyebrow: "Our Methodology",
+  headingPrefix: "Theory, Practical Exercises &",
+  headingHighlight: "Workplace-Based",
+  headingSuffix: "Training",
   description:
-    "At Ash Academy, we focus on practical skills that prepare you for the workplace. Our unique training approach ensures you are job-ready from day one.",
+    "At Ash Academy, our 24-week curriculum follows a proven 3-session daily routine (9:30 AM – 3:30 PM, 4 hr 45 min per day) and a 5-day weekly mastery pattern ensuring complete job readiness.",
   centerImage: {
     src: "/images/img_8.jpg",
     alt: "Two accomplished business graduates representing Ash Academy",
   },
   leftPillars: [
     {
-      title: "01. Practical Training",
-      description: "You can gain skill & industrial experience",
+      title: "01. Session 1: Topic Teaching",
+      description: "9:30 – 11:15 AM: Deep-dive into core concepts, policies, statutory rules & SOPs",
     },
     {
-      title: "02. Real Client Project",
-      description: "Hands-on-experience & meeting client need",
+      title: "02. Session 2: Guided Practice",
+      description: "11:30 AM – 1:00 PM: Trainer demonstration, common mistakes & collaborative activities",
     },
   ],
   rightPillars: [
     {
-      title: "03. Interview Preparation",
-      description: "Improve your communication skills and confidence",
+      title: "03. Session 3: Independent Execution",
+      description: "2:00 – 3:30 PM: Student task completion, live review, feedback & exit check",
     },
     {
-      title: "04. Achieve Your Dream Career",
-      description:
-        "Setting clear goals, gaining the necessary skills and experience",
+      title: "04. 100% Placement Support",
+      description: "Resume preparation, mock interviews, workplace English & employer connections",
     },
   ],
   stats: [
-    { to: 50, suffix: "+", label: "Job Oriented Courses" },
-    { to: 15, suffix: "+", label: "Years Experience" },
-    { to: 20, suffix: "k+", label: "Students Completed" },
-    { to: 98, suffix: "%", label: "Placement Rate" },
+    { to: 24, suffix: " Wks", label: "Course Duration" },
+    { to: 120, suffix: " Days", label: "Practical Training" },
+    { to: 200, suffix: "+", label: "Students Trained" },
+    { to: 100, suffix: "%", label: "Placement Support" },
   ],
 };
 
@@ -168,45 +167,45 @@ export const testimonialsData = {
     "Discover what our students have to say about their experiences. From transformative learning moments to supportive instructors, their stories highlight why they're excited about the journey they've had with us.",
   testimonials: [
     {
-      initials: "ST",
-      role: "Corporate Graduate",
+      initials: "FA",
+      role: "HR Executive",
       quote:
-        "I'm very pleased with my experience at this training institute. The courses were relevant and well-taught, and the instructors were very professional. The practical skills I gained have been essential for my career growth.",
+        "The day-wise practical timetable at ASH Academy gave me real confidence. From CTC calculation to Zoho People and AI drafting, everything I learned is directly used at my current corporate office.",
       featured: false,
     },
     {
-      initials: "EA",
-      role: "Executive Associate",
+      initials: "RS",
+      role: "Office Administrator",
       quote:
-        "This institute exceeded my expectations. The training was thorough and practical, and the staff were supportive and knowledgeable. My understanding of the subject was greatly aided by the practical approach.",
+        "This institute exceeded my expectations. The training was thorough and practical, covering both HR and office operations. The 100% placement support team prepared me thoroughly for my interviews.",
       featured: true,
     },
     {
-      initials: "AL",
-      role: "Academy Alumni",
+      initials: "MH",
+      role: "Hospital Front Office Executive",
       quote:
-        "I am glad that I was a student of Ash Academy. The hands-on projects felt like real-world challenges, making the learning process dynamic and practical. Plus, the support staff went above and beyond.",
+        "The hospital administration module and daily 3-session practical structure were game-changers for me. Within weeks of completing my capstone project, I was placed successfully.",
       featured: false,
     },
   ],
 };
 
 export const ctaBannerData = {
-  eyebrow: "Get in touch directly",
+  eyebrow: "Direct Admissions Helpline",
   callPrefix: "Call Us:",
-  phoneDisplay: "9072 80 1300",
-  phoneHref: "tel:9072801300",
-  ctaLabel: "Registration",
+  phoneDisplay: "+91 8921 365 750",
+  phoneHref: "tel:+918921365750",
+  ctaLabel: "Enquire Now",
   studentImage: {
     src: "/images/img_9.jpg",
     alt: "Representative student from Ash Academy",
   },
   rightNote: "Contact us today for batch dates & fees:",
   academyName: "Ash Academy",
-  tagline: "Start your professional journey",
-  phoneCompact: "9072801300",
-  email: "info@cbaacademy.in",
-  emailHref: "mailto:info@cbaacademy.in",
+  tagline: "Build Skills. Gain Confidence. Advance Your Career.",
+  phoneCompact: "+91 8921 365 750 / +91 9337 009 400",
+  email: "connect@ashacademy.ai",
+  emailHref: "mailto:connect@ashacademy.ai",
 };
 
 export const footerData = {
@@ -215,34 +214,33 @@ export const footerData = {
     alt: "ASH Academy Logo",
   },
   socialLinks: [
-    { label: "WhatsApp", short: "WA", href: "https://wa.me/919072801300", external: true },
+    { label: "WhatsApp", short: "WA", href: "https://wa.me/918921365750", external: true },
     { label: "Facebook", short: "FB", href: "#facebook", external: false },
     { label: "Instagram", short: "IG", href: "#instagram", external: false },
     { label: "LinkedIn", short: "IN", href: "#linkedin", external: false },
     { label: "YouTube", short: "YT", href: "#youtube", external: false },
   ],
   courseLinks: [
-    { label: "HR Course", href: "#courses" },
-    { label: "Office Administration", href: "#courses" },
-    { label: "Accounting Course", href: "#courses" },
-    { label: "Spoken English", href: "#courses" },
-    { label: "Terms & Condition", href: "#" },
+    { label: "HR & Administration Management", href: "/course" },
+    { label: "Office Administration", href: "/course" },
+    { label: "Payroll & Statutory Compliance", href: "/course#interactive-syllabus" },
+    { label: "Hospital Administration", href: "/course#interactive-syllabus" },
+    { label: "Fee Structure & Installments", href: "/course#fee-structure" },
   ],
   communityLinks: [
-    { label: "Help Center", href: "#" },
-    { label: "Our Partners", href: "#" },
-    { label: "Suggestions", href: "#" },
+    { label: "Daily Schedule & Timings", href: "/course#schedule" },
+    { label: "Who Can Join & 17 Job Roles", href: "/course#who-can-join" },
+    { label: "Software & AI Sandbox", href: "/course#software-sandbox" },
+    { label: "100% Placement Support", href: "/course#placement-support" },
     { label: "Our Blog", href: "/blogs" },
-    { label: "Newsletter", href: "#" },
   ],
   resourceLinks: [
-    { label: "Help Center", href: "#" },
-    { label: "Our Partners", href: "#" },
-    { label: "Suggestions", href: "#" },
-    { label: "Our Blog", href: "/blogs" },
-    { label: "Newsletter", href: "#" },
+    { label: "Admission Desk", href: "/contact" },
+    { label: "Tirur Main Campus", href: "/contact" },
+    { label: "Calicut Campus", href: "/contact" },
+    { label: "About ASH Academy", href: "/about" },
+    { label: "Course FAQs", href: "/course#faqs" },
   ],
-  copyright: "Copyright © 2025 Ash Academy. All rights reserved.",
-  bottomLinks: ["Services", "Help & FAQs", "Careers"],
+  copyright: "Copyright © 2026 ASH Academy. All rights reserved.",
+  bottomLinks: ["Privacy Policy", "Terms & Conditions", "Admissions Help"],
 };
-

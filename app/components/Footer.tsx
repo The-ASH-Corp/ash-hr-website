@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { footerData } from "./landingData";
 
@@ -35,20 +36,18 @@ export default function Footer() {
               </div>
             </motion.a>
             <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-400 leading-relaxed lg:pr-6">
-              <strong>Ash Academy</strong> is a career-focused professional
-              training institute dedicated to building job-ready skills for
-              today&apos;s competitive corporate world. We offer industry-relevant
-              courses in <strong>Accounting</strong>,{" "}
-              <strong>Office Administration</strong>,{" "}
-              <strong>Human Resource Management</strong>, and{" "}
-              <strong>English Communication</strong>, designed to transform
-              students into confident professionals.
+              <strong>ASH Academy</strong> is a premier career development
+              institute providing comprehensive practical training in{" "}
+              <strong>HR & Administration Management</strong>,{" "}
+              <strong>Office Operations</strong>, and{" "}
+              <strong>Healthcare Administration</strong>. With a proven record
+              of 200+ students trained and 100+ placements, we transform learners
+              into confident, job-ready professionals.
             </p>
             <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-400 leading-relaxed lg:pr-6">
-              Our programs combine <strong>expert-led training</strong>,{" "}
-              <strong>practical exposure</strong>, and{" "}
-              <strong>internship support</strong>, ensuring every learner is
-              prepared for real-world challenges.
+              Our 6-month programme combines <strong>theory</strong>,{" "}
+              <strong>practical exercises</strong>, and{" "}
+              <strong>workplace-based training</strong> with 100% placement support.
             </p>
 
             {/* Social Icons */}
@@ -72,64 +71,79 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links: Our Course */}
+          {/* Links: Program Modules */}
           <div className="sm:col-span-1 lg:col-span-2 space-y-3 2xl:space-y-4">
             <h4 className="text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-white uppercase tracking-wider">
-              Our Course
+              Programme
             </h4>
             <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-400">
               {footerData.courseLinks.map((link) => (
                 <li key={link.label}>
-                  <motion.a
-                    whileHover={{ x: 4 }}
+                  <Link
                     className="inline-block hover:text-white transition-colors"
                     href={link.href}
                   >
                     {link.label}
-                  </motion.a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Links: Our Community */}
+          {/* Links: Key Areas */}
           <div className="sm:col-span-1 lg:col-span-2 space-y-3 2xl:space-y-4">
             <h4 className="text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-white uppercase tracking-wider">
-              Our Community
+              Quick Links
             </h4>
             <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-400">
               {footerData.communityLinks.map((link) => (
                 <li key={link.label}>
-                  <motion.a
-                    whileHover={{ x: 4 }}
+                  <Link
                     className="inline-block hover:text-white transition-colors"
                     href={link.href}
                   >
                     {link.label}
-                  </motion.a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Links: Company Resources */}
+          {/* Contact Details & Campus Hub */}
           <div className="sm:col-span-1 lg:col-span-3 space-y-3 2xl:space-y-4">
             <h4 className="text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold text-white uppercase tracking-wider">
-              Company Resources
+              Campus & Contact
             </h4>
-            <ul className="space-y-2 2xl:space-y-2.5 text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-400">
-              {footerData.resourceLinks.map((link) => (
-                <li key={link.label}>
-                  <motion.a
-                    whileHover={{ x: 4 }}
-                    className="inline-block hover:text-white transition-colors"
-                    href={link.href}
-                  >
-                    {link.label}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-2.5 text-xs 2xl:text-sm text-slate-400">
+              <p className="leading-relaxed">
+                <strong className="text-white">Main Campus:</strong>
+                <br />
+                2nd Floor, OPS Mall, Vailathur, Ponmundam, Tirur Road, Malappuram, Kerala, India (676106)
+              </p>
+              <p>
+                <strong className="text-white">Phone:</strong>
+                <br />
+                <a href="tel:+918921365750" className="hover:text-white transition-colors">
+                  +91 8921 365 750
+                </a>
+                {" • "}
+                <a href="tel:+919337009400" className="hover:text-white transition-colors">
+                  +91 9337 009 400
+                </a>
+              </p>
+              <p>
+                <strong className="text-white">Email:</strong>
+                <br />
+                <a href="mailto:connect@ashacademy.ai" className="hover:text-white transition-colors">
+                  connect@ashacademy.ai
+                </a>
+              </p>
+              <p>
+                <strong className="text-white">Website:</strong>
+                <br />
+                <span className="text-sky-300">www.ashacademy.ai</span>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -138,14 +152,12 @@ export default function Footer() {
           <p>{footerData.copyright}</p>
           <div className="flex items-center space-x-6 2xl:space-x-8">
             {footerData.bottomLinks.map((item) => (
-              <motion.a
+              <span
                 key={item}
-                whileHover={{ y: -2 }}
                 className="hover:text-slate-400 transition-colors"
-                href="#"
               >
                 {item}
-              </motion.a>
+              </span>
             ))}
           </div>
         </div>
