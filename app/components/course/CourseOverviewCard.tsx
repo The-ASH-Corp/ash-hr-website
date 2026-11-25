@@ -8,7 +8,7 @@ function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
     case "dualDomain":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -23,7 +23,7 @@ function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
     case "practical":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -37,7 +37,7 @@ function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
     case "placement":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -52,7 +52,7 @@ function HighlightIcon({ type }: { type: OverviewHighlightItem["iconType"] }) {
     case "ai":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -77,81 +77,140 @@ export default function CourseOverviewCard() {
       id="overview"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       style={{ backgroundColor: "#ffffff", color: "#0f172a" }}
-      className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-[0_10px_35px_-10px_rgba(15,23,42,0.06)] scroll-mt-28"
+      className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-[0_12px_40px_-12px_rgba(15,23,42,0.07)] scroll-mt-28 overflow-hidden"
       data-purpose="course-overview-card"
     >
-      {/* Top Eyebrow */}
-      <div className="flex items-center gap-2.5 mb-3.5">
-        <span
-          style={{ backgroundColor: "#eef2ff", color: "#253b97" }}
-          className="w-7 h-7 rounded-lg bg-[#eef2ff] text-[#253b97] flex items-center justify-center shrink-0"
-        >
-          <svg
-            className="w-4 h-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
-            <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
-          </svg>
-        </span>
-        <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#253b97]">
-          {overviewCard.eyebrow}
-        </span>
-      </div>
+      {/* Subtle Top-Right Decorative Gradient Accent */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-gradient-to-br from-[#253b97]/[0.06] to-transparent blur-2xl"
+      />
 
-      {/* Title */}
-      <h2 className="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-[#0f172a] tracking-tight leading-snug mb-3.5">
-        {overviewCard.title}
-      </h2>
-
-      {/* Description */}
-      <p className="text-slate-600 text-xs sm:text-sm leading-[1.85] mb-6">
-        {overviewCard.description}
-      </p>
-
-      {/* Key Highlights Quick Strip (Document 2 & 3 Data) */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 mb-7">
-        {overviewCard.keyHighlights.map((kh, i) => (
-          <div key={i} className="text-left">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">
-              {kh.label}
-            </span>
-            <span className="text-xs sm:text-[13px] font-extrabold text-[#0f172a] block leading-tight">
-              {kh.value}
+      {/* Top Split Layout: Programme Abstract (Left) + Executive Snapshot Panel (Right) */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-9 items-center pb-8 mb-8 border-b border-slate-100">
+        {/* Left 7 Columns: Eyebrow, Heading & Abstract */}
+        <div className="lg:col-span-7 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#eef2ff] border border-[#253b97]/15">
+            <span className="w-2 h-2 rounded-full bg-[#253b97] animate-pulse" />
+            <span className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#253b97]">
+              {overviewCard.eyebrow}
             </span>
           </div>
-        ))}
-      </div>
 
-      {/* Bottom 4 Highlights Row */}
-      <div className="pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {overviewCard.highlights.map((item) => (
-          <motion.div
-            key={item.id}
-            whileHover={{ y: -3 }}
-            className="flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-slate-50 transition-colors"
+          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#0f172a] tracking-tight leading-[1.18]">
+            {overviewCard.title}
+          </h2>
+
+          <p className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-[1.8]">
+            {overviewCard.description}
+          </p>
+        </div>
+
+        {/* Right 5 Columns: Dark Navy Executive Programme Matrix */}
+        <div className="lg:col-span-5">
+          <div
+            style={{
+              background:
+                "linear-gradient(135deg, #131f54 0%, #1c2f7d 55%, #253b97 100%)",
+              color: "#ffffff",
+            }}
+            className="relative rounded-2xl p-5 sm:p-6 text-white shadow-[0_14px_32px_-8px_rgba(28,45,115,0.35)] overflow-hidden"
           >
             <div
-              style={{ backgroundColor: "#eef2ff", color: "#253b97" }}
-              className="w-9 h-9 rounded-xl bg-[#eef2ff] text-[#253b97] flex items-center justify-center shrink-0"
-            >
-              <HighlightIcon type={item.iconType} />
+              aria-hidden="true"
+              style={{
+                backgroundImage:
+                  "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
+                backgroundSize: "18px 18px",
+              }}
+              className="pointer-events-none absolute inset-0"
+            />
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/15">
+                <span className="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-[#ffca28]">
+                  PROGRAMME SNAPSHOT
+                </span>
+                <span className="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold text-blue-100">
+                  Executive Track
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {overviewCard.keyHighlights.map((kh, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{
+                      y: -2,
+                      scale: 1.02,
+                      transition: {
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 20,
+                        delay: 0,
+                      },
+                    }}
+                    className="rounded-xl p-3.5 bg-white/[0.08] hover:bg-white/[0.15] border border-white/10 hover:border-[#ffca28]/50 backdrop-blur-sm transition-colors duration-200 cursor-default"
+                  >
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-blue-200/80 block mb-1">
+                      {kh.label}
+                    </span>
+                    <span className="text-xs sm:text-[13px] font-extrabold text-white block leading-snug">
+                      {kh.value}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom 4 Interactive Bento Pillar Cards */}
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        {overviewCard.highlights.map((item, idx) => (
+          <motion.div
+            key={item.id}
+            whileHover={{
+              y: -6,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 20,
+                delay: 0,
+              },
+            }}
+            className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.35)] transition-all duration-250 cursor-default overflow-hidden"
+          >
+            {/* Top Row: Icon Box + Step Badge */}
+            <div className="flex items-center justify-between mb-5">
+              <div className="w-11 h-11 rounded-2xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] flex items-center justify-center shrink-0 shadow-xs transition-colors duration-250">
+                <HighlightIcon type={item.iconType} />
+              </div>
+              <span className="text-xs font-extrabold tracking-widest text-slate-300 group-hover:text-[#ffca28] transition-colors duration-250">
+                0{idx + 1}
+              </span>
+            </div>
+
+            {/* Bottom Content: Title & Subtitle */}
             <div>
-              <h3 className="text-xs font-extrabold text-[#0f172a] leading-tight">
+              <h3 className="text-sm sm:text-[15px] font-extrabold text-[#0f172a] group-hover:text-white leading-snug mb-1.5 transition-colors duration-250">
                 {item.title}
               </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5">
+              <p className="text-xs text-slate-500 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
                 {item.subtitle}
               </p>
+            </div>
+
+            {/* Bottom Animated Accent Line */}
+            <div className="mt-4 pt-3 border-t border-slate-200/70 group-hover:border-white/15 flex items-center justify-between text-[11px] font-bold text-[#253b97] group-hover:text-[#ffca28] transition-colors duration-250">
+              <span>Core Pillar</span>
+              <span className="group-hover:translate-x-1 transition-transform duration-200">
+                →
+              </span>
             </div>
           </motion.div>
         ))}

@@ -279,12 +279,12 @@ export const courseOverviewData: CourseOverviewData = {
     eyebrow: "6-MONTH CAREER DEVELOPMENT PROGRAMME",
     title: "HR & Administration Management Programme",
     description:
-      "A career-defining dual-domain curriculum combining strategic Human Resource Management with comprehensive Office and Healthcare Administration. Delivered across 24 weeks (120 days) through hands-on simulations, real corporate workflows, AI productivity tools, and 100% placement support.",
+      "A career-defining 6-month dual-domain curriculum combining strategic Human Resource Management with comprehensive Office and Healthcare Administration through hands-on simulations, real corporate workflows, AI productivity tools, and 100% placement support.",
     keyHighlights: [
-      { label: "Duration", value: "6 Months • 24 Weeks • 120 Days" },
-      { label: "Daily Schedule", value: "Mon – Fri • 9:30 AM – 3:30 PM" },
+      { label: "Programme Duration", value: "6-Month Career Programme" },
+      { label: "Curriculum Structure", value: "24 Practical Learning Modules" },
       { label: "Training Approach", value: "Theory, Practical & Workplace-Based" },
-      { label: "Placement Record", value: "100+ Placements • 100% Placement Support" },
+      { label: "Career Support", value: "100% Placement & Interview Support" },
     ],
     highlights: [
       {
@@ -297,19 +297,19 @@ export const courseOverviewData: CourseOverviewData = {
         id: "practical",
         iconType: "practical",
         title: "Workplace Simulations",
-        subtitle: "120 Days Hands-On Practice",
+        subtitle: "Real Workflows, SOPs & Case Studies",
       },
       {
         id: "placement",
         iconType: "placement",
         title: "100% Placement Support",
-        subtitle: "Interviews & Employer Connects",
+        subtitle: "Resume, Mock Interviews & Job Connects",
       },
       {
         id: "ai",
         iconType: "ai",
         title: "AI-Assisted Workplace",
-        subtitle: "Modern Prompting & SOP Workflows",
+        subtitle: "Modern Prompting & Digital Office Tools",
       },
     ],
   },
@@ -1363,8 +1363,8 @@ export const courseOverviewData: CourseOverviewData = {
       "We support learners throughout their career preparation journey, helping them build confidence, strengthen professional skills, and prepare for relevant employment opportunities in HR, Administration, and Healthcare sectors.",
     badge: "100% PLACEMENT SUPPORT",
     stats: [
-      { value: "200+", label: "Students Trained" },
-      { value: "100+", label: "Student Placements" },
+      { value: "6 Months", label: "Career Programme" },
+      { value: "24 Modules", label: "Practical Curriculum" },
       { value: "100%", label: "Placement Assistance" },
       { value: "17+", label: "Potential Job Roles" },
     ],
