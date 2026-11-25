@@ -37,15 +37,6 @@ export default function CoursePlacementSupportCard({
           </p>
         </div>
 
-        <div className="shrink-0">
-          <span
-            style={{ backgroundColor: "#dcfce7", color: "#15803d" }}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#dcfce7] text-[#15803d] text-xs font-bold"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#16a34a] animate-pulse" />
-            <span>{placementSupportCard.badge}</span>
-          </span>
-        </div>
       </div>
 
       {/* Motto Tagline Banner */}
@@ -68,22 +59,7 @@ export default function CoursePlacementSupportCard({
         </button>
       </div>
 
-      {/* 4 Stats Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-        {placementSupportCard.stats.map((stat, idx) => (
-          <div
-            key={idx}
-            className="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center"
-          >
-            <div className="text-2xl sm:text-3xl font-extrabold text-[#253b97]">
-              {stat.value}
-            </div>
-            <div className="text-[11px] font-bold text-slate-500 mt-0.5 uppercase tracking-wide">
-              {stat.label}
-            </div>
-          </div>
-        ))}
-      </div>
+     
 
       {/* 6 Placement Pillars Grid */}
       <div>
@@ -91,21 +67,29 @@ export default function CoursePlacementSupportCard({
           Structured 6-Pillar Career Support Pathway:
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {placementSupportCard.pillars.map((pillar, idx) => (
             <motion.div
               key={idx}
-              whileHover={{ y: -2 }}
-              className="rounded-2xl p-4 sm:p-5 bg-white border border-slate-200 hover:border-[#253b97]/30 hover:shadow-xs transition-all flex flex-col justify-between"
+              whileHover={{
+                y: -6,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 20,
+                  delay: 0,
+                },
+              }}
+              className="group rounded-2xl p-5 sm:p-6 bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.32)] transition-all duration-250 flex flex-col justify-between cursor-default"
             >
               <div>
-                <div className="w-7 h-7 rounded-lg bg-[#eef2ff] text-[#253b97] text-xs font-bold flex items-center justify-center mb-3">
+                <div className="w-9 h-9 rounded-xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] text-xs font-extrabold flex items-center justify-center mb-4 transition-colors duration-250">
                   0{idx + 1}
                 </div>
-                <h4 className="text-xs sm:text-[13px] font-bold text-[#0f172a] mb-1.5 leading-snug">
+                <h4 className="text-sm sm:text-[15px] font-extrabold text-[#0f172a] group-hover:text-white mb-1.5 leading-snug transition-colors duration-250">
                   {pillar.title}
                 </h4>
-                <p className="text-[11.5px] text-slate-500 leading-relaxed">
+                <p className="text-xs text-slate-500 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
                   {pillar.description}
                 </p>
               </div>

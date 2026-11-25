@@ -32,9 +32,9 @@ export const heroData = {
   },
  
   accreditations: [
-    { badge: "6M", label: "6-Month Career Programme", rounded: "rounded" },
+    { badge: "6M", label: "6-Month Career Programme", rounded: "rounded-full" },
     { badge: "120D", label: "120 Days Practical Training", rounded: "rounded-full" },
-    // { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded" },
+    // { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded-full" },
     { badge: "100%", label: "Placement Support", rounded: "rounded-full" },
   ],
 };

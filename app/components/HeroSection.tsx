@@ -155,10 +155,10 @@ export default function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
               key={item.label}
               whileHover={{ scale: 1.06, y: -2, color: "#ffffff" }}
               transition={{ type: "spring", stiffness: 350, damping: 18 }}
-              className="flex items-center gap-2 2xl:gap-3 cursor-default"
+              className="flex items-center gap-2.5 sm:gap-3 2xl:gap-3.5 cursor-default"
             >
               <span
-                className={`w-6 h-6 2xl:w-7 2xl:h-7 shrink-0 ${item.rounded} border border-white/30 flex items-center justify-center text-[10px] 2xl:text-xs text-white font-bold`}
+                className="w-9 h-9 sm:w-10 sm:h-10 2xl:w-11 2xl:h-11 shrink-0 rounded-full border border-white/30 flex items-center justify-center text-[10px] sm:text-[11px] 2xl:text-xs text-white font-bold leading-none tracking-tight"
               >
                 {item.badge}
               </span>{" "}

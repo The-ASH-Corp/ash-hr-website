@@ -393,9 +393,9 @@ export default function ContactFormSection({
                 </a>
               </h3>
 
-              <p className="text-xs text-slate-200/90 leading-relaxed max-w-md min-[137.5rem]:max-w-lg mx-auto lg:mx-0">
+              {/* <p className="text-xs text-slate-200/90 leading-relaxed max-w-md min-[137.5rem]:max-w-lg mx-auto lg:mx-0">
                 {admissionsBanner.hoursNote}
-              </p>
+              </p> */}
 
               <div className="pt-1">
                 <motion.button

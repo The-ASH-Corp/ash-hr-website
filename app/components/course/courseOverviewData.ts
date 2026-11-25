@@ -279,12 +279,12 @@ export const courseOverviewData: CourseOverviewData = {
     eyebrow: "6-MONTH CAREER DEVELOPMENT PROGRAMME",
     title: "HR & Administration Management Programme",
     description:
-      "A career-defining dual-domain curriculum combining strategic Human Resource Management with comprehensive Office and Healthcare Administration. Delivered across 24 weeks (120 days) through hands-on simulations, real corporate workflows, AI productivity tools, and 100% placement support.",
+      "A career-defining 6-month dual-domain curriculum combining strategic Human Resource Management with comprehensive Office and Healthcare Administration through hands-on simulations, real corporate workflows, AI productivity tools, and 100% placement support.",
     keyHighlights: [
-      { label: "Duration", value: "6 Months • 24 Weeks • 120 Days" },
-      { label: "Daily Schedule", value: "Mon – Fri • 9:30 AM – 3:30 PM" },
+      { label: "Programme Duration", value: "6-Month Career Programme" },
+      { label: "Curriculum Structure", value: "24 Practical Learning Modules" },
       { label: "Training Approach", value: "Theory, Practical & Workplace-Based" },
-      { label: "Placement Record", value: "100+ Placements • 100% Placement Support" },
+      { label: "Career Support", value: "100% Placement & Interview Support" },
     ],
     highlights: [
       {
@@ -297,19 +297,19 @@ export const courseOverviewData: CourseOverviewData = {
         id: "practical",
         iconType: "practical",
         title: "Workplace Simulations",
-        subtitle: "120 Days Hands-On Practice",
+        subtitle: "Real Workflows, SOPs & Case Studies",
       },
       {
         id: "placement",
         iconType: "placement",
         title: "100% Placement Support",
-        subtitle: "Interviews & Employer Connects",
+        subtitle: "Resume, Mock Interviews & Job Connects",
       },
       {
         id: "ai",
         iconType: "ai",
         title: "AI-Assisted Workplace",
-        subtitle: "Modern Prompting & SOP Workflows",
+        subtitle: "Modern Prompting & Digital Office Tools",
       },
     ],
   },
@@ -965,11 +965,11 @@ export const courseOverviewData: CourseOverviewData = {
   },
 
   syllabusCard: {
-    eyebrow: "DETAILED 24-WEEK COURSE ROADMAP",
-    title: "Comprehensive Month-by-Month & Week-by-Week Syllabus",
+    eyebrow: "STRUCTURED ACADEMIC ROADMAP",
+    title: "6-Month Comprehensive Syllabus",
     subtitle:
-      "120 Days of intensive theory, practical exercises, and workplace-based training with mandatory weekly portfolio submissions.",
-    downloadLabel: "Download Complete 24-Week Timetable PDF",
+      "A structured 6-month curriculum covering office administration foundations, core HR functions, payroll & compliance, hospital administration, and AI-enabled workplace tools.",
+    downloadLabel: "Download Full Syllabus PDF",
     months: [
       {
         id: "month-1",
@@ -1163,7 +1163,7 @@ export const courseOverviewData: CourseOverviewData = {
         id: "month-5",
         monthNumber: 5,
         monthLabel: "Month 5",
-        badgeVariant: "gold",
+        badgeVariant: "navy",
         title: "Applied Administration Settings",
         subtitle: "Basic Hospital Administration, Enquiry Handling, Office Accounts & AI Tools",
         defaultOpen: true,
@@ -1210,7 +1210,7 @@ export const courseOverviewData: CourseOverviewData = {
         id: "month-6",
         monthNumber: 6,
         monthLabel: "Month 6",
-        badgeVariant: "gold",
+        badgeVariant: "navy",
         title: "Reporting, Digital Systems, Career Readiness & Capstone",
         subtitle: "Data Analysis, Google Workspace, CRM Workflows, CV/Interviews & Final Viva",
         defaultOpen: true,
@@ -1320,14 +1320,7 @@ export const courseOverviewData: CourseOverviewData = {
         subtitle: "Modern automated attendance systems, salary structures & self-service desks",
         tag: "HR & Attendance",
       },
-      {
-        id: "zoho-books",
-        badgeText: "Books",
-        badgeType: "zohobooks",
-        title: "Zoho Books & Invoicing",
-        subtitle: "Request-to-invoice workflows, supplier/customer records & payment status",
-        tag: "Office Accounts",
-      },
+     
       {
         id: "google-workspace",
         badgeText: "Drive",
@@ -1363,8 +1356,8 @@ export const courseOverviewData: CourseOverviewData = {
       "We support learners throughout their career preparation journey, helping them build confidence, strengthen professional skills, and prepare for relevant employment opportunities in HR, Administration, and Healthcare sectors.",
     badge: "100% PLACEMENT SUPPORT",
     stats: [
-      { value: "200+", label: "Students Trained" },
-      { value: "100+", label: "Student Placements" },
+      { value: "6 Months", label: "Career Programme" },
+      { value: "24 Modules", label: "Practical Curriculum" },
       { value: "100%", label: "Placement Assistance" },
       { value: "17+", label: "Potential Job Roles" },
     ],
@@ -1459,12 +1452,7 @@ export const courseOverviewData: CourseOverviewData = {
         answer:
           "Students learn AI-Assisted Administration in Month 5: prompt engineering (role, task, context, constraints) for drafting memos, SOPs, and emails, combined with mandatory human verification for facts, calculations, and data privacy guardrails.",
       },
-      {
-        id: "faq-placement",
-        question: "What placement support does ASH Academy provide?",
-        answer:
-          "We offer 100% Placement Support with a proven track record of 200+ students trained and 100+ placements. Our placement cell provides career guidance, resume crafting, mock interview drills, workplace readiness, and direct employer connections for 17+ potential job roles.",
-      },
+     
     ],
   },
 

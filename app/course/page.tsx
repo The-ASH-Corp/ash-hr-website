@@ -12,6 +12,7 @@ import CourseFeeStructureCard from "../components/course/CourseFeeStructureCard"
 import CourseWhoCanJoinCard from "../components/course/CourseWhoCanJoinCard";
 import CourseSoftwareSandboxCard from "../components/course/CourseSoftwareSandboxCard";
 import CoursePlacementSupportCard from "../components/course/CoursePlacementSupportCard";
+import CourseJobOpportunitiesCard from "../components/course/CourseJobOpportunitiesCard";
 import CourseMentorshipCard from "../components/course/CourseMentorshipCard";
 import CourseFaqCard from "../components/course/CourseFaqCard";
 import CourseBottomBanner from "../components/course/CourseBottomBanner";
@@ -44,8 +45,8 @@ export default function CoursePage() {
         >
           <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-start">
-              {/* Left 8 Columns: Comprehensive Course Sections */}
-              <div className="lg:col-span-8 space-y-7 lg:space-y-8">
+              {/* Main Course Sections (Full 12-Column Standard Width while right sidebar cards are commented out) */}
+              <div className="lg:col-span-12 space-y-7 lg:space-y-8">
                 <CourseOverviewCard />
                 {/* <CourseDailyScheduleCard /> */}
                 <CourseCompetenciesCard />
@@ -54,12 +55,13 @@ export default function CoursePage() {
                 {/* <CourseWhoCanJoinCard /> */}
                 <CourseSoftwareSandboxCard />
                 <CoursePlacementSupportCard onOpenEnquiry={openEnquiry} />
+                <CourseJobOpportunitiesCard />
                 {/* <CourseMentorshipCard /> */}
                 <CourseFaqCard />
               </div>
 
               {/* Right 4 Columns: Program Snapshot + Admissions Desk + Institutional Accreditations */}
-              <div className="lg:col-span-4 space-y-6 lg:space-y-7 sticky top-28">
+              <div className="hidden">
                 {/* <CourseSnapshotCard /> */}
                 {/* <CourseAdmissionsCard /> */}
                 {/* <CourseAccreditationsCard /> */}

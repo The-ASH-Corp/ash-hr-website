@@ -8,7 +8,7 @@ function CompetencyIcon({ type }: { type: CompetencyCardItem["iconType"] }) {
     case "architecture":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -25,7 +25,7 @@ function CompetencyIcon({ type }: { type: CompetencyCardItem["iconType"] }) {
     case "sourcing":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -42,7 +42,7 @@ function CompetencyIcon({ type }: { type: CompetencyCardItem["iconType"] }) {
     case "compliance":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -57,7 +57,7 @@ function CompetencyIcon({ type }: { type: CompetencyCardItem["iconType"] }) {
     case "payroll":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -73,7 +73,7 @@ function CompetencyIcon({ type }: { type: CompetencyCardItem["iconType"] }) {
     case "analytics":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -87,7 +87,7 @@ function CompetencyIcon({ type }: { type: CompetencyCardItem["iconType"] }) {
     case "hris":
       return (
         <svg
-          className="w-4 h-4"
+          className="w-5 h-5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -99,6 +99,38 @@ function CompetencyIcon({ type }: { type: CompetencyCardItem["iconType"] }) {
           <rect x="3" y="15" width="6" height="5" rx="1" />
           <rect x="15" y="15" width="6" height="5" rx="1" />
           <path d="M12 8v4M6 15v-3h12v3" />
+        </svg>
+      );
+    case "hospital":
+      return (
+        <svg
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 21h18M5 21V7a2 2 0 012-2h10a2 2 0 012 2v14" />
+          <path d="M12 9v4M10 11h4" />
+        </svg>
+      );
+    case "ai":
+      return (
+        <svg
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 2a4 4 0 00-4 4v2H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-2V6a4 4 0 00-4-4z" />
+          <circle cx="9" cy="13" r="1" />
+          <circle cx="15" cy="13" r="1" />
+          <path d="M10 17h4" />
         </svg>
       );
   }
@@ -119,42 +151,50 @@ export default function CourseCompetenciesCard() {
       data-purpose="course-competencies-card"
     >
       {/* Eyebrow */}
-      <span className="block text-[11px] font-extrabold uppercase tracking-wider text-[#253b97] mb-1.5">
+      <span className="block text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#253b97] mb-1.5">
         {competenciesCard.eyebrow}
       </span>
 
       {/* Title */}
-      <h2 className="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-[#0f172a] tracking-tight leading-snug mb-2">
+      <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-extrabold text-[#0f172a] tracking-tight leading-[1.2] mb-2">
         {competenciesCard.title}
       </h2>
 
       {/* Subtitle */}
-      <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6">
+      <p className="text-slate-500 text-xs sm:text-sm lg:text-[15px] leading-relaxed mb-7 max-w-3xl">
         {competenciesCard.subtitle}
       </p>
 
-      {/* 2x3 Competency Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-        {competenciesCard.items.map((item) => (
+      {/* Competency Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        {competenciesCard.items.map((item, idx) => (
           <motion.div
             key={item.id}
             whileHover={{
-              y: -4,
-              scale: 1.01,
-              transition: { type: "spring", stiffness: 380, damping: 22, delay: 0 },
+              y: -6,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 20,
+                delay: 0,
+              },
             }}
-            style={{ backgroundColor: "#f8fafc" }}
-            className="rounded-2xl p-5 bg-[#f8fafc] hover:bg-[#f0f3ff]/60 border border-slate-100 hover:border-[#253b97]/25 transition-colors duration-200 flex items-start gap-3.5"
+            className="group rounded-2xl p-5 sm:p-6 bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.32)] transition-all duration-250 flex flex-col justify-between cursor-default"
           >
-            <span className="text-[#253b97] mt-0.5 shrink-0">
-              <CompetencyIcon type={item.iconType} />
-            </span>
+            <div className="flex items-center justify-between mb-4">
+              <div className="w-11 h-11 rounded-2xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] flex items-center justify-center shrink-0 transition-colors duration-250">
+                <CompetencyIcon type={item.iconType} />
+              </div>
+              <span className="text-[11px] font-extrabold tracking-widest text-slate-300 group-hover:text-white/60 transition-colors duration-250">
+                0{idx + 1}
+              </span>
+            </div>
 
             <div>
-              <h3 className="text-xs sm:text-[13px] font-extrabold text-[#0f172a] mb-1.5">
+              <h3 className="text-sm sm:text-[15px] font-extrabold text-[#0f172a] group-hover:text-white mb-1.5 leading-snug transition-colors duration-250">
                 {item.title}
               </h3>
-              <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed">
+              <p className="text-xs text-slate-500 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
                 {item.description}
               </p>
             </div>
@@ -164,4 +204,3 @@ export default function CourseCompetenciesCard() {
     </motion.section>
   );
 }
-

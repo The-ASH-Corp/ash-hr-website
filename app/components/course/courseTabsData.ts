@@ -32,5 +32,10 @@ export const courseTabsData: CourseTabItem[] = [
     label: "Placement Support",
     href: "#placement-support",
   },
+  {
+    id: "job-opportunities",
+    label: "Job Opportunities",
+    href: "#job-opportunities",
+  },
   { id: "faqs", label: "FAQs", href: "#faqs" },
 ];

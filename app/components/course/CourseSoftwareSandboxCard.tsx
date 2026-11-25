@@ -108,18 +108,25 @@ export default function CourseSoftwareSandboxCard() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4, delay: idx * 0.05, ease: "easeOut" }}
-            whileHover={{ y: -3 }}
-            style={{ backgroundColor: "#ffffff" }}
-            className="flex flex-col items-center text-center p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 hover:border-[#253b97]/30 hover:shadow-[0_10px_25px_rgba(37,59,151,0.06)] transition-all"
+            whileHover={{
+              y: -6,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 20,
+                delay: 0,
+              },
+            }}
+            className="group flex flex-col items-center text-center p-5 sm:p-6 rounded-2xl bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.32)] transition-all duration-250 cursor-default"
           >
             <SandboxToolBadge item={tool} />
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-[#ffca28] transition-colors mb-1">
               {tool.tag}
             </span>
-            <h3 className="text-[14px] sm:text-[14.5px] font-bold text-[#0f172a] mb-1.5">
+            <h3 className="text-[14px] sm:text-[15px] font-extrabold text-[#0f172a] group-hover:text-white transition-colors mb-1.5">
               {tool.title}
             </h3>
-            <p className="text-[12px] text-slate-500 leading-[1.55] max-w-[210px]">
+            <p className="text-[12px] text-slate-500 group-hover:text-blue-100/90 leading-[1.55] max-w-[220px] transition-colors">
               {tool.subtitle}
             </p>
           </motion.div>
