@@ -27,7 +27,7 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
       className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100"
     >
       <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
-        <div className="flex items-center justify-between h-14 sm:h-16">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <Link
@@ -35,13 +35,13 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
               className="flex items-center group shrink-0"
               href="/"
             >
-              <div className="relative h-10 w-20 sm:h-11 sm:w-22 overflow-hidden">
+              <div className="relative h-11 w-22 sm:h-13 sm:w-26 overflow-hidden">
                 <Image
                   src={headerData.logo.src}
                   alt={headerData.logo.alt}
                   fill
                   priority
-                  sizes="96px"
+                  sizes="104px"
                   className="object-cover object-[center_45%]"
                 />
               </div>

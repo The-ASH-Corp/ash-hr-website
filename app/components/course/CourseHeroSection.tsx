@@ -188,17 +188,7 @@ export default function CourseHeroSection({
                 </span>
               </div>
 
-              <div
-                style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  borderColor: "rgba(255, 255, 255, 0.2)",
-                }}
-                className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm"
-              >
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-100">
-                  {courseHeroData.badges.benchmarked}
-                </span>
-              </div>
+              {/*  */}
             </motion.div>
 
             {/* Main Heading */}
@@ -233,57 +223,7 @@ export default function CourseHeroSection({
             </motion.p>
 
             {/* Next Executive Batch Box */}
-            <motion.div
-              variants={itemVariants}
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.08)",
-                borderColor: "rgba(255, 255, 255, 0.16)",
-              }}
-              className="rounded-2xl p-3.5 sm:px-4 sm:py-3.5 bg-white/[0.08] border border-white/15 backdrop-blur-sm max-w-xl min-[137.5rem]:max-w-2xl flex flex-wrap items-center justify-between gap-3"
-            >
-              <div className="flex items-center gap-3.5">
-                <div
-                  style={{ backgroundColor: "#f5b82e", color: "#0f172a" }}
-                  className="w-10 h-10 rounded-xl bg-[#f5b82e] text-[#0f172a] flex items-center justify-center shrink-0 shadow-sm"
-                >
-                  <svg
-                    className="w-5 h-5"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z" />
-                  </svg>
-                </div>
-
-                <div>
-                  <span className="block text-[10px] font-bold uppercase tracking-wider text-slate-300">
-                    {courseHeroData.batchBox.label}
-                  </span>
-                  <span className="block text-xs sm:text-sm font-bold text-white mt-0.5">
-                    {courseHeroData.batchBox.schedule}
-                  </span>
-                </div>
-              </div>
-
-              <div
-                style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  borderColor: "rgba(255, 255, 255, 0.15)",
-                }}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15"
-              >
-                <span
-                  style={{ backgroundColor: "#f5b82e" }}
-                  className="w-1.5 h-1.5 rounded-full bg-[#f5b82e] animate-pulse"
-                />
-                <span
-                  style={{ color: "#f5b82e" }}
-                  className="text-[11px] font-bold text-[#f5b82e]"
-                >
-                  {courseHeroData.batchBox.seatsLeft}
-                </span>
-              </div>
-            </motion.div>
+           
 
             {/* CTA Buttons & Phone Row */}
             <motion.div
@@ -302,50 +242,9 @@ export default function CourseHeroSection({
                 <span className="text-base leading-none">→</span>
               </motion.button>
 
-              <motion.button
-                type="button"
-                onClick={onOpenEnquiry}
-                whileHover={{ scale: 1.03, y: -1 }}
-                whileTap={{ scale: 0.97 }}
-                style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  borderColor: "rgba(255, 255, 255, 0.25)",
-                  color: "#ffffff",
-                }}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/25 text-white text-xs sm:text-sm font-bold backdrop-blur-sm transition-colors cursor-pointer"
-              >
-                <svg
-                  className="w-4 h-4 shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16" />
-                </svg>
-                <span>{courseHeroData.secondaryCta}</span>
-              </motion.button>
+              
 
-              <a
-                href={courseHeroData.phoneHref}
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-sky-200 transition-colors pl-1"
-              >
-                <svg
-                  className="w-4 h-4 text-sky-300 shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M3 18v-6a9 9 0 0118 0v6" />
-                  <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z" />
-                </svg>
-                <span>{courseHeroData.phoneDisplay}</span>
-              </a>
+              
             </motion.div>
           </motion.div>
 
@@ -402,50 +301,7 @@ export default function CourseHeroSection({
           </motion.div>
         </div>
 
-        {/* Bottom 4 Stat Boxes Bar */}
-        <div className="mt-12 sm:mt-14 pt-8 sm:pt-10 border-t border-white/10">
-          <motion.div
-            variants={statGridVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.25 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
-          >
-            {courseHeroData.stats.map((stat) => (
-              <motion.div
-                key={stat.id}
-                variants={statCardVariants}
-                whileHover={{
-                  y: -6,
-                  scale: 1.02,
-                  transition: {
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 22,
-                    delay: 0,
-                  },
-                }}
-                style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.06)",
-                  borderColor: "rgba(255, 255, 255, 0.14)",
-                }}
-                className="rounded-2xl py-5 px-6 bg-white/[0.06] hover:bg-white/[0.11] border border-white/15 hover:border-white/30 backdrop-blur-sm text-center transition-colors duration-200 cursor-default"
-              >
-                <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight tabular-nums">
-                  <AnimatedCourseStat
-                    to={stat.numericValue}
-                    suffix={stat.suffix}
-                    decimals={stat.decimals}
-                    formatWithCommas={stat.formatWithCommas}
-                  />
-                </div>
-                <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-300 mt-1.5">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+       
       </div>
     </section>
   );

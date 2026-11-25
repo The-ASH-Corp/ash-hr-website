@@ -190,7 +190,7 @@ export const testimonialsData = {
 };
 
 export const ctaBannerData = {
-  eyebrow: "Direct Admissions Helpline",
+  eyebrow: "Admission Helpline",
   callPrefix: "Call Us:",
   phoneDisplay: "+91 8921 365 750",
   phoneHref: "tel:+918921365750",

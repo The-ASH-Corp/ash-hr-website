@@ -147,7 +147,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                     />
                   </div>
 
-                  <div>
+                  {/* <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
                       Select Course
                     </label>
@@ -162,7 +162,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       <option value="Hospital Administration">Basic Hospital Administration</option>
                       <option value="English Communication">English Communication & Personality</option>
                     </select>
-                  </div>
+                  </div> */}
 
                   <div className="pt-1 sm:pt-2">
                     <motion.button

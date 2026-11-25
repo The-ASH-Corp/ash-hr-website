@@ -47,22 +47,22 @@ export default function CoursePage() {
               {/* Left 8 Columns: Comprehensive Course Sections */}
               <div className="lg:col-span-8 space-y-7 lg:space-y-8">
                 <CourseOverviewCard />
-                <CourseDailyScheduleCard />
+                {/* <CourseDailyScheduleCard /> */}
                 <CourseCompetenciesCard />
                 <CourseSyllabusCard onOpenEnquiry={openEnquiry} />
-                <CourseFeeStructureCard onOpenEnquiry={openEnquiry} />
-                <CourseWhoCanJoinCard />
+                {/* <CourseFeeStructureCard onOpenEnquiry={openEnquiry} /> */}
+                {/* <CourseWhoCanJoinCard /> */}
                 <CourseSoftwareSandboxCard />
                 <CoursePlacementSupportCard onOpenEnquiry={openEnquiry} />
-                <CourseMentorshipCard />
+                {/* <CourseMentorshipCard /> */}
                 <CourseFaqCard />
               </div>
 
               {/* Right 4 Columns: Program Snapshot + Admissions Desk + Institutional Accreditations */}
               <div className="lg:col-span-4 space-y-6 lg:space-y-7 sticky top-28">
-                <CourseSnapshotCard />
-                <CourseAdmissionsCard />
-                <CourseAccreditationsCard />
+                {/* <CourseSnapshotCard /> */}
+                {/* <CourseAdmissionsCard /> */}
+                {/* <CourseAccreditationsCard /> */}
               </div>
             </div>
           </div>
