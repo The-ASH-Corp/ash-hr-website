@@ -965,11 +965,11 @@ export const courseOverviewData: CourseOverviewData = {
   },
 
   syllabusCard: {
-    eyebrow: "DETAILED 24-WEEK COURSE ROADMAP",
-    title: "Comprehensive Month-by-Month & Week-by-Week Syllabus",
+    eyebrow: "STRUCTURED ACADEMIC ROADMAP",
+    title: "6-Month Comprehensive Syllabus",
     subtitle:
-      "120 Days of intensive theory, practical exercises, and workplace-based training with mandatory weekly portfolio submissions.",
-    downloadLabel: "Download Complete 24-Week Timetable PDF",
+      "A structured 6-month curriculum covering office administration foundations, core HR functions, payroll & compliance, hospital administration, and AI-enabled workplace tools.",
+    downloadLabel: "Download Full Syllabus PDF",
     months: [
       {
         id: "month-1",
