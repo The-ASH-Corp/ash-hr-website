@@ -37,15 +37,6 @@ export default function CoursePlacementSupportCard({
           </p>
         </div>
 
-        <div className="shrink-0">
-          <span
-            style={{ backgroundColor: "#dcfce7", color: "#15803d" }}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#dcfce7] text-[#15803d] text-xs font-bold"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#16a34a] animate-pulse" />
-            <span>{placementSupportCard.badge}</span>
-          </span>
-        </div>
       </div>
 
       {/* Motto Tagline Banner */}
@@ -68,31 +59,7 @@ export default function CoursePlacementSupportCard({
         </button>
       </div>
 
-      {/* 4 Stats Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        {placementSupportCard.stats.map((stat, idx) => (
-          <motion.div
-            key={idx}
-            whileHover={{
-              y: -5,
-              transition: {
-                type: "spring",
-                stiffness: 400,
-                damping: 20,
-                delay: 0,
-              },
-            }}
-            className="group p-5 rounded-2xl bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_16px_34px_-10px_rgba(37,59,151,0.32)] text-center transition-all duration-250 cursor-default"
-          >
-            <div className="text-2xl sm:text-3xl font-extrabold text-[#253b97] group-hover:text-[#ffca28] transition-colors duration-250">
-              {stat.value}
-            </div>
-            <div className="text-[11px] font-bold text-slate-500 group-hover:text-white mt-1 uppercase tracking-wider transition-colors duration-250">
-              {stat.label}
-            </div>
-          </motion.div>
-        ))}
-      </div>
+     
 
       {/* 6 Placement Pillars Grid */}
       <div>

@@ -12,6 +12,7 @@ import CourseFeeStructureCard from "../components/course/CourseFeeStructureCard"
 import CourseWhoCanJoinCard from "../components/course/CourseWhoCanJoinCard";
 import CourseSoftwareSandboxCard from "../components/course/CourseSoftwareSandboxCard";
 import CoursePlacementSupportCard from "../components/course/CoursePlacementSupportCard";
+import CourseJobOpportunitiesCard from "../components/course/CourseJobOpportunitiesCard";
 import CourseMentorshipCard from "../components/course/CourseMentorshipCard";
 import CourseFaqCard from "../components/course/CourseFaqCard";
 import CourseBottomBanner from "../components/course/CourseBottomBanner";
@@ -54,6 +55,7 @@ export default function CoursePage() {
                 {/* <CourseWhoCanJoinCard /> */}
                 <CourseSoftwareSandboxCard />
                 <CoursePlacementSupportCard onOpenEnquiry={openEnquiry} />
+                <CourseJobOpportunitiesCard />
                 {/* <CourseMentorshipCard /> */}
                 <CourseFaqCard />
               </div>

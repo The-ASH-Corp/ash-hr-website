@@ -1163,7 +1163,7 @@ export const courseOverviewData: CourseOverviewData = {
         id: "month-5",
         monthNumber: 5,
         monthLabel: "Month 5",
-        badgeVariant: "gold",
+        badgeVariant: "navy",
         title: "Applied Administration Settings",
         subtitle: "Basic Hospital Administration, Enquiry Handling, Office Accounts & AI Tools",
         defaultOpen: true,
@@ -1210,7 +1210,7 @@ export const courseOverviewData: CourseOverviewData = {
         id: "month-6",
         monthNumber: 6,
         monthLabel: "Month 6",
-        badgeVariant: "gold",
+        badgeVariant: "navy",
         title: "Reporting, Digital Systems, Career Readiness & Capstone",
         subtitle: "Data Analysis, Google Workspace, CRM Workflows, CV/Interviews & Final Viva",
         defaultOpen: true,
@@ -1320,14 +1320,7 @@ export const courseOverviewData: CourseOverviewData = {
         subtitle: "Modern automated attendance systems, salary structures & self-service desks",
         tag: "HR & Attendance",
       },
-      {
-        id: "zoho-books",
-        badgeText: "Books",
-        badgeType: "zohobooks",
-        title: "Zoho Books & Invoicing",
-        subtitle: "Request-to-invoice workflows, supplier/customer records & payment status",
-        tag: "Office Accounts",
-      },
+     
       {
         id: "google-workspace",
         badgeText: "Drive",
@@ -1459,12 +1452,7 @@ export const courseOverviewData: CourseOverviewData = {
         answer:
           "Students learn AI-Assisted Administration in Month 5: prompt engineering (role, task, context, constraints) for drafting memos, SOPs, and emails, combined with mandatory human verification for facts, calculations, and data privacy guardrails.",
       },
-      {
-        id: "faq-placement",
-        question: "What placement support does ASH Academy provide?",
-        answer:
-          "We offer 100% Placement Support with a proven track record of 200+ students trained and 100+ placements. Our placement cell provides career guidance, resume crafting, mock interview drills, workplace readiness, and direct employer connections for 17+ potential job roles.",
-      },
+     
     ],
   },
 
