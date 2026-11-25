@@ -92,8 +92,8 @@ export default function AboutAcademySection() {
       data-purpose="about-academy-section"
     >
       <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 min-[137.5rem]:gap-20 items-start">
-          {/* Left Column: Intro + 2x2 Stat Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 min-[137.5rem]:gap-20 items-center">
+          {/* Left Column: Intro */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -146,53 +146,10 @@ export default function AboutAcademySection() {
             <p className="text-slate-600 text-sm sm:text-[15px] leading-[1.75] max-w-xl min-[137.5rem]:max-w-none">
               {aboutAcademyData.description}
             </p>
-
-            {/* 2x2 Stat Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-2">
-              {aboutAcademyData.stats.map((stat, idx) => (
-                <motion.div
-                  key={stat.id}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: idx * 0.1,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  whileHover={{ y: -5, scale: 1.015 }}
-                  style={{ backgroundColor: "#f8fafc" }}
-                  className="bg-[#f8fafc] border border-slate-100 hover:border-slate-200/90 hover:shadow-md rounded-2xl p-6 sm:p-7 text-center transition-all duration-300 flex flex-col items-center justify-center"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.12, rotate: 6 }}
-                    style={{
-                      backgroundColor: stat.iconBg,
-                      color: stat.iconColor,
-                    }}
-                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-3.5"
-                  >
-                    <StatIcon type={stat.iconType} />
-                  </motion.div>
-
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight tabular-nums">
-                    <AnimatedCounter
-                      to={stat.numericValue}
-                      suffix={stat.suffix}
-                      formatWithCommas={stat.formatWithCommas}
-                    />
-                  </div>
-
-                  <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1.5 leading-snug max-w-[170px]">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
-          {/* Right Column: Mission Card + Mentors Image Card */}
-          <div className="lg:col-span-6 space-y-6">
+          {/* Right Column: Mission Card */}
+          <div className="lg:col-span-6">
             {/* Top Mission & Approach Card */}
             <motion.div
               initial={{ opacity: 0, x: 30, y: 16 }}
@@ -258,58 +215,59 @@ export default function AboutAcademySection() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
 
-            {/* Bottom Mentors & Alumni Image Card */}
+        {/* Horizontal 4-Column Stat Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-10 sm:pt-12">
+          {aboutAcademyData.stats.map((stat, idx) => (
             <motion.div
-              initial={{ opacity: 0, y: 28 }}
+              key={stat.id}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{
-                duration: 0.65,
-                delay: 0.15,
+                duration: 0.5,
+                delay: idx * 0.08,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              whileHover={{ y: -4 }}
-              className="relative rounded-2xl overflow-hidden shadow-lg aspect-[16/10] sm:aspect-[16/9.5] bg-slate-900 group"
+              whileHover={{
+                y: -5,
+                scale: 1.015,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 20,
+                  delay: 0,
+                },
+              }}
+              style={{ backgroundColor: "#f8fafc" }}
+              className="bg-[#f8fafc] border border-slate-100 hover:border-slate-200/90 hover:shadow-md rounded-2xl p-6 sm:p-7 text-center transition-colors duration-300 flex flex-col items-center justify-center"
             >
-              <Image
-                src={aboutAcademyData.mentorCard.imageSrc}
-                alt={aboutAcademyData.mentorCard.imageAlt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+              <motion.div
+                whileHover={{ scale: 1.12, rotate: 6 }}
+                style={{
+                  backgroundColor: stat.iconBg,
+                  color: stat.iconColor,
+                }}
+                className="w-10 h-10 rounded-xl flex items-center justify-center mb-3.5"
+              >
+                <StatIcon type={stat.iconType} />
+              </motion.div>
 
-              {/* Dark bottom gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090d16]/95 via-[#090d16]/55 to-transparent pointer-events-none" />
-
-              {/* Overlay Content */}
-              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7 z-10">
-                <motion.div
-                  whileHover={{ scale: 1.04 }}
-                  style={{ backgroundColor: "#f59e0b", color: "#0f172a" }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f59e0b] text-slate-950 text-[11px] font-bold mb-2.5 shadow-sm"
-                >
-                  <svg
-                    className="w-3.5 h-3.5 text-slate-950 shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z" />
-                  </svg>
-                  <span>{aboutAcademyData.mentorCard.badgeText}</span>
-                </motion.div>
-
-                <h3 className="text-white font-bold text-base sm:text-lg lg:text-xl leading-snug mb-1.5">
-                  {aboutAcademyData.mentorCard.title}
-                </h3>
-
-                <p className="text-slate-200/90 text-xs sm:text-[13px] leading-relaxed max-w-xl">
-                  {aboutAcademyData.mentorCard.description}
-                </p>
+              <div className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight tabular-nums">
+                <AnimatedCounter
+                  to={stat.numericValue}
+                  suffix={stat.suffix}
+                  formatWithCommas={stat.formatWithCommas}
+                />
               </div>
+
+              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1.5 leading-snug max-w-[180px]">
+                {stat.label}
+              </p>
             </motion.div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

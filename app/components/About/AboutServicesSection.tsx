@@ -152,56 +152,7 @@ export default function AboutServicesSection({
           </motion.div>
 
           {/* Bottom Trust Strip Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.55, delay: 0.2 }}
-            style={{ backgroundColor: "#ffffff" }}
-            className="mt-8 sm:mt-10 bg-white border border-slate-200/80 rounded-2xl px-5 py-4 sm:px-7 sm:py-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4"
-          >
-            <div className="flex flex-col sm:flex-row items-center gap-3.5 text-center sm:text-left">
-              <div className="flex -space-x-2.5 shrink-0">
-                {trustBar.avatars.map((avatar, idx) => (
-                  <motion.div
-                    key={avatar.src}
-                    whileHover={{ y: -3, scale: 1.1, zIndex: 10 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                    className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full ring-2 ring-white overflow-hidden bg-slate-200"
-                    style={{ zIndex: idx + 1 }}
-                  >
-                    <Image
-                      src={avatar.src}
-                      alt={avatar.alt}
-                      fill
-                      sizes="36px"
-                      className="object-cover"
-                    />
-                  </motion.div>
-                ))}
-              </div>
-              <p className="text-xs sm:text-[13px] text-slate-600 font-medium">
-                {trustBar.textPrefix}{" "}
-                <strong className="font-extrabold text-[#0f172a]">
-                  {trustBar.textHighlight}
-                </strong>{" "}
-                <strong className="font-bold text-[#0f172a]">
-                  {trustBar.textSuffix}
-                </strong>
-              </p>
-            </div>
-
-            <motion.button
-              type="button"
-              onClick={onOpenEnquiry}
-              whileHover={{ scale: 1.04, y: -1 }}
-              whileTap={{ scale: 0.96 }}
-              style={{ backgroundColor: "#253b97", color: "#ffffff" }}
-              className="px-5 py-2.5 rounded-lg bg-[#253b97] hover:bg-[#1c2d73] text-white text-[11px] font-bold uppercase tracking-wider transition-colors shadow-sm shrink-0 cursor-pointer"
-            >
-              {trustBar.ctaLabel}
-            </motion.button>
-          </motion.div>
+          {/*  */}
         </div>
       </section>
 
@@ -251,9 +202,7 @@ export default function AboutServicesSection({
                   </a>
                 </h3>
 
-                <p className="text-xs text-slate-200/90 leading-relaxed max-w-xs min-[137.5rem]:max-w-md mx-auto lg:mx-0">
-                  {admissionsBanner.hoursNote}
-                </p>
+                {/*  */}
 
                 <div className="pt-1">
                   <motion.button
@@ -352,26 +301,6 @@ export default function AboutServicesSection({
                   </span>
                 </div>
 
-                <div className="pt-1">
-                  <button
-                    type="button"
-                    onClick={onOpenEnquiry}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-white underline underline-offset-4 hover:text-[#f59e0b] transition-colors cursor-pointer"
-                  >
-                    <span>{admissionsBanner.brochureLabel}</span>
-                    <svg
-                      className="w-3.5 h-3.5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16" />
-                    </svg>
-                  </button>
-                </div>
               </div>
             </div>
           </motion.div>

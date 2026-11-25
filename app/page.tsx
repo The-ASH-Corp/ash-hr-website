@@ -25,7 +25,7 @@ export default function Home() {
       <Header onOpenEnquiry={openEnquiry} />
 
       <main className="flex-1">
-        <HeroSection />
+        <HeroSection onOpenEnquiry={openEnquiry} />
         <AccreditationSection onOpenEnquiry={openEnquiry} />
         <WhyChooseUsSection onOpenEnquiry={openEnquiry} />
         <HowWeTeachSection />

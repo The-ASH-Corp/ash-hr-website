@@ -19,7 +19,7 @@ export default function CourseTabsBar() {
   return (
     <div
       style={{ backgroundColor: "#ffffff", color: "#0f172a" }}
-      className="bg-white border-b border-slate-200/80 sticky top-14 sm:top-16 z-40"
+      className="bg-white border-b border-slate-200/80 sticky top-16 sm:top-20 z-40"
       data-purpose="course-section-tabs"
     >
       <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24">
