@@ -148,7 +148,7 @@ export default function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.55 }}
-          className="mt-10 sm:mt-14 2xl:mt-20 pt-6 2xl:pt-8 border-t border-white/10 grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-items-center sm:justify-center lg:justify-between gap-4 sm:gap-6 text-slate-300 text-[11px] sm:text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold tracking-wider uppercase"
+          className="mt-10 sm:mt-14 2xl:mt-20 pt-6 2xl:pt-8 border-t border-white/10 w-fit sm:w-full mx-auto flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-center lg:justify-between gap-3.5 sm:gap-6 text-slate-300 text-[11px] sm:text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold tracking-wider uppercase"
         >
           {heroData.accreditations.map((item) => (
             <motion.span
@@ -162,7 +162,7 @@ export default function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
               >
                 {item.badge}
               </span>{" "}
-              <span className="truncate">{item.label}</span>
+              <span className="whitespace-nowrap">{item.label}</span>
             </motion.span>
           ))}
         </motion.div>
