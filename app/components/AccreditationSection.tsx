@@ -99,14 +99,14 @@ export default function AccreditationSection({
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
+              <h3 className="text-[16.5px] sm:text-[18.5px] lg:text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 {accreditationData.cards[0].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
+              <p className="text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 {accreditationData.cards[0].description}
               </p>
             </div>
-            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
+            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               {accreditationData.cards[0].footerLabel}{" "}
               <span className="ml-1.5">→</span>
             </div>
@@ -144,14 +144,14 @@ export default function AccreditationSection({
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
+              <h3 className="text-[16.5px] sm:text-[18.5px] lg:text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 {accreditationData.cards[1].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
+              <p className="text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 {accreditationData.cards[1].description}
               </p>
             </div>
-            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
+            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               {accreditationData.cards[1].footerLabel}{" "}
               <span className="ml-1.5">→</span>
             </div>
@@ -183,14 +183,14 @@ export default function AccreditationSection({
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
+              <h3 className="text-[16.5px] sm:text-[18.5px] lg:text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 {accreditationData.cards[2].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
+              <p className="text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 {accreditationData.cards[2].description}
               </p>
             </div>
-            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
+            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               {accreditationData.cards[2].footerLabel}{" "}
               <span className="ml-1.5">→</span>
             </div>
@@ -222,14 +222,14 @@ export default function AccreditationSection({
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
+              <h3 className="text-[16.5px] sm:text-[18.5px] lg:text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300">
                 {accreditationData.cards[3].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
+              <p className="text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-600 group-hover:text-indigo-100/90 leading-relaxed transition-colors duration-300">
                 {accreditationData.cards[3].description}
               </p>
             </div>
-            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
+            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center text-[12.5px] sm:text-[14.5px] lg:text-xs 2xl:text-sm min-[137.5rem]:text-base font-semibold text-[#253b97] group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300">
               {accreditationData.cards[3].footerLabel}{" "}
               <span className="ml-1.5">→</span>
             </div>
@@ -237,7 +237,7 @@ export default function AccreditationSection({
         </motion.div>
 
         {/* Action Footer for section */}
-      
+
       </div>
     </section>
   );

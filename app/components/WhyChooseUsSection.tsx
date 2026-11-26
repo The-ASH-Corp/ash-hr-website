@@ -101,7 +101,7 @@ export default function WhyChooseUsSection({
                     >
                       ✓
                     </span>
-                    <span className="text-xs sm:text-sm 2xl:text-base min-[137.5rem]:text-lg font-medium text-slate-800">
+                    <span className="text-[12.5px] sm:text-[14.5px] lg:text-sm 2xl:text-base min-[137.5rem]:text-lg font-medium text-slate-800">
                       {text}
                     </span>
                   </motion.div>
@@ -118,8 +118,8 @@ export default function WhyChooseUsSection({
                 style={{ backgroundColor: "#253b97", color: "#ffffff" }}
                 className="sm:col-span-4 relative overflow-hidden bg-[#253b97] text-white py-4 px-6 sm:p-5 2xl:p-7 rounded-2xl text-center shadow-lg shadow-[#253b97]/25 flex flex-col justify-center items-center cursor-default"
               > */}
-                {/* Smooth periodic light shimmer sweep */}
-                {/* <motion.div
+              {/* Smooth periodic light shimmer sweep */}
+              {/* <motion.div
                   animate={{ x: ["-150%", "250%"] }}
                   transition={{
                     duration: 2.2,
@@ -130,7 +130,7 @@ export default function WhyChooseUsSection({
                   className="pointer-events-none absolute inset-y-0 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent"
                 /> */}
 
-                {/* <span className="relative z-10 text-3xl sm:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-extrabold tracking-tight leading-none text-white">
+              {/* <span className="relative z-10 text-3xl sm:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-extrabold tracking-tight leading-none text-white">
                   {whyChooseUsData.experienceBadge.value}
                 </span>
                 <span className="relative z-10 text-[11px] 2xl:text-xs font-semibold uppercase tracking-wider text-sky-200 mt-1 2xl:mt-2">
@@ -150,7 +150,7 @@ export default function WhyChooseUsSection({
               >
                 {whyChooseUsData.ctaLabel}
               </motion.button>
-              
+
             </div>
           </motion.div>
         </div>
