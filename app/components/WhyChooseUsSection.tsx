@@ -77,14 +77,14 @@ export default function WhyChooseUsSection({
                 </span>
               </h2>
             </div>
-            <p className="text-slate-600 text-sm sm:text-base 2xl:text-lg min-[137.5rem]:text-xl leading-relaxed text-center sm:text-left">
+            <p className="text-slate-600 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl leading-relaxed text-center sm:text-left">
               At <strong>{whyChooseUsData.brandName}</strong>
               {whyChooseUsData.descriptionSuffix}
             </p>
 
             {/* Checkpoint list and experience badge */}
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 2xl:gap-8 pt-2 items-center">
-              <div className="sm:col-span-8 space-y-3 2xl:space-y-4">
+              <div className="sm:col-span-12 space-y-3 2xl:space-y-4">
                 {whyChooseUsData.checkpoints.map((text, i) => (
                   <motion.div
                     key={i}
@@ -101,7 +101,7 @@ export default function WhyChooseUsSection({
                     >
                       ✓
                     </span>
-                    <span className="text-[12.5px] sm:text-[14.5px] lg:text-sm 2xl:text-base min-[137.5rem]:text-lg font-medium text-slate-800">
+                    <span className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-medium text-slate-800">
                       {text}
                     </span>
                   </motion.div>
