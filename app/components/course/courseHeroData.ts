@@ -50,7 +50,7 @@ export const courseHeroData: CourseHeroData = {
   ],
   badges: {
     accredited: "CAREER DEVELOPMENT PROGRAMME",
-    benchmarked: "6 MONTHS • 120 DAYS • 24 WEEKS",
+    benchmarked: "6 MONTHS • 180 DAYS • 24 WEEKS",
   },
   headingLine1: "HR & Administration",
   headingHighlight: "Management",
@@ -79,7 +79,7 @@ export const courseHeroData: CourseHeroData = {
       id: "duration",
       numericValue: 6,
       suffix: " Months",
-      label: "24 WEEKS • 120 DAYS",
+      label: "24 WEEKS • 180 DAYS",
     },
     {
       id: "students",

@@ -319,7 +319,7 @@ export const courseOverviewData: CourseOverviewData = {
     title: "Daily Time Structure & 5-Day Weekly Pattern",
     subtitle:
       "A rigorous corporate-style routine designed to build real workplace muscle memory and operational independence.",
-    schedulePill: "24 Weeks | 120 Days | Monday to Friday | 9:30 AM – 3:30 PM",
+    schedulePill: "24 Weeks | 180 Days | Monday to Friday | 9:30 AM – 3:30 PM",
     totalClassTime: "Total Class Time: 4 Hours 45 Minutes per day (with dedicated tea & lunch breaks)",
     slots: [
       {
@@ -424,7 +424,7 @@ export const courseOverviewData: CourseOverviewData = {
     title: "Transparent Fee Structure & Payment Plans",
     subtitle:
       "Choose between a discounted upfront one-time payment or a convenient 6-month installment plan designed for flexibility.",
-    duration: "Course Duration: 6 Months (24 Weeks | 120 Days)",
+    duration: "Course Duration: 6 Months (24 Weeks | 180 Days)",
     options: [
       {
         id: "one-time",
@@ -891,7 +891,7 @@ export const courseOverviewData: CourseOverviewData = {
     rows: [
       {
         label: "Duration",
-        value: "6 Months (24 Weeks | 120 Days)",
+        value: "6 Months (24 Weeks | 180 Days)",
         valueColor: "blue",
       },
       {
@@ -1438,7 +1438,7 @@ export const courseOverviewData: CourseOverviewData = {
         id: "faq-timing",
         question: "What are the daily class timings and weekly structure?",
         answer:
-          "The course runs Monday to Friday, 9:30 AM – 3:30 PM (total 24 weeks / 120 days). Each day features 3 distinct sessions (Topic Teaching, Trainer Activity & Guided Practice, and Independent Task Execution) with tea and lunch breaks totaling 4 hr 45 min of class time per day.",
+          "The course runs Monday to Friday, 9:30 AM – 3:30 PM (total 24 weeks / 180 days). Each day features 3 distinct sessions (Topic Teaching, Trainer Activity & Guided Practice, and Independent Task Execution) with tea and lunch breaks totaling 4 hr 45 min of class time per day.",
       },
       {
         id: "faq-hospital-admin",

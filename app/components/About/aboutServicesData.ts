@@ -57,7 +57,7 @@ export const aboutServicesData: AboutServicesData = {
       id: "hr-admin",
       title: "HR & Administration Management Programme",
       description:
-        "Flagship 6-month (24 weeks, 120 days) dual-domain career programme covering talent sourcing, payroll calculations, statutory compliance, and executive office coordination.",
+        "Flagship 6-month (24 weeks, 180 days) dual-domain career programme covering talent sourcing, payroll calculations, statutory compliance, and executive office coordination.",
       footerLabel: "6 Months • 100% Placement",
       badgeLabel: "Flagship Programme",
       iconType: "hr",
