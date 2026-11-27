@@ -33,7 +33,7 @@ export const heroData = {
  
   accreditations: [
     { badge: "6M", label: "6-Month Career Programme", rounded: "rounded-full" },
-    { badge: "120D", label: "120 Days Practical Training", rounded: "rounded-full" },
+    { badge: "180D", label: "180 Days Practical Training", rounded: "rounded-full" },
     // { badge: "ISO", label: "9001:2015 Certified", rounded: "rounded-full" },
     { badge: "100%", label: "Placement Support", rounded: "rounded-full" },
   ],
@@ -57,8 +57,8 @@ export const accreditationData = {
     {
       title: "Workplace-Based Training",
       description:
-        "120 Days / 24 Weeks of daily structured hands-on sessions (9:30 AM – 3:30 PM) building operational independence.",
-      footerLabel: "120 Days Practice",
+        "180 Days / 24 Weeks of daily structured hands-on sessions building operational independence.",
+      footerLabel: "180 Days Practice",
     },
     {
       title: "100% Placement Support",
