@@ -87,17 +87,17 @@ export default function BlogsHeroSection() {
                 {item.href && idx < lastBreadcrumbIndex ? (
                   <Link
                     href={item.href}
-                    className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] text-slate-300 hover:text-white transition-colors"
+                    className="text-[11px] sm:text-xs 2xl:text-sm font-semibold uppercase tracking-[0.08em] text-slate-300 hover:text-white transition-colors"
                   >
                     {item.label}
                   </Link>
                 ) : (
-                  <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.08em] text-white">
+                  <span className="text-[11px] sm:text-xs 2xl:text-sm font-extrabold uppercase tracking-[0.08em] text-white">
                     {item.label}
                   </span>
                 )}
                 {idx < lastBreadcrumbIndex && (
-                  <span className="text-[11px] sm:text-xs text-slate-400 select-none">
+                  <span className="text-[11px] sm:text-xs 2xl:text-sm text-slate-400 select-none">
                     /
                   </span>
                 )}
@@ -110,7 +110,7 @@ export default function BlogsHeroSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.06, ease: "easeOut" }}
-            className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#ffca28] mb-3"
+            className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#ffca28] mb-3"
           >
             {hero.eyebrow}
           </motion.span>
@@ -120,7 +120,7 @@ export default function BlogsHeroSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            className="text-3xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.12] text-white mb-4 sm:mb-5"
+            className="text-3xl sm:text-5xl lg:text-6xl 2xl:text-7xl min-[137.5rem]:text-8xl font-bold tracking-tight leading-tight text-white mb-4 sm:mb-5"
           >
             {hero.title}{" "}
             <span className="text-[#7cc4fa]">{hero.highlightWord}</span>
@@ -131,7 +131,7 @@ export default function BlogsHeroSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.16, ease: "easeOut" }}
-            className="text-sm sm:text-base lg:text-[16.5px] text-slate-200/90 font-normal leading-[1.75] max-w-[680px] min-[137.5rem]:max-w-4xl mx-auto"
+            className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-200/90 font-normal leading-relaxed max-w-2xl 2xl:max-w-3xl min-[137.5rem]:max-w-4xl mx-auto"
           >
             {hero.description}
           </motion.p>
@@ -166,10 +166,10 @@ export default function BlogsHeroSection() {
               }}
               className="rounded-2xl px-5 py-5 sm:py-6 text-center bg-white/[0.06] border border-white/15 backdrop-blur-sm hover:bg-white/[0.11] hover:border-white/25 transition-colors cursor-default"
             >
-              <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">
+              <div className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-extrabold text-white tracking-tight mb-1">
                 <AnimatedBlogStatValue stat={stat} />
               </div>
-              <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-blue-100/80">
+              <div className="text-xs sm:text-sm 2xl:text-base font-bold uppercase tracking-wider text-blue-100/80">
                 {stat.label}
               </div>
             </motion.div>

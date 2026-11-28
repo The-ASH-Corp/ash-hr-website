@@ -31,20 +31,20 @@ const itemVariants = {
 export default function HeroSection({ onOpenEnquiry }: HeroSectionProps) {
   return (
     <section
-      className="relative bg-gradient-to-b from-[#1c2d73] via-[#253b97] to-[#1c2d73] text-white pt-10 pb-14 sm:pt-14 sm:pb-18 lg:pt-16 lg:pb-20 2xl:pt-24 2xl:pb-28 min-[137.5rem]:pt-32 min-[137.5rem]:pb-36 overflow-hidden"
+      className="relative bg-gradient-to-b from-[#1c2d73] via-[#253b97] to-[#1c2d73] text-white pt-6 pb-14 sm:pt-8 sm:pb-18 lg:pt-10 lg:pb-20 2xl:pt-14 2xl:pb-28 min-[137.5rem]:pt-20 min-[137.5rem]:pb-36 overflow-hidden"
       data-purpose="hero-banner"
       id="home"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none"></div>
 
       <div className="w-full max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1760px] min-[137.5rem]:max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-24 min-[137.5rem]:px-16 min-[160rem]:px-24 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 2xl:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 2xl:gap-20 items-center lg:items-start">
           {/* Left Hero Copy */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-7 space-y-5 sm:space-y-6 2xl:space-y-8 text-center lg:text-left"
+            className="lg:col-span-7 lg:pt-2 2xl:pt-4 space-y-5 sm:space-y-6 2xl:space-y-8 text-center lg:text-left"
           >
             <motion.div
               variants={itemVariants}

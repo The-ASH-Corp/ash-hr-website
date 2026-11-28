@@ -243,3 +243,4 @@ export const footerData = {
   copyright: "Copyright © 2026 ASH Academy. All rights reserved.",
   bottomLinks: ["Privacy Policy", "Terms & Conditions", "Admissions Help"],
 };
+

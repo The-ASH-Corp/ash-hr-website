@@ -47,19 +47,19 @@ export default function CourseBottomBanner({
             <div className="lg:col-span-5 space-y-3.5 text-center lg:text-left">
               <span
                 style={{ color: "#fbbf24" }}
-                className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#fbbf24] block"
+                className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#fbbf24] block"
               >
                 {bottomBanner.eyebrow}
               </span>
 
-              <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold tracking-tight leading-[1.15] text-white">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-white">
                 <span className="block">{bottomBanner.headingLine1}</span>
                 <span className="block text-[#fbbf24]">
                   {bottomBanner.headingLine2}
                 </span>
               </h3>
 
-              <p className="text-xs sm:text-[13px] text-slate-200/90 leading-relaxed max-w-md min-[137.5rem]:max-w-lg mx-auto lg:mx-0">
+              <p className="text-sm sm:text-base text-slate-200/90 leading-relaxed max-w-md min-[137.5rem]:max-w-lg mx-auto lg:mx-0">
                 {bottomBanner.description}
               </p>
 
@@ -70,10 +70,10 @@ export default function CourseBottomBanner({
                   whileHover={{ scale: 1.04, y: -2 }}
                   whileTap={{ scale: 0.96 }}
                   style={{ backgroundColor: "#ffffff", color: "#1c2d73" }}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white hover:bg-slate-50 text-[#1c2d73] text-xs font-bold uppercase tracking-wider shadow-sm transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 sm:px-7 sm:py-3 rounded-full bg-white hover:bg-slate-50 text-[#1c2d73] text-xs sm:text-sm font-semibold uppercase tracking-wider shadow-sm transition-colors cursor-pointer"
                 >
                   <svg
-                    className="w-3.5 h-3.5 text-[#253b97] shrink-0"
+                    className="w-4 h-4 text-[#253b97] shrink-0"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
@@ -105,7 +105,7 @@ export default function CourseBottomBanner({
                 {/* Green Available Now Badge */}
                 <div
                   style={{ backgroundColor: "#10b981", color: "#ffffff" }}
-                  className="-mt-3.5 relative z-10 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#10b981] text-white text-[11px] font-bold shadow-md border border-white/30"
+                  className="-mt-3.5 relative z-10 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#10b981] text-white text-xs font-bold shadow-md border border-white/30"
                 >
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                   <span>{bottomBanner.statusBadge}</span>
@@ -117,20 +117,20 @@ export default function CourseBottomBanner({
             <div className="lg:col-span-4 min-[137.5rem]:justify-self-end space-y-2.5 text-center lg:text-left border-t lg:border-t-0 lg:border-l border-white/15 pt-6 lg:pt-0 lg:pl-8">
               <p
                 style={{ color: "#fbbf24" }}
-                className="text-xs sm:text-[13px] font-extrabold uppercase tracking-wide text-[#fbbf24] leading-snug"
+                className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#fbbf24] leading-snug"
               >
                 {bottomBanner.rightHeading}
               </p>
 
-              <h4 className="text-base sm:text-lg font-extrabold text-white">
+              <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white">
                 {bottomBanner.academyName}
               </h4>
 
-              <p className="text-xs text-slate-200/90 leading-relaxed max-w-sm">
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-sm">
                 {bottomBanner.address}
               </p>
 
-              <div className="pt-1.5 space-y-1.5 text-xs sm:text-[13px] text-white">
+              <div className="pt-1.5 space-y-1.5 text-sm sm:text-base text-white">
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
                   <svg
                     style={{ color: "#fbbf24" }}

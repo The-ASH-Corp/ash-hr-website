@@ -73,17 +73,17 @@ export default function AboutHeroSection() {
                 {item.href && idx < lastBreadcrumbIndex ? (
                   <Link
                     href={item.href}
-                    className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] text-slate-300 hover:text-white transition-colors"
+                    className="text-[11px] sm:text-xs 2xl:text-sm font-semibold uppercase tracking-[0.08em] text-slate-300 hover:text-white transition-colors"
                   >
                     {item.label}
                   </Link>
                 ) : (
-                  <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.08em] text-white">
+                  <span className="text-[11px] sm:text-xs 2xl:text-sm font-extrabold uppercase tracking-[0.08em] text-white">
                     {item.label}
                   </span>
                 )}
                 {idx < lastBreadcrumbIndex && (
-                  <span className="text-[11px] sm:text-xs text-slate-400 select-none">
+                  <span className="text-[11px] sm:text-xs 2xl:text-sm text-slate-400 select-none">
                     /
                   </span>
                 )}
@@ -94,7 +94,7 @@ export default function AboutHeroSection() {
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-tight text-white mb-4 sm:mb-5"
+            className="text-3xl sm:text-5xl lg:text-6xl 2xl:text-7xl min-[137.5rem]:text-8xl font-bold tracking-tight leading-tight text-white mb-4 sm:mb-5"
           >
             {aboutHeroData.title}
           </motion.h1>
@@ -102,7 +102,7 @@ export default function AboutHeroSection() {
           {/* Subtitle / Description */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-base lg:text-[17px] text-slate-200/90 font-normal leading-[1.75] max-w-[650px] min-[137.5rem]:max-w-4xl mx-auto"
+            className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-200/90 font-normal leading-relaxed max-w-2xl 2xl:max-w-3xl min-[137.5rem]:max-w-4xl mx-auto"
           >
             {aboutHeroData.description}
           </motion.p>

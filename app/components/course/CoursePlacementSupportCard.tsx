@@ -26,13 +26,13 @@ export default function CoursePlacementSupportCard({
       {/* Top Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-6 mb-7 border-b border-slate-100">
         <div>
-          <span className="block text-[11px] font-extrabold uppercase tracking-wider text-[#253b97] mb-1.5">
+          <span className="block text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] mb-2">
             {placementSupportCard.eyebrow}
           </span>
-          <h2 className="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-[#0f172a] tracking-tight leading-snug">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-[#0f172a] tracking-tight leading-snug">
             {placementSupportCard.title}
           </h2>
-          <p className="text-xs sm:text-[13px] text-slate-500 mt-1 max-w-xl">
+          <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 mt-2 max-w-3xl 2xl:max-w-4xl">
             {placementSupportCard.description}
           </p>
         </div>
@@ -40,12 +40,12 @@ export default function CoursePlacementSupportCard({
       </div>
 
       {/* Motto Tagline Banner */}
-      <div className="mb-7 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#253b97] via-[#1d2f7a] to-[#253b97] text-white text-center flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="mb-7 p-5 sm:p-6 2xl:p-8 rounded-2xl bg-gradient-to-r from-[#253b97] via-[#1d2f7a] to-[#253b97] text-white text-center flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-left">
-          <span className="text-[10px] uppercase font-bold tracking-widest text-[#f5b82e] block">
+          <span className="text-xs 2xl:text-sm uppercase font-bold tracking-widest text-[#f5b82e] block">
             OUR COMMITMENT
           </span>
-          <span className="text-base sm:text-lg font-extrabold tracking-wide">
+          <span className="text-lg sm:text-xl lg:text-2xl 2xl:text-3xl font-extrabold tracking-wide">
             {placementSupportCard.tagline}
           </span>
         </div>
@@ -53,7 +53,7 @@ export default function CoursePlacementSupportCard({
         <button
           type="button"
           onClick={onOpenEnquiry}
-          className="px-4 py-2 rounded-full bg-[#f5b82e] hover:bg-[#eab308] text-[#0f172a] text-xs font-bold transition-all shadow-sm cursor-pointer whitespace-nowrap"
+          className="px-6 py-3 rounded-full bg-[#f5b82e] hover:bg-[#eab308] text-[#0f172a] text-xs sm:text-sm 2xl:text-base font-bold transition-all shadow-sm cursor-pointer whitespace-nowrap"
         >
           Enquire for Placement Drive
         </button>
@@ -63,11 +63,11 @@ export default function CoursePlacementSupportCard({
 
       {/* 6 Placement Pillars Grid */}
       <div>
-        <h3 className="text-sm sm:text-base font-extrabold text-[#0f172a] mb-4">
+        <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] mb-4">
           Structured 6-Pillar Career Support Pathway:
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 2xl:gap-8">
           {placementSupportCard.pillars.map((pillar, idx) => (
             <motion.div
               key={idx}
@@ -80,16 +80,16 @@ export default function CoursePlacementSupportCard({
                   delay: 0,
                 },
               }}
-              className="group rounded-2xl p-5 sm:p-6 bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.32)] transition-all duration-250 flex flex-col justify-between cursor-default"
+              className="group rounded-2xl p-5 sm:p-6 2xl:p-8 min-[137.5rem]:p-10 bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.32)] transition-all duration-250 flex flex-col justify-between cursor-default"
             >
               <div>
-                <div className="w-9 h-9 rounded-xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] text-xs font-extrabold flex items-center justify-center mb-4 transition-colors duration-250">
+                <div className="w-10 h-10 2xl:w-12 2xl:h-12 rounded-xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] text-xs sm:text-sm 2xl:text-base font-extrabold flex items-center justify-center mb-4 transition-colors duration-250">
                   0{idx + 1}
                 </div>
-                <h4 className="text-sm sm:text-[15px] font-extrabold text-[#0f172a] group-hover:text-white mb-1.5 leading-snug transition-colors duration-250">
+                <h4 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] group-hover:text-white mb-2 leading-snug transition-colors duration-250">
                   {pillar.title}
                 </h4>
-                <p className="text-xs text-slate-500 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
+                <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
                   {pillar.description}
                 </p>
               </div>

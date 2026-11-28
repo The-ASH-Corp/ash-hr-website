@@ -23,13 +23,13 @@ export default function CourseSyllabusCard({}: CourseSyllabusCardProps) {
     >
       {/* Header Row */}
       <div className="mb-6">
-        <span className="block text-[11px] font-extrabold uppercase tracking-wider text-[#253b97] mb-1.5">
+        <span className="block text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] mb-2">
           {syllabusCard.eyebrow}
         </span>
-        <h2 className="text-xl sm:text-2xl lg:text-[26px] font-extrabold text-[#0f172a] tracking-tight leading-snug">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-[#0f172a] tracking-tight leading-snug">
           {syllabusCard.title}
         </h2>
-        <p className="text-xs sm:text-[13px] text-slate-500 mt-1 max-w-2xl">
+        <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 mt-2 max-w-3xl 2xl:max-w-4xl">
           {syllabusCard.subtitle}
         </p>
       </div>
@@ -44,24 +44,24 @@ export default function CourseSyllabusCard({}: CourseSyllabusCardProps) {
               key={month.id}
               className="rounded-2xl border border-slate-200/90 hover:border-slate-300 bg-white hover:bg-slate-50/70 transition-colors overflow-hidden"
             >
-              <div className="w-full px-4 sm:px-6 py-4.5 flex items-center justify-between gap-4 text-left">
-                <div className="flex flex-wrap sm:flex-nowrap items-center gap-3.5">
+              <div className="w-full px-4 sm:px-6 2xl:px-8 py-4.5 2xl:py-6 flex items-center justify-between gap-4 text-left">
+                <div className="flex flex-wrap sm:flex-nowrap items-center gap-3.5 2xl:gap-5">
                   <span
                     style={
                       isGold
                         ? { backgroundColor: "#f5b82e", color: "#0f172a" }
                         : { backgroundColor: "#253b97", color: "#ffffff" }
                     }
-                    className="px-3 py-1 rounded-md text-[11px] font-extrabold shrink-0"
+                    className="px-3.5 py-1.5 rounded-md text-xs sm:text-sm 2xl:text-base font-extrabold shrink-0"
                   >
                     {month.monthLabel}
                   </span>
 
                   <div>
-                    <span className="text-xs sm:text-sm font-extrabold text-[#0f172a] block leading-snug">
+                    <span className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] block leading-snug">
                       {month.title}
                     </span>
-                    <span className="text-[11px] text-slate-500 block mt-0.5">
+                    <span className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 block mt-0.5">
                       {month.subtitle}
                     </span>
                   </div>
@@ -74,19 +74,19 @@ export default function CourseSyllabusCard({}: CourseSyllabusCardProps) {
 
       {/* Bonus Training Module — Basic Social Media Page Handling */}
       <div className="mt-5 pt-5 border-t border-slate-100">
-        <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 flex items-center justify-between gap-4">
-          <div className="flex flex-wrap sm:flex-nowrap items-center gap-3.5">
+        <div className="p-4 sm:p-6 2xl:p-8 rounded-2xl bg-amber-50/70 border border-amber-200/80 flex items-center justify-between gap-4">
+          <div className="flex flex-wrap sm:flex-nowrap items-center gap-3.5 2xl:gap-5">
             <span
               style={{ backgroundColor: "#fbbf24", color: "#0f172a" }}
-              className="px-3 py-1 rounded-md bg-amber-400 text-slate-900 text-[11px] font-extrabold uppercase shrink-0"
+              className="px-3.5 py-1.5 rounded-md bg-amber-400 text-slate-900 text-xs sm:text-sm 2xl:text-base font-extrabold uppercase shrink-0"
             >
               BONUS MODULE
             </span>
             <div>
-              <h3 className="text-xs sm:text-sm font-extrabold text-[#0f172a] leading-snug">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] leading-snug">
                 {syllabusCard.extraTraining.title}
               </h3>
-              <p className="text-[11px] text-slate-600 mt-0.5">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 mt-0.5">
                 {syllabusCard.extraTraining.subtitle}
               </p>
             </div>

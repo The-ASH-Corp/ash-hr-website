@@ -44,7 +44,7 @@ export default function BlogsFeaturedSection({
               <div className="absolute top-4 left-4 flex flex-wrap items-center gap-2">
                 <span
                   style={{ backgroundColor: "#ffca28", color: "#0f172a" }}
-                  className="inline-flex items-center px-3 py-1 rounded-full bg-[#ffca28] text-[#0f172a] text-[10.5px] font-extrabold uppercase tracking-wider shadow-sm"
+                  className="inline-flex items-center px-3 py-1 rounded-full bg-[#ffca28] text-[#0f172a] text-xs 2xl:text-sm font-extrabold uppercase tracking-wider shadow-sm"
                 >
                   {featuredPost.badge}
                 </span>
@@ -52,10 +52,10 @@ export default function BlogsFeaturedSection({
 
               {/* Bottom Floating Author Chip on Mobile/Image */}
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-[11px] font-bold">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs 2xl:text-sm font-bold">
                   {featuredPost.category}
                 </span>
-                <span className="text-[11.5px] font-semibold text-slate-200">
+                <span className="text-xs sm:text-sm font-semibold text-slate-200">
                   {featuredPost.readTime}
                 </span>
               </div>
@@ -65,7 +65,7 @@ export default function BlogsFeaturedSection({
             <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-between">
               <div>
                 {/* Meta Row */}
-                <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-3">
+                <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm 2xl:text-base text-slate-500 mb-3">
                   <span className="font-bold uppercase tracking-wider text-[#253b97]">
                     {featuredPost.category}
                   </span>
@@ -78,30 +78,30 @@ export default function BlogsFeaturedSection({
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl sm:text-2xl lg:text-[28px] font-extrabold text-[#0f172a] leading-[1.25] tracking-tight mb-3.5">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-[#0f172a] leading-[1.2] tracking-tight mb-3.5">
                   {featuredPost.title}
                 </h2>
 
                 {/* Excerpt */}
-                <p className="text-[13.5px] sm:text-[14.5px] text-slate-600 leading-[1.7] mb-5">
+                <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 leading-relaxed mb-5">
                   {featuredPost.excerpt}
                 </p>
 
                 {/* Key Takeaways Box */}
                 <div
                   style={{ backgroundColor: "#ffffff" }}
-                  className="rounded-2xl p-4 sm:p-5 bg-white border border-slate-200/80 mb-6"
+                  className="rounded-2xl p-4 sm:p-6 bg-white border border-slate-200/80 mb-6"
                 >
-                  <div className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#253b97] mb-2.5">
+                  <div className="text-xs 2xl:text-sm font-extrabold uppercase tracking-wider text-[#253b97] mb-3">
                     KEY ARTICLE TAKEAWAYS
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2.5">
                     {featuredPost.keyTakeaways.map((point, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-2.5 text-[12.5px] sm:text-[13px] text-slate-600 leading-[1.55]"
+                        className="flex items-start gap-3 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-700 leading-relaxed"
                       >
-                        <span className="mt-1 w-4 h-4 rounded-full bg-[#e8edff] text-[#253b97] flex items-center justify-center text-[10px] font-extrabold shrink-0">
+                        <span className="mt-1 w-5 h-5 2xl:w-6 2xl:h-6 rounded-full bg-[#e8edff] text-[#253b97] flex items-center justify-center text-xs 2xl:text-sm font-extrabold shrink-0">
                           ✓
                         </span>
                         <span>{point}</span>
@@ -114,7 +114,7 @@ export default function BlogsFeaturedSection({
               {/* Author + CTA Footer */}
               <div className="pt-4 border-t border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
+                  <div className="relative w-11 h-11 2xl:w-13 2xl:h-13 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
                     <Image
                       src={featuredPost.author.avatar}
                       alt={featuredPost.author.name}
@@ -124,10 +124,10 @@ export default function BlogsFeaturedSection({
                     />
                   </div>
                   <div>
-                    <div className="text-[13.5px] font-extrabold text-[#0f172a]">
+                    <div className="text-sm sm:text-base lg:text-lg 2xl:text-xl font-bold text-[#0f172a]">
                       {featuredPost.author.name}
                     </div>
-                    <div className="text-[11.5px] font-semibold text-[#253b97]">
+                    <div className="text-xs sm:text-sm 2xl:text-base font-semibold text-[#253b97]">
                       {featuredPost.author.role}
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function BlogsFeaturedSection({
                   }}
                   whileTap={{ scale: 0.98 }}
                   style={{ backgroundColor: "#253b97", color: "#ffffff" }}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#253b97] hover:bg-[#1c2d73] text-white text-xs sm:text-[13px] font-bold shadow-md shadow-[#253b97]/20 transition-colors cursor-pointer shrink-0"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#253b97] hover:bg-[#1c2d73] text-white text-xs sm:text-sm 2xl:text-base font-bold shadow-md shadow-[#253b97]/20 transition-colors cursor-pointer shrink-0"
                 >
                   <span>Read Full Article</span>
                   <svg

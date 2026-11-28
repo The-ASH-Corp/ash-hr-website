@@ -68,7 +68,7 @@ export default function HowWeTeachSection() {
             </span>{" "}
             {howWeTeachData.headingSuffix}
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base 2xl:text-lg min-[137.5rem]:text-xl leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl leading-relaxed">
             {howWeTeachData.description}
           </p>
         </motion.div>
@@ -83,11 +83,11 @@ export default function HowWeTeachSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 2xl:p-7 min-[137.5rem]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 sm:p-6 2xl:p-8 min-[137.5rem]:p-10 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: 8, scale: 1.15 }}
-                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
+                className="w-10 h-10 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
                   className="w-5 h-5 2xl:w-6 2xl:h-6 min-[137.5rem]:w-7 min-[137.5rem]:h-7"
@@ -103,10 +103,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-white mb-1 2xl:mb-2">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-white mb-1.5 2xl:mb-2">
                 {howWeTeachData.leftPillars[0].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-300">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-300 leading-relaxed">
                 {howWeTeachData.leftPillars[0].description}
               </p>
             </motion.div>
@@ -117,11 +117,11 @@ export default function HowWeTeachSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 2xl:p-7 min-[137.5rem]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 sm:p-6 2xl:p-8 min-[137.5rem]:p-10 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: 8, scale: 1.15 }}
-                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
+                className="w-10 h-10 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
                   className="w-5 h-5 2xl:w-6 2xl:h-6 min-[137.5rem]:w-7 min-[137.5rem]:h-7"
@@ -137,10 +137,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-white mb-1 2xl:mb-2">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-white mb-1.5 2xl:mb-2">
                 {howWeTeachData.leftPillars[1].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-300">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-300 leading-relaxed">
                 {howWeTeachData.leftPillars[1].description}
               </p>
             </motion.div>
@@ -177,11 +177,11 @@ export default function HowWeTeachSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 2xl:p-7 min-[137.5rem]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 sm:p-6 2xl:p-8 min-[137.5rem]:p-10 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: -8, scale: 1.15 }}
-                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
+                className="w-10 h-10 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
                   className="w-5 h-5 2xl:w-6 2xl:h-6 min-[137.5rem]:w-7 min-[137.5rem]:h-7"
@@ -197,10 +197,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-white mb-1 2xl:mb-2">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-white mb-1.5 2xl:mb-2">
                 {howWeTeachData.rightPillars[0].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-300">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-300 leading-relaxed">
                 {howWeTeachData.rightPillars[0].description}
               </p>
             </motion.div>
@@ -211,11 +211,11 @@ export default function HowWeTeachSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white/5 p-5 2xl:p-7 min-[137.5rem]:p-8 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
+              className="bg-white/5 p-5 sm:p-6 2xl:p-8 min-[137.5rem]:p-10 rounded-xl 2xl:rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-colors duration-200 group"
             >
               <motion.div
                 whileHover={{ rotate: -8, scale: 1.15 }}
-                className="w-9 h-9 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
+                className="w-10 h-10 2xl:w-12 2xl:h-12 min-[137.5rem]:w-14 min-[137.5rem]:h-14 rounded-lg 2xl:rounded-xl bg-white/10 text-sky-300 flex items-center justify-center mb-3 2xl:mb-4 transition-transform"
               >
                 <svg
                   className="w-5 h-5 2xl:w-6 2xl:h-6 min-[137.5rem]:w-7 min-[137.5rem]:h-7"
@@ -237,10 +237,10 @@ export default function HowWeTeachSection() {
                   ></path>
                 </svg>
               </motion.div>
-              <h3 className="text-base 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-white mb-1 2xl:mb-2">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-white mb-1.5 2xl:mb-2">
                 {howWeTeachData.rightPillars[1].title}
               </h3>
-              <p className="text-xs 2xl:text-sm min-[137.5rem]:text-base text-slate-300">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-300 leading-relaxed">
                 {howWeTeachData.rightPillars[1].description}
               </p>
             </motion.div>

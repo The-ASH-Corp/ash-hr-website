@@ -136,17 +136,17 @@ export default function CourseHeroSection({
               {item.href && idx < lastBreadcrumbIndex ? (
                 <Link
                   href={item.href}
-                  className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] text-slate-300 hover:text-white transition-colors"
+                  className="text-[11px] sm:text-xs 2xl:text-sm font-semibold uppercase tracking-[0.08em] text-slate-300 hover:text-white transition-colors"
                 >
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.08em] text-white">
+                <span className="text-[11px] sm:text-xs 2xl:text-sm font-extrabold uppercase tracking-[0.08em] text-white">
                   {item.label}
                 </span>
               )}
               {idx < lastBreadcrumbIndex && (
-                <span className="text-[11px] sm:text-xs text-slate-400 select-none">
+                <span className="text-[11px] sm:text-xs 2xl:text-sm text-slate-400 select-none">
                   /
                 </span>
               )}
@@ -177,13 +177,13 @@ export default function CourseHeroSection({
               >
                 <svg
                   style={{ color: "#f5b82e" }}
-                  className="w-3.5 h-3.5 text-[#f5b82e] shrink-0"
+                  className="w-3.5 h-3.5 2xl:w-4 2xl:h-4 text-[#f5b82e] shrink-0"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
                   <path d="M12 2L9.19 4.19 5.7 3.7l-.49 3.49L3 10l2.21 2.81.49 3.49 3.49-.49L12 18l2.81-2.19 3.49.49.49-3.49L21 10l-2.21-2.81-.49-3.49-3.49.49L12 2zm-1.06 11.41L7.53 10l1.41-1.41 2 2 4.12-4.12 1.41 1.41-5.53 5.53z" />
                 </svg>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-100">
+                <span className="text-[11px] sm:text-xs 2xl:text-sm font-bold uppercase tracking-wider text-slate-100">
                   {courseHeroData.badges.accredited}
                 </span>
               </div>
@@ -194,7 +194,7 @@ export default function CourseHeroSection({
             {/* Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-5xl lg:text-[50px] xl:text-[54px] font-extrabold tracking-tight leading-[1.12] text-white"
+              className="text-3xl sm:text-5xl lg:text-6xl 2xl:text-7xl min-[137.5rem]:text-8xl font-bold tracking-tight leading-tight text-white"
             >
               {courseHeroData.headingLine1}
               <br />
@@ -208,7 +208,7 @@ export default function CourseHeroSection({
             {courseHeroData.tagline && (
               <motion.div
                 variants={itemVariants}
-                className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#f5b82e]"
+                className="text-xs sm:text-sm 2xl:text-base font-extrabold uppercase tracking-widest text-[#f5b82e]"
               >
                 {courseHeroData.tagline}
               </motion.div>
@@ -217,7 +217,7 @@ export default function CourseHeroSection({
             {/* Subtitle / Description */}
             <motion.p
               variants={itemVariants}
-              className="text-sm sm:text-base lg:text-[17px] text-slate-200/90 font-normal leading-[1.7] max-w-2xl min-[137.5rem]:max-w-4xl"
+              className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-200/90 font-normal leading-relaxed max-w-2xl min-[137.5rem]:max-w-4xl"
             >
               {courseHeroData.description}
             </motion.p>
@@ -236,10 +236,10 @@ export default function CourseHeroSection({
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.97 }}
                 style={{ backgroundColor: "#f5b82e", color: "#0f172a" }}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#f5b82e] hover:bg-[#eab308] text-[#0f172a] text-xs sm:text-sm font-bold shadow-md transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2.5 px-8 2xl:px-10 py-3.5 2xl:py-4 rounded-full bg-[#f5b82e] hover:bg-[#eab308] text-[#0f172a] text-sm sm:text-base 2xl:text-lg min-[137.5rem]:text-xl font-bold shadow-md transition-colors cursor-pointer"
               >
                 <span>{courseHeroData.primaryCta}</span>
-                <span className="text-base leading-none">→</span>
+                <span className="text-base 2xl:text-lg leading-none">→</span>
               </motion.button>
 
               
@@ -282,18 +282,18 @@ export default function CourseHeroSection({
                 className="absolute bottom-3.5 left-3.5 right-3.5 sm:bottom-5 sm:left-5 sm:right-5 bg-white rounded-2xl p-4 sm:p-5 shadow-xl"
               >
                 <div className="flex items-center justify-between gap-2 mb-1.5">
-                  <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#253b97]">
+                  <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97]">
                     {courseHeroData.heroImage.overlayEyebrow}
                   </span>
                   <span
                     style={{ backgroundColor: "#dcfce7", color: "#15803d" }}
-                    className="px-2.5 py-0.5 rounded-full bg-[#dcfce7] text-[#15803d] text-[10px] sm:text-[11px] font-bold shrink-0"
+                    className="px-2.5 py-0.5 rounded-full bg-[#dcfce7] text-[#15803d] text-xs 2xl:text-sm font-bold shrink-0"
                   >
                     {courseHeroData.heroImage.overlayBadge}
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm font-extrabold text-[#0f172a] leading-snug">
+                <p className="text-sm sm:text-base 2xl:text-lg font-bold text-[#0f172a] leading-snug">
                   {courseHeroData.heroImage.overlayTitle}
                 </p>
               </motion.div>

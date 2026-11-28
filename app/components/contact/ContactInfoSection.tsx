@@ -85,7 +85,7 @@ export default function ContactInfoSection() {
               </svg>
             </motion.div>
 
-            <h3 className="text-base sm:text-lg font-extrabold text-[#0f172a] mb-4">
+            <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] mb-4">
               {locationCard.title}
             </h3>
 
@@ -96,10 +96,10 @@ export default function ContactInfoSection() {
                   style={{ backgroundColor: "#f8fafc" }}
                   className="w-full bg-[#f8fafc] border border-slate-100 rounded-xl px-4 py-3.5 text-center"
                 >
-                  <h4 className="text-xs font-extrabold text-[#253b97] mb-1">
+                  <h4 className="text-sm sm:text-base 2xl:text-lg font-bold text-[#253b97] mb-1">
                     {branch.name}
                   </h4>
-                  <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 leading-relaxed">
                     {branch.address}
                   </p>
                 </div>
@@ -129,11 +129,11 @@ export default function ContactInfoSection() {
               </svg>
             </motion.div>
 
-            <h3 className="text-base sm:text-lg font-extrabold text-[#0f172a] mb-2">
+            <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] mb-2">
               {phoneCard.title}
             </h3>
 
-            <p className="text-xs text-slate-500 leading-relaxed max-w-[200px] mb-4">
+            <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 leading-relaxed mb-4">
               {phoneCard.subtitle}
             </p>
 
@@ -144,12 +144,12 @@ export default function ContactInfoSection() {
                   style={{ backgroundColor: "#f8fafc" }}
                   className="w-full bg-[#f8fafc] border border-slate-100 rounded-xl px-4 py-3.5 text-center"
                 >
-                  <span className="block text-[11px] font-medium text-slate-400 mb-1">
+                  <span className="block text-xs 2xl:text-sm font-semibold uppercase tracking-wider text-slate-500 mb-1">
                     {item.campus}
                   </span>
                   <a
                     href={item.href}
-                    className="text-sm sm:text-[15px] font-extrabold text-[#0f172a] hover:text-[#253b97] transition-colors"
+                    className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-[#0f172a] hover:text-[#253b97] transition-colors"
                   >
                     {item.number}
                   </a>
@@ -180,11 +180,11 @@ export default function ContactInfoSection() {
               </svg>
             </motion.div>
 
-            <h3 className="text-base sm:text-lg font-extrabold text-[#0f172a] mb-2">
+            <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] mb-2">
               {emailCard.title}
             </h3>
 
-            <p className="text-xs text-slate-500 leading-relaxed max-w-[200px] mb-5">
+            <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 leading-relaxed mb-5">
               {emailCard.subtitle}
             </p>
 
@@ -192,18 +192,18 @@ export default function ContactInfoSection() {
               style={{ backgroundColor: "#f8fafc" }}
               className="w-full bg-[#f8fafc] border border-slate-100 rounded-xl px-4 py-4.5 text-center my-auto"
             >
-              <span className="block text-[11px] font-medium text-slate-400 mb-1.5">
+              <span className="block text-xs 2xl:text-sm font-semibold uppercase tracking-wider text-slate-500 mb-1.5">
                 {emailCard.boxLabel}
               </span>
               <a
                 href={emailCard.href}
-                className="text-sm sm:text-[15px] font-extrabold text-[#253b97] hover:underline break-all"
+                className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-[#253b97] hover:underline break-all"
               >
                 {emailCard.email}
               </a>
             </div>
 
-            <p className="text-[11px] font-medium text-slate-400 mt-5">
+            <p className="text-xs sm:text-sm 2xl:text-base font-medium text-slate-500 mt-5">
               {emailCard.footerNote}
             </p>
           </motion.div>
@@ -230,11 +230,11 @@ export default function ContactInfoSection() {
               </svg>
             </motion.div>
 
-            <h3 className="text-base sm:text-lg font-extrabold text-[#0f172a] mb-2">
+            <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] mb-2">
               {websiteCard.title}
             </h3>
 
-            <p className="text-xs text-slate-500 leading-relaxed max-w-[200px] mb-5">
+            <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 leading-relaxed mb-5">
               {websiteCard.subtitle}
             </p>
 
@@ -242,20 +242,20 @@ export default function ContactInfoSection() {
               style={{ backgroundColor: "#f8fafc" }}
               className="w-full bg-[#f8fafc] border border-slate-100 rounded-xl px-4 py-4.5 text-center my-auto"
             >
-              <span className="block text-[11px] font-medium text-slate-400 mb-1.5">
+              <span className="block text-xs 2xl:text-sm font-semibold uppercase tracking-wider text-slate-500 mb-1.5">
                 {websiteCard.boxLabel}
               </span>
               <a
                 href={websiteCard.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm sm:text-[15px] font-extrabold text-[#253b97] hover:underline break-all"
+                className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-[#253b97] hover:underline break-all"
               >
                 {websiteCard.urlDisplay}
               </a>
             </div>
 
-            <p className="text-[11px] font-medium text-slate-400 mt-5">
+            <p className="text-xs sm:text-sm 2xl:text-base font-medium text-slate-500 mt-5">
               {websiteCard.footerNote}
             </p>
           </motion.div>

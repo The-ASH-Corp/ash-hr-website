@@ -23,12 +23,12 @@ export default function CourseFaqCard() {
       className="scroll-mt-32 bg-white rounded-[24px] p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-[0_8px_30px_rgb(15,23,42,0.03)]"
     >
       {/* Eyebrow */}
-      <div className="text-[11px] font-bold tracking-[0.14em] text-[#253b97] uppercase mb-2">
+      <div className="text-xs 2xl:text-sm font-bold tracking-wider text-[#253b97] uppercase mb-2">
         {faqCard.eyebrow}
       </div>
 
       {/* Main Heading */}
-      <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-extrabold tracking-tight text-[#0f172a] leading-[1.2] mb-6">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold tracking-tight text-[#0f172a] leading-[1.2] mb-6">
         {faqCard.title}
       </h2>
 
@@ -50,10 +50,10 @@ export default function CourseFaqCard() {
               <button
                 type="button"
                 onClick={() => toggleFaq(faq.id)}
-                className="w-full flex items-center justify-between gap-4 px-5 py-4 sm:py-4.5 text-left cursor-pointer"
+                className="w-full flex items-center justify-between gap-4 px-5 py-4.5 sm:py-5 text-left cursor-pointer"
                 aria-expanded={isOpen}
               >
-                <span className="text-[14px] sm:text-[15px] font-bold text-[#0f172a] leading-snug">
+                <span className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] leading-snug">
                   {faq.question}
                 </span>
 
@@ -65,7 +65,7 @@ export default function CourseFaqCard() {
                   }`}
                 >
                   <svg
-                    className="w-4 h-4"
+                    className="w-5 h-5 2xl:w-6 2xl:h-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -90,7 +90,7 @@ export default function CourseFaqCard() {
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 pb-5 pt-2 border-t border-slate-100 text-[13.5px] sm:text-[14px] text-slate-600 leading-[1.65]">
+                    <div className="px-5 pb-5 pt-2 border-t border-slate-100 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>

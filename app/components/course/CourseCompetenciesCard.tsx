@@ -151,22 +151,22 @@ export default function CourseCompetenciesCard() {
       data-purpose="course-competencies-card"
     >
       {/* Eyebrow */}
-      <span className="block text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#253b97] mb-1.5">
+      <span className="block text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] mb-2">
         {competenciesCard.eyebrow}
       </span>
 
       {/* Title */}
-      <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-extrabold text-[#0f172a] tracking-tight leading-[1.2] mb-2">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-[#0f172a] tracking-tight leading-[1.2] mb-2.5">
         {competenciesCard.title}
       </h2>
 
       {/* Subtitle */}
-      <p className="text-slate-500 text-xs sm:text-sm lg:text-[15px] leading-relaxed mb-7 max-w-3xl">
+      <p className="text-slate-600 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl leading-relaxed mb-7 max-w-3xl 2xl:max-w-4xl">
         {competenciesCard.subtitle}
       </p>
 
       {/* Competency Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 2xl:gap-8">
         {competenciesCard.items.map((item, idx) => (
           <motion.div
             key={item.id}
@@ -179,22 +179,22 @@ export default function CourseCompetenciesCard() {
                 delay: 0,
               },
             }}
-            className="group rounded-2xl p-5 sm:p-6 bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.32)] transition-all duration-250 flex flex-col justify-between cursor-default"
+            className="group rounded-2xl p-5 sm:p-6 2xl:p-8 min-[137.5rem]:p-10 bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.32)] transition-all duration-250 flex flex-col justify-between cursor-default"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="w-11 h-11 rounded-2xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] flex items-center justify-center shrink-0 transition-colors duration-250">
+              <div className="w-10 h-10 2xl:w-12 2xl:h-12 rounded-xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] flex items-center justify-center shrink-0 transition-colors duration-250">
                 <CompetencyIcon type={item.iconType} />
               </div>
-              <span className="text-[11px] font-extrabold tracking-widest text-slate-300 group-hover:text-white/60 transition-colors duration-250">
+              <span className="text-xs sm:text-sm 2xl:text-base font-extrabold tracking-widest text-slate-300 group-hover:text-white/60 transition-colors duration-250">
                 0{idx + 1}
               </span>
             </div>
 
             <div>
-              <h3 className="text-sm sm:text-[15px] font-extrabold text-[#0f172a] group-hover:text-white mb-1.5 leading-snug transition-colors duration-250">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] group-hover:text-white mb-2 leading-snug transition-colors duration-250">
                 {item.title}
               </h3>
-              <p className="text-xs text-slate-500 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
                 {item.description}
               </p>
             </div>

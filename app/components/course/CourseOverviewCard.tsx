@@ -95,16 +95,16 @@ export default function CourseOverviewCard() {
         <div className="lg:col-span-7 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#eef2ff] border border-[#253b97]/15">
             <span className="w-2 h-2 rounded-full bg-[#253b97] animate-pulse" />
-            <span className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#253b97]">
+            <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97]">
               {overviewCard.eyebrow}
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#0f172a] tracking-tight leading-[1.18]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-[#0f172a] tracking-tight leading-[1.18]">
             {overviewCard.title}
           </h2>
 
-          <p className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-[1.8]">
+          <p className="text-slate-600 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl leading-relaxed">
             {overviewCard.description}
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function CourseOverviewCard() {
                 "linear-gradient(135deg, #131f54 0%, #1c2f7d 55%, #253b97 100%)",
               color: "#ffffff",
             }}
-            className="relative rounded-2xl p-5 sm:p-6 text-white shadow-[0_14px_32px_-8px_rgba(28,45,115,0.35)] overflow-hidden"
+            className="relative rounded-2xl p-5 sm:p-6 2xl:p-8 text-white shadow-[0_14px_32px_-8px_rgba(28,45,115,0.35)] overflow-hidden"
           >
             <div
               aria-hidden="true"
@@ -131,15 +131,15 @@ export default function CourseOverviewCard() {
 
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/15">
-                <span className="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-[#ffca28]">
+                <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#ffca28]">
                   PROGRAMME SNAPSHOT
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold text-blue-100">
+                <span className="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/20 text-xs 2xl:text-sm font-bold text-blue-100">
                   Executive Track
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 2xl:gap-4">
                 {overviewCard.keyHighlights.map((kh, i) => (
                   <motion.div
                     key={i}
@@ -153,12 +153,12 @@ export default function CourseOverviewCard() {
                         delay: 0,
                       },
                     }}
-                    className="rounded-xl p-3.5 bg-white/[0.08] hover:bg-white/[0.15] border border-white/10 hover:border-[#ffca28]/50 backdrop-blur-sm transition-colors duration-200 cursor-default"
+                    className="rounded-xl p-3.5 2xl:p-4 bg-white/[0.08] hover:bg-white/[0.15] border border-white/10 hover:border-[#ffca28]/50 backdrop-blur-sm transition-colors duration-200 cursor-default"
                   >
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-blue-200/80 block mb-1">
+                    <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-blue-200/80 block mb-1">
                       {kh.label}
                     </span>
-                    <span className="text-xs sm:text-[13px] font-extrabold text-white block leading-snug">
+                    <span className="text-sm sm:text-base lg:text-lg 2xl:text-xl font-bold text-white block leading-snug">
                       {kh.value}
                     </span>
                   </motion.div>
@@ -170,7 +170,7 @@ export default function CourseOverviewCard() {
       </div>
 
       {/* Bottom 4 Interactive Bento Pillar Cards */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 2xl:gap-8">
         {overviewCard.highlights.map((item, idx) => (
           <motion.div
             key={item.id}
@@ -183,30 +183,30 @@ export default function CourseOverviewCard() {
                 delay: 0,
               },
             }}
-            className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.35)] transition-all duration-250 cursor-default overflow-hidden"
+            className="group relative flex flex-col justify-between p-5 sm:p-6 2xl:p-8 min-[137.5rem]:p-10 rounded-2xl bg-[#f8fafc] hover:bg-[#253b97] border border-slate-200/90 hover:border-[#253b97] shadow-xs hover:shadow-[0_18px_38px_-10px_rgba(37,59,151,0.35)] transition-all duration-250 cursor-default overflow-hidden"
           >
             {/* Top Row: Icon Box + Step Badge */}
             <div className="flex items-center justify-between mb-5">
-              <div className="w-11 h-11 rounded-2xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] flex items-center justify-center shrink-0 shadow-xs transition-colors duration-250">
+              <div className="w-10 h-10 2xl:w-12 2xl:h-12 rounded-xl bg-[#eef2ff] text-[#253b97] group-hover:bg-white/15 group-hover:text-[#ffca28] flex items-center justify-center shrink-0 shadow-xs transition-colors duration-250">
                 <HighlightIcon type={item.iconType} />
               </div>
-              <span className="text-xs font-extrabold tracking-widest text-slate-300 group-hover:text-[#ffca28] transition-colors duration-250">
+              <span className="text-xs sm:text-sm 2xl:text-base font-extrabold tracking-widest text-slate-300 group-hover:text-[#ffca28] transition-colors duration-250">
                 0{idx + 1}
               </span>
             </div>
 
             {/* Bottom Content: Title & Subtitle */}
             <div>
-              <h3 className="text-sm sm:text-[15px] font-extrabold text-[#0f172a] group-hover:text-white leading-snug mb-1.5 transition-colors duration-250">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] group-hover:text-white leading-snug mb-2 transition-colors duration-250">
                 {item.title}
               </h3>
-              <p className="text-xs text-slate-500 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 group-hover:text-blue-100/90 leading-relaxed transition-colors duration-250">
                 {item.subtitle}
               </p>
             </div>
 
             {/* Bottom Animated Accent Line */}
-            <div className="mt-4 pt-3 border-t border-slate-200/70 group-hover:border-white/15 flex items-center justify-between text-[11px] font-bold text-[#253b97] group-hover:text-[#ffca28] transition-colors duration-250">
+            <div className="mt-5 sm:mt-6 2xl:mt-8 pt-4 border-t border-slate-200/70 group-hover:border-white/15 flex items-center justify-between text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-semibold text-[#253b97] group-hover:text-[#ffca28] transition-colors duration-250">
               <span>Core Pillar</span>
               <span className="group-hover:translate-x-1 transition-transform duration-200">
                 →

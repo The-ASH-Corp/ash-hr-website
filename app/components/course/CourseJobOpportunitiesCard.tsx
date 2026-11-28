@@ -38,13 +38,13 @@ export default function CourseJobOpportunitiesCard() {
       {/* Top Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-6 mb-6 border-b border-slate-100">
         <div>
-          <span className="block text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#253b97] mb-1.5">
+          <span className="block text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] mb-2">
             CAREER PATHWAYS & ROLES
           </span>
-          <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-extrabold text-[#0f172a] tracking-tight leading-[1.2]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-[#0f172a] tracking-tight leading-[1.2]">
             Potential Job Opportunities
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 mt-1.5 max-w-2xl">
+          <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 mt-2 max-w-3xl 2xl:max-w-4xl leading-relaxed">
             Explore the 17+ dual-domain career roles across Human Resources,
             Corporate Office Administration, and Hospital Front-Office
             Operations. Hover or click any role to inspect core responsibilities
@@ -53,7 +53,7 @@ export default function CourseJobOpportunitiesCard() {
         </div>
 
         <div className="shrink-0">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#eef2ff] text-[#253b97] text-xs font-extrabold">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#eef2ff] text-[#253b97] text-xs sm:text-sm 2xl:text-base font-extrabold">
             <span className="w-2 h-2 rounded-full bg-[#253b97] animate-pulse" />
             <span>{whoCanJoinCard.allRoles.length}+ Target Job Roles</span>
           </span>
@@ -61,13 +61,13 @@ export default function CourseJobOpportunitiesCard() {
       </div>
 
       {/* Category Filter Pills */}
-      <div className="flex flex-wrap items-center gap-2 mb-6">
+      <div className="flex flex-wrap items-center gap-2.5 mb-6">
         {categories.map((cat) => (
           <button
             key={cat.id}
             type="button"
             onClick={() => setSelectedCategory(cat.id)}
-            className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
+            className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm 2xl:text-base font-bold transition-colors cursor-pointer ${
               selectedCategory === cat.id
                 ? "bg-[#253b97] text-white shadow-xs"
                 : "bg-[#f8fafc] hover:bg-[#eef2ff] text-slate-600 hover:text-[#253b97] border border-slate-200/80"
@@ -79,7 +79,7 @@ export default function CourseJobOpportunitiesCard() {
       </div>
 
       {/* Roles Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 mb-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-7">
         {filteredRoles.map((role, idx) => {
           return (
             <motion.button
@@ -97,18 +97,18 @@ export default function CourseJobOpportunitiesCard() {
                 },
               }}
               whileTap={{ scale: 0.98 }}
-              className="group p-4 rounded-2xl border text-left bg-[#f8fafc] hover:bg-[#253b97] border-slate-200/90 hover:border-[#253b97] text-[#0f172a] hover:text-white shadow-2xs hover:shadow-[0_14px_30px_-8px_rgba(37,59,151,0.3)] transition-all duration-200 cursor-pointer flex flex-col justify-between"
+              className="group p-4 sm:p-5 2xl:p-6 rounded-2xl border text-left bg-[#f8fafc] hover:bg-[#253b97] border-slate-200/90 hover:border-[#253b97] text-[#0f172a] hover:text-white shadow-2xs hover:shadow-[0_14px_30px_-8px_rgba(37,59,151,0.3)] transition-all duration-200 cursor-pointer flex flex-col justify-between"
             >
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="text-[10.5px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-blue-200 transition-colors">
+              <div className="flex items-center justify-between gap-2 mb-2.5">
+                <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-slate-400 group-hover:text-blue-200 transition-colors">
                   {role.trackLabel.replace(" Track", "")}
                 </span>
-                <span className="text-[10.5px] font-extrabold text-slate-300 group-hover:text-[#ffca28] transition-colors">
+                <span className="text-xs 2xl:text-sm font-extrabold text-slate-300 group-hover:text-[#ffca28] transition-colors">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
               </div>
 
-              <div className="text-xs sm:text-[13.5px] font-extrabold text-[#0f172a] group-hover:text-white leading-snug transition-colors">
+              <div className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-[#0f172a] group-hover:text-white leading-snug transition-colors">
                 {role.shortTitle}
               </div>
             </motion.button>
@@ -124,27 +124,27 @@ export default function CourseJobOpportunitiesCard() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="rounded-2xl p-5 sm:p-7 bg-[#f8fafc] border border-slate-200/90"
+          className="rounded-2xl p-5 sm:p-7 2xl:p-9 bg-[#f8fafc] border border-slate-200/90"
         >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-4 mb-5 border-b border-slate-200/80">
             <div>
-              <span className="text-[10.5px] font-extrabold uppercase tracking-wider text-[#253b97]">
+              <span className="text-xs 2xl:text-sm font-extrabold uppercase tracking-wider text-[#253b97]">
                 {activeRole.trackLabel}
               </span>
-              <h3 className="text-lg sm:text-xl font-extrabold text-[#0f172a] mt-0.5">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] mt-1">
                 {activeRole.fullTitle}
               </h3>
-              <p className="text-xs sm:text-[13.5px] text-slate-600 mt-1 max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 mt-1.5 max-w-3xl 2xl:max-w-4xl leading-relaxed">
                 {activeRole.description}
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 2xl:gap-10">
             <div>
-              <span className="text-xs sm:text-[13px] font-extrabold text-[#0f172a] flex items-center gap-2 mb-3">
+              <span className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-[#0f172a] flex items-center gap-2 mb-3">
                 <svg
-                  className="w-4 h-4 text-[#253b97] shrink-0"
+                  className="w-5 h-5 2xl:w-6 2xl:h-6 text-[#253b97] shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -158,10 +158,10 @@ export default function CourseJobOpportunitiesCard() {
                 </svg>
                 <span>Primary Job Responsibilities</span>
               </span>
-              <ul className="space-y-2 text-xs sm:text-[13px] text-slate-600">
+              <ul className="space-y-2.5 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600">
                 {activeRole.responsibilities.map((res, i) => (
                   <li key={i} className="flex items-start gap-2.5 leading-relaxed">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#253b97] shrink-0" />
+                    <span className="mt-2.5 w-2 h-2 rounded-full bg-[#253b97] shrink-0" />
                     <span>{res}</span>
                   </li>
                 ))}
@@ -169,9 +169,9 @@ export default function CourseJobOpportunitiesCard() {
             </div>
 
             <div>
-              <span className="text-xs sm:text-[13px] font-extrabold text-[#0f172a] flex items-center gap-2 mb-3">
+              <span className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-bold text-[#0f172a] flex items-center gap-2 mb-3">
                 <svg
-                  className="w-4 h-4 text-[#253b97] shrink-0"
+                  className="w-5 h-5 2xl:w-6 2xl:h-6 text-[#253b97] shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -185,11 +185,11 @@ export default function CourseJobOpportunitiesCard() {
                 </svg>
                 <span>Hiring Industry Sectors</span>
               </span>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2.5">
                 {activeRole.sectors.map((sec, i) => (
                   <span
                     key={i}
-                    className="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 text-xs font-bold text-[#0f172a] shadow-2xs"
+                    className="px-4 py-2 rounded-xl bg-white border border-slate-200/90 text-sm sm:text-base 2xl:text-lg font-semibold text-[#0f172a] shadow-2xs"
                   >
                     {sec}
                   </span>

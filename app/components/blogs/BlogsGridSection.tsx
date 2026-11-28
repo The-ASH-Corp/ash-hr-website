@@ -79,7 +79,7 @@ export default function BlogsGridSection({
                   key={category}
                   type="button"
                   onClick={() => setActiveCategory(category)}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-colors cursor-pointer ${
+                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm 2xl:text-base font-bold whitespace-nowrap transition-colors cursor-pointer ${
                     isActive
                       ? "bg-[#253b97] text-white shadow-sm"
                       : "bg-slate-100 text-slate-600 hover:bg-[#e8edff] hover:text-[#253b97]"
@@ -98,7 +98,7 @@ export default function BlogsGridSection({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={sidebar.searchPlaceholder}
-              className="w-full rounded-xl border border-slate-200 bg-[#f8fafc] pl-10 pr-9 py-2.5 text-xs sm:text-[13px] text-[#0f172a] placeholder-slate-400 focus:border-[#253b97] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#253b97]/15 transition-colors"
+              className="w-full rounded-xl border border-slate-200 bg-[#f8fafc] pl-10 pr-9 py-2.5 text-sm sm:text-base text-[#0f172a] placeholder-slate-400 focus:border-[#253b97] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#253b97]/15 transition-colors"
             />
             <svg
               className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
@@ -195,14 +195,14 @@ export default function BlogsGridSection({
                               backgroundColor: "#ffffff",
                               color: "#253b97",
                             }}
-                            className="inline-flex items-center px-3 py-1 rounded-full bg-white/95 text-[#253b97] text-[10.5px] font-extrabold uppercase tracking-wider shadow-sm"
+                            className="inline-flex items-center px-3 py-1 rounded-full bg-white/95 text-[#253b97] text-xs 2xl:text-sm font-extrabold uppercase tracking-wider shadow-sm"
                           >
                             {post.category}
                           </span>
                         </div>
 
                         <div className="absolute bottom-3 right-3.5">
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-[#0f172a]/75 backdrop-blur-sm text-white text-[10.5px] font-semibold">
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-[#0f172a]/75 backdrop-blur-sm text-white text-xs font-semibold">
                             {post.readTime}
                           </span>
                         </div>
@@ -210,15 +210,15 @@ export default function BlogsGridSection({
 
                       {/* Card Body */}
                       <div className="p-6">
-                        <div className="text-[11px] font-semibold text-slate-400 mb-2">
+                        <div className="text-xs 2xl:text-sm font-semibold text-slate-400 mb-2">
                           {post.date}
                         </div>
 
-                        <h3 className="text-base sm:text-[17.5px] font-extrabold text-[#0f172a] group-hover:text-[#253b97] leading-[1.35] mb-2.5 transition-colors">
+                        <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a] group-hover:text-[#253b97] leading-snug mb-2.5 transition-colors">
                           {post.title}
                         </h3>
 
-                        <p className="text-[12.5px] sm:text-[13px] text-slate-600 leading-[1.6] line-clamp-3">
+                        <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl text-slate-600 leading-relaxed line-clamp-3">
                           {post.excerpt}
                         </p>
                       </div>
@@ -227,20 +227,20 @@ export default function BlogsGridSection({
                     {/* Card Footer */}
                     <div className="px-6 pb-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="relative w-8 h-8 rounded-full overflow-hidden border border-slate-200 shrink-0">
+                        <div className="relative w-9 h-9 rounded-full overflow-hidden border border-slate-200 shrink-0">
                           <Image
                             src={post.author.avatar}
                             alt={post.author.name}
                             fill
-                            sizes="32px"
+                            sizes="36px"
                             className="object-cover object-top"
                           />
                         </div>
                         <div className="min-w-0">
-                          <div className="text-[12px] font-bold text-[#0f172a] truncate">
+                          <div className="text-sm sm:text-base 2xl:text-lg font-bold text-[#0f172a] truncate">
                             {post.author.name}
                           </div>
-                          <div className="text-[10.5px] text-slate-500 truncate">
+                          <div className="text-xs sm:text-sm text-slate-500 truncate">
                             {post.author.role}
                           </div>
                         </div>
@@ -249,11 +249,11 @@ export default function BlogsGridSection({
                       <button
                         type="button"
                         onClick={() => onSelectArticle(post)}
-                        className="inline-flex items-center gap-1 text-xs font-extrabold text-[#253b97] hover:text-[#1c2d73] shrink-0 cursor-pointer"
+                        className="inline-flex items-center gap-1 text-sm sm:text-base lg:text-lg 2xl:text-xl font-bold text-[#253b97] hover:text-[#1c2d73] shrink-0 cursor-pointer"
                       >
                         <span>Read</span>
                         <svg
-                          className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"
+                          className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -281,8 +281,8 @@ export default function BlogsGridSection({
               className="rounded-3xl p-6 bg-white border border-slate-200/80 shadow-[0_8px_30px_rgb(15,23,42,0.03)]"
             >
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#253b97]" />
-                <h3 className="text-sm font-extrabold uppercase tracking-wider text-[#0f172a]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#253b97]" />
+                <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl font-bold uppercase tracking-wider text-[#0f172a]">
                   {sidebar.trendingTitle}
                 </h3>
               </div>
@@ -296,14 +296,14 @@ export default function BlogsGridSection({
                     className="w-full text-left p-3.5 rounded-2xl bg-[#f8fafc] hover:bg-[#eff4ff] border border-slate-200/70 hover:border-[#253b97]/30 transition-colors cursor-pointer group"
                   >
                     <div className="flex items-start gap-3">
-                      <span className="w-6 h-6 rounded-lg bg-[#253b97] text-white text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="w-7 h-7 rounded-lg bg-[#253b97] text-white text-xs sm:text-sm font-extrabold flex items-center justify-center shrink-0 mt-0.5">
                         0{index + 1}
                       </span>
                       <div>
-                        <div className="text-[12.5px] font-bold text-[#0f172a] group-hover:text-[#253b97] leading-snug mb-1 transition-colors">
+                        <div className="text-sm sm:text-base lg:text-lg 2xl:text-xl font-bold text-[#0f172a] group-hover:text-[#253b97] leading-snug mb-1 transition-colors">
                           {topic.title}
                         </div>
-                        <div className="text-[10.5px] font-semibold text-slate-400">
+                        <div className="text-xs sm:text-sm font-semibold text-slate-400">
                           {topic.category} • {topic.readTime}
                         </div>
                       </div>
@@ -318,7 +318,7 @@ export default function BlogsGridSection({
               style={{ backgroundColor: "#ffffff" }}
               className="rounded-3xl p-6 bg-white border border-slate-200/80 shadow-[0_8px_30px_rgb(15,23,42,0.03)]"
             >
-              <h3 className="text-sm font-extrabold uppercase tracking-wider text-[#0f172a] mb-4">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl font-bold uppercase tracking-wider text-[#0f172a] mb-4">
                 {sidebar.tagsTitle}
               </h3>
 
@@ -328,7 +328,7 @@ export default function BlogsGridSection({
                     key={tag}
                     type="button"
                     onClick={() => handleTagClick(tag)}
-                    className="px-3 py-1.5 rounded-xl bg-[#f8fafc] hover:bg-[#253b97] text-slate-700 hover:text-white border border-slate-200/80 hover:border-[#253b97] text-[11.5px] font-bold transition-colors cursor-pointer"
+                    className="px-3.5 py-2 rounded-xl bg-[#f8fafc] hover:bg-[#253b97] text-slate-700 hover:text-white border border-slate-200/80 hover:border-[#253b97] text-xs sm:text-sm 2xl:text-base font-bold transition-colors cursor-pointer"
                   >
                     #{tag}
                   </button>
@@ -345,13 +345,13 @@ export default function BlogsGridSection({
               }}
               className="rounded-3xl p-6 text-white shadow-lg"
             >
-              <div className="text-[10.5px] font-extrabold uppercase tracking-[0.14em] text-[#ffca28] mb-1.5">
+              <div className="text-xs 2xl:text-sm font-extrabold uppercase tracking-wider text-[#ffca28] mb-1.5">
                 {sidebar.newsletterCard.eyebrow}
               </div>
-              <h3 className="text-lg font-extrabold text-white leading-snug mb-2">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl font-bold text-white leading-snug mb-2">
                 {sidebar.newsletterCard.title}
               </h3>
-              <p className="text-xs text-blue-100/85 leading-relaxed mb-4">
+              <p className="text-sm sm:text-base lg:text-lg text-blue-100/85 leading-relaxed mb-4">
                 {sidebar.newsletterCard.description}
               </p>
 
@@ -362,19 +362,19 @@ export default function BlogsGridSection({
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder={sidebar.newsletterCard.placeholder}
-                  className="w-full rounded-xl bg-white/12 border border-white/25 px-3.5 py-2.5 text-xs text-white placeholder-blue-200/70 focus:outline-none focus:border-[#ffca28]"
+                  className="w-full rounded-xl bg-white/12 border border-white/25 px-3.5 py-2.5 text-sm sm:text-base text-white placeholder-blue-200/70 focus:outline-none focus:border-[#ffca28]"
                 />
                 <button
                   type="submit"
                   style={{ backgroundColor: "#ffca28", color: "#0f172a" }}
-                  className="w-full py-2.5 rounded-xl bg-[#ffca28] hover:bg-[#f5b800] text-[#0f172a] text-xs font-extrabold uppercase tracking-wider transition-colors cursor-pointer"
+                  className="w-full py-3 rounded-xl bg-[#ffca28] hover:bg-[#f5b800] text-[#0f172a] text-xs sm:text-sm 2xl:text-base font-extrabold uppercase tracking-wider transition-colors cursor-pointer"
                 >
                   {sidebar.newsletterCard.buttonLabel}
                 </button>
               </form>
 
               {newsletterSubmitted && (
-                <div className="mt-3 rounded-xl bg-emerald-500/20 border border-emerald-300/30 px-3 py-2 text-[11.5px] font-semibold text-emerald-100">
+                <div className="mt-3 rounded-xl bg-emerald-500/20 border border-emerald-300/30 px-3 py-2 text-xs sm:text-sm font-semibold text-emerald-100">
                   {sidebar.newsletterCard.successMessage}
                 </div>
               )}
@@ -385,10 +385,10 @@ export default function BlogsGridSection({
               style={{ backgroundColor: "#ffffff" }}
               className="rounded-3xl p-6 bg-white border border-slate-200/80 shadow-[0_8px_30px_rgb(15,23,42,0.03)]"
             >
-              <div className="text-[10.5px] font-bold uppercase tracking-[0.14em] text-[#253b97] mb-1">
+              <div className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-[#253b97] mb-1">
                 {sidebar.programsCard.eyebrow}
               </div>
-              <h3 className="text-base font-extrabold text-[#0f172a] mb-4">
+              <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl font-bold text-[#0f172a] mb-4">
                 {sidebar.programsCard.title}
               </h3>
 
@@ -399,10 +399,10 @@ export default function BlogsGridSection({
                     href={prog.href}
                     className="block p-3.5 rounded-2xl bg-[#f8fafc] hover:bg-[#eff4ff] border border-slate-200/80 hover:border-[#253b97]/30 transition-colors"
                   >
-                    <div className="text-[12.5px] font-bold text-[#0f172a] mb-0.5">
+                    <div className="text-sm sm:text-base lg:text-lg 2xl:text-xl font-bold text-[#0f172a] mb-0.5">
                       {prog.name}
                     </div>
-                    <div className="text-[11px] font-semibold text-[#253b97]">
+                    <div className="text-xs sm:text-sm font-semibold text-[#253b97]">
                       {prog.duration}
                     </div>
                   </Link>
@@ -413,7 +413,7 @@ export default function BlogsGridSection({
                 <Link
                   href="/course"
                   style={{ backgroundColor: "#253b97", color: "#ffffff" }}
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#253b97] hover:bg-[#1c2d73] text-white text-center text-xs font-bold transition-colors"
+                  className="w-full py-3 px-4 rounded-xl bg-[#253b97] hover:bg-[#1c2d73] text-white text-center text-xs sm:text-sm 2xl:text-base font-bold transition-colors"
                 >
                   {sidebar.programsCard.ctaLabel}
                 </Link>
@@ -421,7 +421,7 @@ export default function BlogsGridSection({
                   <button
                     type="button"
                     onClick={onOpenEnquiry}
-                    className="w-full py-2.5 px-4 rounded-xl bg-[#eff4ff] hover:bg-[#dfe8ff] text-[#253b97] text-center text-xs font-bold transition-colors cursor-pointer"
+                    className="w-full py-3 px-4 rounded-xl bg-[#eff4ff] hover:bg-[#dfe8ff] text-[#253b97] text-center text-xs sm:text-sm 2xl:text-base font-bold transition-colors cursor-pointer"
                   >
                     Speak with Career Counselor
                   </button>

@@ -106,7 +106,7 @@ export default function AboutAcademySection() {
               <motion.span
                 whileHover={{ scale: 1.03 }}
                 style={{ backgroundColor: "#eef2ff", color: "#253b97" }}
-                className="inline-block px-3.5 py-1.5 rounded-md bg-[#eef2ff] text-[#253b97] text-[11px] font-bold uppercase tracking-wider"
+                className="inline-block px-3.5 py-1.5 rounded-md bg-[#eef2ff] text-[#253b97] text-xs 2xl:text-sm font-bold uppercase tracking-wider"
               >
                 {aboutAcademyData.badgeText}
               </motion.span>
@@ -114,7 +114,7 @@ export default function AboutAcademySection() {
 
             {/* Heading with Golden Wavy Underline */}
             <div className="space-y-1">
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0f172a] tracking-tight leading-[1.2]">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-bold text-[#0f172a] tracking-tight leading-[1.2]">
                 {aboutAcademyData.headingLine1}
                 <br />
                 <span className="relative inline-block text-[#253b97] pb-2">
@@ -143,7 +143,7 @@ export default function AboutAcademySection() {
             </div>
 
             {/* Description */}
-            <p className="text-slate-600 text-sm sm:text-[15px] leading-[1.75] max-w-xl min-[137.5rem]:max-w-none">
+            <p className="text-slate-600 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl leading-relaxed max-w-xl min-[137.5rem]:max-w-none">
               {aboutAcademyData.description}
             </p>
           </motion.div>
@@ -163,27 +163,27 @@ export default function AboutAcademySection() {
               <div className="flex items-center gap-2.5 mb-3">
                 <span
                   style={{ backgroundColor: "#253b97", color: "#ffffff" }}
-                  className="w-5 h-5 rounded-full bg-[#253b97] text-white flex items-center justify-center shrink-0"
+                  className="w-6 h-6 2xl:w-7 2xl:h-7 rounded-full bg-[#253b97] text-white flex items-center justify-center shrink-0"
                 >
                   <svg
-                    className="w-3 h-3"
+                    className="w-3.5 h-3.5 2xl:w-4 2xl:h-4"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
                     <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.8 6.2l-2.6 5.2-5.2 2.6 2.6-5.2 5.2-2.6z" />
                   </svg>
                 </span>
-                <h3 className="text-base sm:text-lg font-extrabold text-[#0f172a]">
+                <h3 className="text-base sm:text-lg lg:text-xl 2xl:text-2xl min-[137.5rem]:text-3xl font-bold text-[#0f172a]">
                   {aboutAcademyData.missionCard.title}
                 </h3>
               </div>
 
-              <p className="text-slate-600 text-xs sm:text-sm leading-[1.75] pb-5 border-b border-slate-200/70">
+              <p className="text-slate-600 text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl leading-relaxed pb-5 border-b border-slate-200/70">
                 {aboutAcademyData.missionCard.description}
               </p>
 
               <div className="pt-5">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-3.5">
+                <span className="text-xs 2xl:text-sm font-bold uppercase tracking-wider text-slate-400 block mb-3.5">
                   {aboutAcademyData.missionCard.programsLabel}
                 </span>
 
@@ -203,11 +203,11 @@ export default function AboutAcademySection() {
                           backgroundColor: "#dcfce7",
                           color: "#16a34a",
                         }}
-                        className="w-5 h-5 rounded-full bg-[#dcfce7] text-[#16a34a] flex items-center justify-center text-[11px] font-bold shrink-0"
+                        className="w-5 h-5 2xl:w-6 2xl:h-6 rounded-full bg-[#dcfce7] text-[#16a34a] flex items-center justify-center text-xs 2xl:text-sm font-bold shrink-0"
                       >
                         ✓
                       </span>
-                      <span className="text-xs sm:text-[13px] font-semibold text-slate-800">
+                      <span className="text-sm sm:text-base lg:text-lg 2xl:text-xl min-[137.5rem]:text-2xl font-medium text-slate-800">
                         {program}
                       </span>
                     </motion.div>
@@ -250,12 +250,12 @@ export default function AboutAcademySection() {
                   backgroundColor: stat.iconBg,
                   color: stat.iconColor,
                 }}
-                className="w-10 h-10 rounded-xl flex items-center justify-center mb-3.5"
+                className="w-10 h-10 2xl:w-12 2xl:h-12 rounded-xl flex items-center justify-center mb-3.5"
               >
                 <StatIcon type={stat.iconType} />
               </motion.div>
 
-              <div className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight tabular-nums">
+              <div className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl min-[137.5rem]:text-6xl font-extrabold text-[#0f172a] tracking-tight tabular-nums">
                 <AnimatedCounter
                   to={stat.numericValue}
                   suffix={stat.suffix}
@@ -263,7 +263,7 @@ export default function AboutAcademySection() {
                 />
               </div>
 
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1.5 leading-snug max-w-[180px]">
+              <p className="text-xs sm:text-sm 2xl:text-base min-[137.5rem]:text-lg font-bold uppercase tracking-wider text-slate-500 mt-1.5 leading-snug">
                 {stat.label}
               </p>
             </motion.div>

@@ -36,8 +36,8 @@ export default function CourseTabsBar() {
                 onClick={() => handleTabClick(tab.id, tab.href)}
                 className={
                   isActive
-                    ? "relative py-3.5 sm:py-4 text-xs sm:text-[13px] font-bold text-[#253b97] whitespace-nowrap transition-colors cursor-pointer"
-                    : "relative py-3.5 sm:py-4 text-xs sm:text-[13px] font-medium text-slate-600 hover:text-[#253b97] whitespace-nowrap transition-colors cursor-pointer"
+                    ? "relative py-3.5 sm:py-4 text-sm sm:text-base 2xl:text-lg font-bold text-[#253b97] whitespace-nowrap transition-colors cursor-pointer"
+                    : "relative py-3.5 sm:py-4 text-sm sm:text-base 2xl:text-lg font-medium text-slate-600 hover:text-[#253b97] whitespace-nowrap transition-colors cursor-pointer"
                 }
               >
                 <span>{tab.label}</span>

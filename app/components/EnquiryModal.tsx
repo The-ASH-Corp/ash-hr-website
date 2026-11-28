@@ -63,14 +63,14 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
             <div className="mb-5 sm:mb-6 pr-6">
               <div
                 style={{ backgroundColor: "#f0f3ff", color: "#253b97" }}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f0f3ff] text-[#253b97] text-xs font-semibold uppercase tracking-wider mb-2"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f0f3ff] text-[#253b97] text-xs 2xl:text-sm font-bold uppercase tracking-wider mb-2"
               >
                 Admissions Open
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+              <h3 className="text-xl sm:text-2xl 2xl:text-3xl font-bold text-slate-900 tracking-tight">
                 Apply to Ash Academy
               </h3>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              <p className="text-sm sm:text-base 2xl:text-lg text-slate-600 mt-1">
                 Book a 1-on-1 counseling session and get full curriculum details.
               </p>
             </div>
@@ -92,8 +92,8 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                   >
                     ✓
                   </motion.div>
-                  <h4 className="font-bold text-lg text-emerald-900">Application Submitted!</h4>
-                  <p className="text-sm text-emerald-700">
+                  <h4 className="font-bold text-lg sm:text-xl text-emerald-900">Application Submitted!</h4>
+                  <p className="text-sm sm:text-base text-emerald-700">
                     Our career advisor will contact {formData.phone} shortly.
                   </p>
                 </motion.div>
@@ -107,7 +107,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                   className="space-y-3.5 sm:space-y-4"
                 >
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Full Name
                     </label>
                     <input
@@ -116,12 +116,12 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       placeholder="Enter your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 text-sm sm:text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Contact Number
                     </label>
                     <input
@@ -130,12 +130,12 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       placeholder="Enter your mobile number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 text-sm sm:text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Email Address
                     </label>
                     <input
@@ -143,7 +143,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 text-sm sm:text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#253b97] focus:border-transparent"
                     />
                   </div>
 
@@ -170,7 +170,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       whileTap={{ scale: 0.98 }}
                       type="submit"
                       style={{ backgroundColor: "#253b97", color: "#ffffff" }}
-                      className="w-full py-2.5 sm:py-3 rounded-xl bg-[#253b97] hover:bg-[#1c2d73] text-white font-semibold text-sm transition-colors shadow-md shadow-[#253b97]/25 cursor-pointer"
+                      className="w-full py-3 sm:py-3.5 rounded-xl bg-[#253b97] hover:bg-[#1c2d73] text-white font-bold text-sm sm:text-base transition-colors shadow-md shadow-[#253b97]/25 cursor-pointer"
                     >
                       Submit Application
                     </motion.button>
