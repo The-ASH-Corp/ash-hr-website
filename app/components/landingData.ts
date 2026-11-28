@@ -207,13 +207,15 @@ export const ctaBannerData = {
   emailHref: "mailto:connect@ashacademy.ai",
 };
 
+export const whatsappHref = "https://wa.me/918921365750";
+
 export const footerData = {
   logo: {
     src: "/images/ASH Logo.png",
     alt: "ASH Academy Logo",
   },
   socialLinks: [
-    { label: "WhatsApp", short: "WA", href: "https://wa.me/918921365750", external: true },
+    { label: "WhatsApp", short: "WA", href: whatsappHref, external: true },
     { label: "Facebook", short: "FB", href: "https://www.facebook.com/profile.php?id=61596144760794", external: true },
     { label: "Instagram", short: "IG", href: "https://www.instagram.com/ashschoolofmanagement?gwpx=MWc3Njhqbng2NG5uMA%3D%3D", external: true },
     { label: "YouTube", short: "YT", href: "https://youtube.com/@ashschoolofmanagement?si=KEpBZ-BtQjEFR4Dn", external: true },

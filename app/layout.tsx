@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { whatsappHref } from "./components/landingData";
+import WhatsAppIcon from "./components/WhatsAppIcon";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -65,6 +67,15 @@ export default function RootLayout({
         className="min-h-screen overflow-x-clip bg-[#fbf8ff] text-[#0f172a] selection:bg-[#e0e7ff] selection:text-[#253b97]"
       >
         {children}
+        <a
+          href={whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp (opens in a new tab)"
+          className="fixed right-4 bottom-4 z-40 flex size-14 items-center justify-center rounded-full bg-[#12823e] text-white shadow-lg transition motion-safe:hover:scale-105 hover:bg-[#0d6932] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#12823e] sm:right-6 sm:bottom-6 animate-bounce hover:scale-120" 
+        >
+          <WhatsAppIcon className="size-7" />
+        </a>
       </body>
     </html>
   );
