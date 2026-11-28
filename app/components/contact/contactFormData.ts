@@ -1,5 +1,5 @@
 export interface ContactSocialItem {
-  id: "facebook" | "twitter" | "instagram" | "youtube" | "linkedin";
+  id: "whatsapp" | "facebook" | "instagram" | "youtube";
   label: string;
   href: string;
 }
@@ -72,19 +72,14 @@ export const contactFormData: ContactFormData = {
   ],
   socialHeading: "Follow us on social media :",
   socials: [
-    { id: "facebook", label: "Facebook", href: "#" },
-    { id: "twitter", label: "Twitter", href: "#" },
+    { id: "whatsapp", label: "WhatsApp", href: "https://wa.me/918921365750" },
+    { id: "facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61596144760794" },
     {
       id: "instagram",
       label: "Instagram",
-      href: "https://www.instagram.com/ash_._academy",
+      href: "https://www.instagram.com/ashschoolofmanagement?gwpx=MWc3Njhqbng2NG5uMA%3D%3D",
     },
-    { id: "youtube", label: "YouTube", href: "#" },
-    {
-      id: "linkedin",
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/company/the-ash-academy/",
-    },
+    { id: "youtube", label: "YouTube", href: "https://youtube.com/@ashschoolofmanagement?si=KEpBZ-BtQjEFR4Dn" },
   ],
   formCard: {
     title: "Send Us a Direct Message",
